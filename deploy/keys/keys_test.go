@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/certikfoundation/burrow/keys"
+	"github.com/hyperledger/burrow/keys"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/certikfoundation/burrow/vent/sqldb/adapters"
-	"github.com/certikfoundation/burrow/vent/test"
-	"github.com/certikfoundation/burrow/vent/types"
+	"github.com/hyperledger/burrow/vent/sqldb/adapters"
+	"github.com/hyperledger/burrow/vent/test"
+	"github.com/hyperledger/burrow/vent/types"
 	"github.com/lib/pq"
 	"github.com/stretchr/testify/require"
 )

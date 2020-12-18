@@ -25,7 +25,7 @@ LABEL org.label-schema.name = "Burrow"
 LABEL org.label-schema.vendor="Hyperledger Burrow Authors"
 LABEL org.label-schema.description="Hyperledger Burrow is a permissioned Ethereum smart-contract blockchain node."
 LABEL org.label-schema.license="Apache-2.0"
-LABEL org.label-schema.vcs-url="https://github.com/certikfoundation/burrow"
+LABEL org.label-schema.vcs-url="https://github.com/hyperledger/burrow"
 
 # Run burrow as burrow user; not as root user
 ENV BURROW_PATH /home/$USER

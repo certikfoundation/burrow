@@ -8,16 +8,16 @@ import (
 	"io"
 	"testing"
 
-	"github.com/certikfoundation/burrow/integration"
+	"github.com/hyperledger/burrow/integration"
 
 	"github.com/tendermint/tendermint/crypto/tmhash"
 
-	"github.com/certikfoundation/burrow/acm"
-	"github.com/certikfoundation/burrow/event/query"
-	"github.com/certikfoundation/burrow/execution/names"
-	"github.com/certikfoundation/burrow/genesis"
-	"github.com/certikfoundation/burrow/integration/rpctest"
-	"github.com/certikfoundation/burrow/rpc/rpcquery"
+	"github.com/hyperledger/burrow/acm"
+	"github.com/hyperledger/burrow/event/query"
+	"github.com/hyperledger/burrow/execution/names"
+	"github.com/hyperledger/burrow/genesis"
+	"github.com/hyperledger/burrow/integration/rpctest"
+	"github.com/hyperledger/burrow/rpc/rpcquery"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

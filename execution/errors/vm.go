@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/certikfoundation/burrow/crypto"
-	"github.com/certikfoundation/burrow/permission"
+	"github.com/hyperledger/burrow/crypto"
+	"github.com/hyperledger/burrow/permission"
 )
 
 type PermissionDenied struct {

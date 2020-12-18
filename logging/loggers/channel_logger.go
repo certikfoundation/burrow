@@ -8,7 +8,7 @@ import (
 
 	"github.com/eapache/channels"
 	"github.com/go-kit/kit/log"
-	"github.com/certikfoundation/burrow/logging/errors"
+	"github.com/hyperledger/burrow/logging/errors"
 )
 
 const (

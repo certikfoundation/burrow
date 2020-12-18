@@ -4,8 +4,8 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/certikfoundation/burrow/logging"
-	"github.com/certikfoundation/burrow/vent/config"
+	"github.com/hyperledger/burrow/logging"
+	"github.com/hyperledger/burrow/vent/config"
 )
 
 // Server exposes HTTP endpoints for the service

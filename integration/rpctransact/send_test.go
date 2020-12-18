@@ -6,10 +6,10 @@ import (
 	"context"
 	"testing"
 
-	"github.com/certikfoundation/burrow/integration"
+	"github.com/hyperledger/burrow/integration"
 
-	"github.com/certikfoundation/burrow/integration/rpctest"
-	"github.com/certikfoundation/burrow/txs/payload"
+	"github.com/hyperledger/burrow/integration/rpctest"
+	"github.com/hyperledger/burrow/txs/payload"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

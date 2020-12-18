@@ -5,13 +5,13 @@ import (
 
 	"regexp"
 
-	"github.com/certikfoundation/burrow/acm/acmstate"
-	"github.com/certikfoundation/burrow/execution/engine"
-	"github.com/certikfoundation/burrow/execution/errors"
-	"github.com/certikfoundation/burrow/execution/exec"
-	"github.com/certikfoundation/burrow/execution/names"
-	"github.com/certikfoundation/burrow/logging"
-	"github.com/certikfoundation/burrow/txs/payload"
+	"github.com/hyperledger/burrow/acm/acmstate"
+	"github.com/hyperledger/burrow/execution/engine"
+	"github.com/hyperledger/burrow/execution/errors"
+	"github.com/hyperledger/burrow/execution/exec"
+	"github.com/hyperledger/burrow/execution/names"
+	"github.com/hyperledger/burrow/logging"
+	"github.com/hyperledger/burrow/txs/payload"
 )
 
 // Name should be file system like

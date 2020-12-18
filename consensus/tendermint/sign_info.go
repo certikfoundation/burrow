@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/certikfoundation/burrow/binary"
+	"github.com/hyperledger/burrow/binary"
 	"github.com/tendermint/tendermint/types"
 	tmtime "github.com/tendermint/tendermint/types/time"
 )

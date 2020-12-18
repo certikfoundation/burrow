@@ -6,7 +6,7 @@ package structure
 import (
 	"testing"
 
-	"github.com/certikfoundation/burrow/util/slice"
+	"github.com/hyperledger/burrow/util/slice"
 
 	"github.com/stretchr/testify/assert"
 )

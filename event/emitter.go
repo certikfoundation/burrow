@@ -7,10 +7,10 @@ import (
 	"context"
 	"math/rand"
 
-	"github.com/certikfoundation/burrow/event/pubsub"
-	"github.com/certikfoundation/burrow/event/query"
-	"github.com/certikfoundation/burrow/logging"
-	"github.com/certikfoundation/burrow/logging/structure"
+	"github.com/hyperledger/burrow/event/pubsub"
+	"github.com/hyperledger/burrow/event/query"
+	"github.com/hyperledger/burrow/logging"
+	"github.com/hyperledger/burrow/logging/structure"
 	"github.com/tendermint/tendermint/libs/service"
 	hex "github.com/tmthrgd/go-hex"
 )

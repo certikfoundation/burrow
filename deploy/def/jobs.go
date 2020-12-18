@@ -6,8 +6,8 @@ import (
 
 	validation "github.com/go-ozzo/ozzo-validation"
 	"github.com/go-ozzo/ozzo-validation/is"
-	"github.com/certikfoundation/burrow/deploy/def/rule"
-	"github.com/certikfoundation/burrow/execution/evm/abi"
+	"github.com/hyperledger/burrow/deploy/def/rule"
+	"github.com/hyperledger/burrow/execution/evm/abi"
 )
 
 // ------------------------------------------------------------------------

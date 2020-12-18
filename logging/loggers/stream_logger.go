@@ -7,7 +7,7 @@ import (
 
 	"github.com/go-kit/kit/log"
 	"github.com/go-kit/kit/log/term"
-	"github.com/certikfoundation/burrow/logging/structure"
+	"github.com/hyperledger/burrow/logging/structure"
 )
 
 type Syncable interface {

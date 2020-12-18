@@ -1,6 +1,6 @@
 package permission
 
-import "github.com/certikfoundation/burrow/binary"
+import "github.com/hyperledger/burrow/binary"
 
 func NewAccountPermissions(pss ...PermFlag) AccountPermissions {
 	var perms PermFlag

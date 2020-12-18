@@ -5,7 +5,7 @@ package logging
 
 import (
 	"github.com/go-kit/kit/log/term"
-	"github.com/certikfoundation/burrow/logging/structure"
+	"github.com/hyperledger/burrow/logging/structure"
 )
 
 func Colors(keyvals ...interface{}) term.FgBgColor {

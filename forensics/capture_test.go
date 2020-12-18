@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/certikfoundation/burrow/binary"
+	"github.com/hyperledger/burrow/binary"
 )
 
 func TestCompareCapture(t *testing.T) {

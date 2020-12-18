@@ -3,9 +3,9 @@ package payload
 import (
 	"fmt"
 
-	"github.com/certikfoundation/burrow/acm/acmstate"
-	"github.com/certikfoundation/burrow/crypto"
-	"github.com/certikfoundation/burrow/permission"
+	"github.com/hyperledger/burrow/acm/acmstate"
+	"github.com/hyperledger/burrow/crypto"
+	"github.com/hyperledger/burrow/permission"
 )
 
 func NewPermsTx(st acmstate.AccountGetter, from crypto.PublicKey, args permission.PermArgs) (*PermsTx, error) {

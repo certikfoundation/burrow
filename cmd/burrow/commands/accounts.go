@@ -5,9 +5,9 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/certikfoundation/burrow/deploy/compile"
-	"github.com/certikfoundation/burrow/execution/evm/abi"
-	"github.com/certikfoundation/burrow/rpc/rpcquery"
+	"github.com/hyperledger/burrow/deploy/compile"
+	"github.com/hyperledger/burrow/execution/evm/abi"
+	"github.com/hyperledger/burrow/rpc/rpcquery"
 	cli "github.com/jawher/mow.cli"
 	"google.golang.org/grpc"
 )

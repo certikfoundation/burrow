@@ -1,6 +1,6 @@
 package logconfig
 
-import "github.com/certikfoundation/burrow/logging/loggers"
+import "github.com/hyperledger/burrow/logging/loggers"
 
 // Keep these in sync
 const (

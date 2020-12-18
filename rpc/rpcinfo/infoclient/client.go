@@ -7,11 +7,11 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/certikfoundation/burrow/acm"
-	"github.com/certikfoundation/burrow/crypto"
-	"github.com/certikfoundation/burrow/execution/names"
-	"github.com/certikfoundation/burrow/rpc"
-	"github.com/certikfoundation/burrow/rpc/rpcinfo"
+	"github.com/hyperledger/burrow/acm"
+	"github.com/hyperledger/burrow/crypto"
+	"github.com/hyperledger/burrow/execution/names"
+	"github.com/hyperledger/burrow/rpc"
+	"github.com/hyperledger/burrow/rpc/rpcinfo"
 )
 
 type RPCClient interface {

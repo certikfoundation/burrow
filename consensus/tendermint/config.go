@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/certikfoundation/burrow/consensus/abci"
+	"github.com/hyperledger/burrow/consensus/abci"
 	tmConfig "github.com/tendermint/tendermint/config"
 )
 

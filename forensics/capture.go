@@ -3,8 +3,8 @@ package forensics
 import (
 	"fmt"
 
-	"github.com/certikfoundation/burrow/binary"
-	"github.com/certikfoundation/burrow/execution/exec"
+	"github.com/hyperledger/burrow/binary"
+	"github.com/hyperledger/burrow/execution/exec"
 	"github.com/pkg/errors"
 )
 

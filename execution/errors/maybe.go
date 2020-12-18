@@ -1,7 +1,7 @@
 package errors
 
 import (
-	"github.com/certikfoundation/burrow/crypto"
+	"github.com/hyperledger/burrow/crypto"
 )
 
 type Maybe struct {

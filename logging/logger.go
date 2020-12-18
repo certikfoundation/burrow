@@ -5,8 +5,8 @@ package logging
 
 import (
 	"github.com/go-kit/kit/log"
-	"github.com/certikfoundation/burrow/logging/structure"
-	"github.com/certikfoundation/burrow/util/slice"
+	"github.com/hyperledger/burrow/logging/structure"
+	"github.com/hyperledger/burrow/util/slice"
 )
 
 // InfoTraceLogger maintains provides two logging 'channels' that are interlaced

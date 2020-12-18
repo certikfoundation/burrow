@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/certikfoundation/burrow/crypto"
+	"github.com/hyperledger/burrow/crypto"
 )
 
 // Token to use in deploy yaml in order to indicate call to the fallback function.

@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/go-kit/kit/log"
-	"github.com/certikfoundation/burrow/logging"
+	"github.com/hyperledger/burrow/logging"
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/libs/kv"

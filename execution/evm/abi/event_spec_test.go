@@ -3,7 +3,7 @@ package abi
 import (
 	"testing"
 
-	"github.com/certikfoundation/burrow/execution/solidity"
+	"github.com/hyperledger/burrow/execution/solidity"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

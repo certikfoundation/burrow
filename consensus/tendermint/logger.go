@@ -1,7 +1,7 @@
 package tendermint
 
 import (
-	"github.com/certikfoundation/burrow/logging"
+	"github.com/hyperledger/burrow/logging"
 	"github.com/tendermint/tendermint/libs/log"
 )
 

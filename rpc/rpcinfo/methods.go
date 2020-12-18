@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/certikfoundation/burrow/acm"
-	"github.com/certikfoundation/burrow/execution/names"
-	"github.com/certikfoundation/burrow/rpc"
-	"github.com/certikfoundation/burrow/rpc/lib/server"
+	"github.com/hyperledger/burrow/acm"
+	"github.com/hyperledger/burrow/execution/names"
+	"github.com/hyperledger/burrow/rpc"
+	"github.com/hyperledger/burrow/rpc/lib/server"
 )
 
 // Method names

@@ -7,11 +7,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/certikfoundation/burrow/acm/balance"
-	crypto "github.com/certikfoundation/burrow/crypto"
-	"github.com/certikfoundation/burrow/genesis"
-	"github.com/certikfoundation/burrow/keys"
-	"github.com/certikfoundation/burrow/permission"
+	"github.com/hyperledger/burrow/acm/balance"
+	crypto "github.com/hyperledger/burrow/crypto"
+	"github.com/hyperledger/burrow/genesis"
+	"github.com/hyperledger/burrow/keys"
+	"github.com/hyperledger/burrow/permission"
 )
 
 const DefaultAmount uint64 = 1000000

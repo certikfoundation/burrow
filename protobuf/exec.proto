@@ -2,7 +2,7 @@ syntax = 'proto3';
 
 package exec;
 
-option go_package = "github.com/certikfoundation/burrow/execution/exec";
+option go_package = "github.com/hyperledger/burrow/execution/exec";
 
 import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 import "github.com/tendermint/tendermint/abci/types/types.proto";
@@ -30,7 +30,7 @@ message StreamEvent {
     option (gogoproto.onlyone) = true;
     BeginBlock BeginBlock = 1;
     BeginTx BeginTx = 2;
-    txs.Envelope Envelope = 3 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/txs.Envelope"];
+    txs.Envelope Envelope = 3 [(gogoproto.customtype) = "github.com/hyperledger/burrow/txs.Envelope"];
     Event Event = 4;
     EndTx EndTx = 5;
     EndBlock EndBlock = 6;
@@ -62,14 +62,14 @@ message BeginTx {
 
 message EndTx {
     // The hash of the transaction that caused this event to be generated
-    bytes TxHash = 3 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/binary.HexBytes", (gogoproto.nullable) = false];
+    bytes TxHash = 3 [(gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes", (gogoproto.nullable) = false];
 }
 
 message TxHeader {
     // Transaction type
-    uint32 TxType = 1 [(gogoproto.casttype) = "github.com/certikfoundation/burrow/txs/payload.Type"];
+    uint32 TxType = 1 [(gogoproto.casttype) = "github.com/hyperledger/burrow/txs/payload.Type"];
     // The hash of the transaction that caused this event to be generated
-    bytes TxHash = 2 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/binary.HexBytes", (gogoproto.nullable) = false];
+    bytes TxHash = 2 [(gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes", (gogoproto.nullable) = false];
     // The block height at which this transaction was included
     uint64 Height = 3;
     // The index of this transaction within the block
@@ -97,7 +97,7 @@ message TxExecutionKey {
 message TxExecution {
     TxHeader Header = 1 [(gogoproto.embed) = true];
     // Signed Tx that triggered this execution
-    txs.Envelope Envelope = 6 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/txs.Envelope"];
+    txs.Envelope Envelope = 6 [(gogoproto.customtype) = "github.com/hyperledger/burrow/txs.Envelope"];
     // Execution events
     repeated Event Events = 7;
     // The execution results
@@ -124,9 +124,9 @@ message Origin {
 message Header {
     option (gogoproto.goproto_stringer) = false;
     // Transaction type
-    uint32 TxType = 1 [(gogoproto.casttype) = "github.com/certikfoundation/burrow/txs/payload.Type"];
+    uint32 TxType = 1 [(gogoproto.casttype) = "github.com/hyperledger/burrow/txs/payload.Type"];
     // The hash of the transaction that caused this event to be generated
-    bytes TxHash = 2 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/binary.HexBytes", (gogoproto.nullable) = false];
+    bytes TxHash = 2 [(gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes", (gogoproto.nullable) = false];
     // The type of event
     uint32 EventType = 3 [(gogoproto.casttype) = "EventType"];
     // EventID published with event
@@ -163,17 +163,17 @@ message Result {
 }
 
 message LogEvent {
-    bytes Address = 1 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/crypto.Address", (gogoproto.nullable) = false];
-    bytes Data = 2 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/binary.HexBytes", (gogoproto.nullable) = false];
-    repeated bytes Topics = 3 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/binary.Word256", (gogoproto.nullable) = false];
+    bytes Address = 1 [(gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address", (gogoproto.nullable) = false];
+    bytes Data = 2 [(gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes", (gogoproto.nullable) = false];
+    repeated bytes Topics = 3 [(gogoproto.customtype) = "github.com/hyperledger/burrow/binary.Word256", (gogoproto.nullable) = false];
 }
 
 message CallEvent {
     uint32 CallType = 5 [(gogoproto.casttype) = "CallType"];
     CallData CallData = 1;
-    bytes Origin = 2 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/crypto.Address", (gogoproto.nullable) = false];
+    bytes Origin = 2 [(gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address", (gogoproto.nullable) = false];
     uint64 StackDepth = 3;
-    bytes Return = 4 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/binary.HexBytes", (gogoproto.nullable) = false];
+    bytes Return = 4 [(gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes", (gogoproto.nullable) = false];
 }
 
 message GovernAccountEvent {
@@ -181,17 +181,17 @@ message GovernAccountEvent {
 }
 
 message InputEvent {
-    bytes Address = 1 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/crypto.Address", (gogoproto.nullable) = false];
+    bytes Address = 1 [(gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address", (gogoproto.nullable) = false];
 }
 
 message OutputEvent {
-    bytes Address = 1 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/crypto.Address", (gogoproto.nullable) = false];
+    bytes Address = 1 [(gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address", (gogoproto.nullable) = false];
 }
 
 message CallData {
-    bytes Caller = 1 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/crypto.Address", (gogoproto.nullable) = false];
-    bytes Callee = 2 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/crypto.Address", (gogoproto.nullable) = false];
-    bytes Data = 3 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/binary.HexBytes", (gogoproto.nullable) = false];
+    bytes Caller = 1 [(gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address", (gogoproto.nullable) = false];
+    bytes Callee = 2 [(gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address", (gogoproto.nullable) = false];
+    bytes Data = 3 [(gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes", (gogoproto.nullable) = false];
     uint64 Value = 4;
     uint64 Gas = 5;
 }

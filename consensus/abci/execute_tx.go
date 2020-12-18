@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/certikfoundation/burrow/consensus/tendermint/codes"
-	"github.com/certikfoundation/burrow/execution"
-	"github.com/certikfoundation/burrow/execution/errors"
-	"github.com/certikfoundation/burrow/logging"
-	"github.com/certikfoundation/burrow/logging/structure"
-	"github.com/certikfoundation/burrow/txs"
+	"github.com/hyperledger/burrow/consensus/tendermint/codes"
+	"github.com/hyperledger/burrow/execution"
+	"github.com/hyperledger/burrow/execution/errors"
+	"github.com/hyperledger/burrow/logging"
+	"github.com/hyperledger/burrow/logging/structure"
+	"github.com/hyperledger/burrow/txs"
 	"github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/libs/kv"
 )

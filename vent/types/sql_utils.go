@@ -1,6 +1,6 @@
 package types
 
-import "github.com/certikfoundation/burrow/logging"
+import "github.com/hyperledger/burrow/logging"
 
 // SQLConnection stores parameters to build a new db connection & initialize the database
 type SQLConnection struct {

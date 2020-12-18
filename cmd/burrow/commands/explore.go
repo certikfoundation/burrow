@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/certikfoundation/burrow/config"
-	"github.com/certikfoundation/burrow/forensics"
+	"github.com/hyperledger/burrow/config"
+	"github.com/hyperledger/burrow/forensics"
 
-	"github.com/certikfoundation/burrow/bcm"
+	"github.com/hyperledger/burrow/bcm"
 
-	"github.com/certikfoundation/burrow/txs"
+	"github.com/hyperledger/burrow/txs"
 	cli "github.com/jawher/mow.cli"
 	dbm "github.com/tendermint/tm-db"
 )

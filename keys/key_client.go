@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/certikfoundation/burrow/crypto"
-	"github.com/certikfoundation/burrow/logging"
+	"github.com/hyperledger/burrow/crypto"
+	"github.com/hyperledger/burrow/logging"
 	"google.golang.org/grpc"
 )
 

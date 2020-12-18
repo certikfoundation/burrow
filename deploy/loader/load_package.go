@@ -5,8 +5,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/certikfoundation/burrow/deploy/def"
-	"github.com/certikfoundation/burrow/logging"
+	"github.com/hyperledger/burrow/deploy/def"
+	"github.com/hyperledger/burrow/logging"
 	"github.com/spf13/viper"
 )
 

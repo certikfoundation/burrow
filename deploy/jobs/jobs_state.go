@@ -1,7 +1,7 @@
 package jobs
 
 import (
-	"github.com/certikfoundation/burrow/deploy/def"
+	"github.com/hyperledger/burrow/deploy/def"
 )
 
 func DumpStateJob(dump *def.DumpState) (string, error) {

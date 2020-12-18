@@ -1,11 +1,11 @@
 # [Hyperledger Burrow](https://hyperledger.github.io/burrow)
 
-[![CI](https://github.com/certikfoundation/burrow/workflows/master/badge.svg)](https://launch-editor.github.com/actions?workflowID=master&event=push&nwo=hyperledger%2Fburrow)
-[![version](https://img.shields.io/github/tag/certikfoundation/burrow.svg)](https://github.com/certikfoundation/burrow/releases/latest)
-[![GoDoc](https://godoc.org/github.com/burrow?status.png)](https://godoc.org/github.com/certikfoundation/burrow)
-[![license](https://img.shields.io/github/license/certikfoundation/burrow.svg)](../LICENSE.md)
-[![LoC](https://tokei.rs/b1/github/certikfoundation/burrow?category=lines)](https://github.com/certikfoundation/burrow)
-[![codecov](https://codecov.io/gh/certikfoundation/burrow/branch/master/graph/badge.svg)](https://codecov.io/gh/certikfoundation/burrow)
+[![CI](https://github.com/hyperledger/burrow/workflows/master/badge.svg)](https://launch-editor.github.com/actions?workflowID=master&event=push&nwo=hyperledger%2Fburrow)
+[![version](https://img.shields.io/github/tag/hyperledger/burrow.svg)](https://github.com/hyperledger/burrow/releases/latest)
+[![GoDoc](https://godoc.org/github.com/burrow?status.png)](https://godoc.org/github.com/hyperledger/burrow)
+[![license](https://img.shields.io/github/license/hyperledger/burrow.svg)](../LICENSE.md)
+[![LoC](https://tokei.rs/b1/github/hyperledger/burrow?category=lines)](https://github.com/hyperledger/burrow)
+[![codecov](https://codecov.io/gh/hyperledger/burrow/branch/master/graph/badge.svg)](https://codecov.io/gh/hyperledger/burrow)
 
 Hyperledger Burrow is a permissioned Ethereum smart-contract blockchain node. It executes Ethereum EVM and WASM smart contract code (usually written in [Solidity](https://solidity.readthedocs.io)) on a permissioned virtual machine. Burrow provides transaction finality and high transaction throughput on a proof-of-stake [Tendermint](https://tendermint.com) consensus engine.
 
@@ -43,14 +43,14 @@ Watch the [Boring into Burrow](https://www.youtube.com/watch?v=OpbjYaGAP4k) talk
 
 ## JavaScript Client
 
-There is a [JavaScript API](https://github.com/certikfoundation/burrow/tree/master/js)
+There is a [JavaScript API](https://github.com/hyperledger/burrow/tree/master/js)
 
 ## Project Roadmap
 
 Project information generally updated on a quarterly basis can be found on the [Hyperledger Burrow Wiki](https://wiki.hyperledger.org/display/burrow).
 
 ## Documentation
-Burrow getting started documentation is available on the [documentation site](https://hyperledger.github.io/burrow) (source markdown files can be found in [docs]()) and programmatic API in [GoDocs](https://godoc.org/github.com/certikfoundation/burrow).
+Burrow getting started documentation is available on the [documentation site](https://hyperledger.github.io/burrow) (source markdown files can be found in [docs]()) and programmatic API in [GoDocs](https://godoc.org/github.com/hyperledger/burrow).
 
 ## Contribute
 
@@ -59,7 +59,7 @@ We welcome any and all contributions. Read the [contributing file](../.github/CO
 You can find us on:
 - [Hyperledger Chat](https://chat.hyperledger.org)
 - [Hyperledger Mailing List](https://lists.hyperledger.org/mailman/listinfo)
-- [here on Github](https://github.com/certikfoundation/burrow/issues)
+- [here on Github](https://github.com/hyperledger/burrow/issues)
 
 ## License
 

@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/certikfoundation/burrow/integration"
-	"github.com/certikfoundation/burrow/integration/rpctest"
+	"github.com/hyperledger/burrow/integration"
+	"github.com/hyperledger/burrow/integration/rpctest"
 
-	"github.com/certikfoundation/burrow/vent/test"
+	"github.com/hyperledger/burrow/vent/test"
 )
 
 func TestSqliteConsumer(t *testing.T) {

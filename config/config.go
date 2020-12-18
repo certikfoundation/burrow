@@ -3,14 +3,14 @@ package config
 import (
 	"fmt"
 
-	"github.com/certikfoundation/burrow/config/source"
-	"github.com/certikfoundation/burrow/consensus/tendermint"
-	"github.com/certikfoundation/burrow/crypto"
-	"github.com/certikfoundation/burrow/execution"
-	"github.com/certikfoundation/burrow/genesis"
-	"github.com/certikfoundation/burrow/keys"
-	"github.com/certikfoundation/burrow/logging/logconfig"
-	"github.com/certikfoundation/burrow/rpc"
+	"github.com/hyperledger/burrow/config/source"
+	"github.com/hyperledger/burrow/consensus/tendermint"
+	"github.com/hyperledger/burrow/crypto"
+	"github.com/hyperledger/burrow/execution"
+	"github.com/hyperledger/burrow/genesis"
+	"github.com/hyperledger/burrow/keys"
+	"github.com/hyperledger/burrow/logging/logconfig"
+	"github.com/hyperledger/burrow/rpc"
 	tmConfig "github.com/tendermint/tendermint/config"
 )
 

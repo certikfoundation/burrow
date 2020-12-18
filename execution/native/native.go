@@ -1,9 +1,9 @@
 package native
 
 import (
-	"github.com/certikfoundation/burrow/acm"
-	"github.com/certikfoundation/burrow/crypto"
-	"github.com/certikfoundation/burrow/execution/engine"
+	"github.com/hyperledger/burrow/acm"
+	"github.com/hyperledger/burrow/crypto"
+	"github.com/hyperledger/burrow/execution/engine"
 )
 
 type Native interface {

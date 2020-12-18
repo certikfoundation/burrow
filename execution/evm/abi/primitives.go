@@ -8,7 +8,7 @@ import (
 	"strings"
 	"unsafe" // just for Sizeof
 
-	"github.com/certikfoundation/burrow/crypto"
+	"github.com/hyperledger/burrow/crypto"
 )
 
 // EVM Solidity calls and return values are packed into

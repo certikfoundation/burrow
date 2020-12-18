@@ -6,10 +6,10 @@ import (
 
 	hex "github.com/tmthrgd/go-hex"
 
-	"github.com/certikfoundation/burrow/deploy/def"
-	"github.com/certikfoundation/burrow/deploy/util"
-	"github.com/certikfoundation/burrow/execution/evm/abi"
-	"github.com/certikfoundation/burrow/logging"
+	"github.com/hyperledger/burrow/deploy/def"
+	"github.com/hyperledger/burrow/deploy/util"
+	"github.com/hyperledger/burrow/execution/evm/abi"
+	"github.com/hyperledger/burrow/logging"
 )
 
 func QueryContractJob(query *def.QueryContract, do *def.DeployArgs, script *def.Playbook, client *def.Client, logger *logging.Logger) (string, []*abi.Variable, error) {

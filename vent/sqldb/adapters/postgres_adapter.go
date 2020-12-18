@@ -6,8 +6,8 @@ import (
 
 	"github.com/lib/pq"
 
-	"github.com/certikfoundation/burrow/logging"
-	"github.com/certikfoundation/burrow/vent/types"
+	"github.com/hyperledger/burrow/logging"
+	"github.com/hyperledger/burrow/vent/types"
 	"github.com/jmoiron/sqlx"
 	"github.com/prometheus/common/log"
 )

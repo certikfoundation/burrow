@@ -1,5 +1,5 @@
 package exec
 
-import "github.com/certikfoundation/burrow/txs"
+import "github.com/hyperledger/burrow/txs"
 
 var cdc = txs.NewProtobufCodec()

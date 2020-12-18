@@ -11,10 +11,10 @@ import (
 
 	"unicode"
 
-	"github.com/certikfoundation/burrow/deploy/def"
-	"github.com/certikfoundation/burrow/deploy/def/rule"
-	"github.com/certikfoundation/burrow/execution/evm/abi"
-	"github.com/certikfoundation/burrow/logging"
+	"github.com/hyperledger/burrow/deploy/def"
+	"github.com/hyperledger/burrow/deploy/def/rule"
+	"github.com/hyperledger/burrow/execution/evm/abi"
+	"github.com/hyperledger/burrow/logging"
 )
 
 func Variables(value interface{}) []*abi.Variable {

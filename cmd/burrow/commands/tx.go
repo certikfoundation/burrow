@@ -7,11 +7,11 @@ import (
 	"os"
 	"time"
 
-	"github.com/certikfoundation/burrow/config/source"
-	"github.com/certikfoundation/burrow/deploy/def"
-	"github.com/certikfoundation/burrow/deploy/jobs"
-	"github.com/certikfoundation/burrow/logging"
-	"github.com/certikfoundation/burrow/txs/payload"
+	"github.com/hyperledger/burrow/config/source"
+	"github.com/hyperledger/burrow/deploy/def"
+	"github.com/hyperledger/burrow/deploy/jobs"
+	"github.com/hyperledger/burrow/logging"
+	"github.com/hyperledger/burrow/txs/payload"
 	cli "github.com/jawher/mow.cli"
 )
 

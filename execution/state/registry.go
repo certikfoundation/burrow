@@ -3,10 +3,10 @@ package state
 import (
 	"fmt"
 
-	"github.com/certikfoundation/burrow/crypto"
-	"github.com/certikfoundation/burrow/encoding"
-	"github.com/certikfoundation/burrow/execution/registry"
-	"github.com/certikfoundation/burrow/storage"
+	"github.com/hyperledger/burrow/crypto"
+	"github.com/hyperledger/burrow/encoding"
+	"github.com/hyperledger/burrow/execution/registry"
+	"github.com/hyperledger/burrow/storage"
 )
 
 var _ registry.IterableReader = &State{}

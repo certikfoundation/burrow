@@ -64,7 +64,7 @@ grpc:
     type: ClusterIP
 image:
   pullPolicy: IfNotPresent
-  repository: certikfoundation/burrow
+  repository: hyperledger/burrow
   # To be set by helm package
   tag: null
 info:

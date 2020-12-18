@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/certikfoundation/burrow/crypto"
+	"github.com/hyperledger/burrow/crypto"
 )
 
 //---------------------------------------------------------------------------------------------------

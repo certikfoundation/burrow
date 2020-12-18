@@ -10,7 +10,7 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/certikfoundation/burrow/txs/payload"
+	"github.com/hyperledger/burrow/txs/payload"
 )
 
 // Cache helps prevent unnecessary IAVLTree updates and garbage generation.

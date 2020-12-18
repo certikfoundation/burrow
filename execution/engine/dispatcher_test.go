@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/certikfoundation/burrow/acm"
+	"github.com/hyperledger/burrow/acm"
 	"github.com/stretchr/testify/require"
 )
 

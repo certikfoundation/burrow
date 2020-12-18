@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/certikfoundation/burrow/encoding"
-	"github.com/certikfoundation/burrow/execution/exec"
-	"github.com/certikfoundation/burrow/storage"
+	"github.com/hyperledger/burrow/encoding"
+	"github.com/hyperledger/burrow/execution/exec"
+	"github.com/hyperledger/burrow/storage"
 )
 
 func (ws *writeState) AddBlock(be *exec.BlockExecution) error {

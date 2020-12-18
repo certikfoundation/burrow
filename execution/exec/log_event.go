@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"strings"
 
-	. "github.com/certikfoundation/burrow/binary"
-	"github.com/certikfoundation/burrow/event"
-	"github.com/certikfoundation/burrow/execution/evm/abi"
+	. "github.com/hyperledger/burrow/binary"
+	"github.com/hyperledger/burrow/event"
+	"github.com/hyperledger/burrow/execution/evm/abi"
 	"github.com/tmthrgd/go-hex"
 )
 

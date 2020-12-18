@@ -3,12 +3,12 @@ package native
 import (
 	"bytes"
 
-	"github.com/certikfoundation/burrow/acm"
-	"github.com/certikfoundation/burrow/acm/acmstate"
-	"github.com/certikfoundation/burrow/crypto"
-	"github.com/certikfoundation/burrow/deploy/compile"
-	"github.com/certikfoundation/burrow/execution/errors"
-	"github.com/certikfoundation/burrow/txs/payload"
+	"github.com/hyperledger/burrow/acm"
+	"github.com/hyperledger/burrow/acm/acmstate"
+	"github.com/hyperledger/burrow/crypto"
+	"github.com/hyperledger/burrow/deploy/compile"
+	"github.com/hyperledger/burrow/execution/errors"
+	"github.com/hyperledger/burrow/txs/payload"
 	"golang.org/x/crypto/sha3"
 )
 
