@@ -4,9 +4,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/burrow/crypto"
-	"github.com/hyperledger/burrow/genesis"
-	"github.com/hyperledger/burrow/logging"
+	"github.com/certikfoundation/burrow/crypto"
+	"github.com/certikfoundation/burrow/genesis"
+	"github.com/certikfoundation/burrow/logging"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"

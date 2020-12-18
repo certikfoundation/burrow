@@ -15,10 +15,10 @@ import (
 	"time"
 
 	"github.com/gorilla/websocket"
-	"github.com/hyperledger/burrow/consensus/tendermint"
-	"github.com/hyperledger/burrow/logging"
-	"github.com/hyperledger/burrow/logging/structure"
-	"github.com/hyperledger/burrow/rpc/lib/types"
+	"github.com/certikfoundation/burrow/consensus/tendermint"
+	"github.com/certikfoundation/burrow/logging"
+	"github.com/certikfoundation/burrow/logging/structure"
+	"github.com/certikfoundation/burrow/rpc/lib/types"
 	"github.com/pkg/errors"
 	"github.com/tendermint/tendermint/libs/service"
 )

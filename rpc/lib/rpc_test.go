@@ -13,12 +13,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/burrow/logging/logconfig"
-	"github.com/hyperledger/burrow/process"
+	"github.com/certikfoundation/burrow/logging/logconfig"
+	"github.com/certikfoundation/burrow/process"
 
-	"github.com/hyperledger/burrow/rpc/lib/client"
-	"github.com/hyperledger/burrow/rpc/lib/server"
-	"github.com/hyperledger/burrow/rpc/lib/types"
+	"github.com/certikfoundation/burrow/rpc/lib/client"
+	"github.com/certikfoundation/burrow/rpc/lib/server"
+	"github.com/certikfoundation/burrow/rpc/lib/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	cmn "github.com/tendermint/tendermint/libs/bytes"

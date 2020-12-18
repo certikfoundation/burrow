@@ -3,7 +3,7 @@ package bc
 import (
 	"fmt"
 
-	"github.com/hyperledger/burrow/execution/evm/asm"
+	"github.com/certikfoundation/burrow/execution/evm/asm"
 )
 
 type ByteSlicable interface {

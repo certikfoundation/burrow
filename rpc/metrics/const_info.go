@@ -1,8 +1,8 @@
 package metrics
 
 import (
-	"github.com/hyperledger/burrow/acm/acmstate"
-	"github.com/hyperledger/burrow/rpc"
+	"github.com/certikfoundation/burrow/acm/acmstate"
+	"github.com/certikfoundation/burrow/rpc"
 	core_types "github.com/tendermint/tendermint/rpc/core/types"
 	"github.com/tendermint/tendermint/types"
 )

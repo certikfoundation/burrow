@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/hyperledger/burrow/crypto"
+	"github.com/certikfoundation/burrow/crypto"
 )
 
 type NodeStats struct {

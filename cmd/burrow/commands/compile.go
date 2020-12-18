@@ -5,8 +5,8 @@ import (
 	"os"
 	"path"
 
-	"github.com/hyperledger/burrow/deploy/compile"
-	"github.com/hyperledger/burrow/logging"
+	"github.com/certikfoundation/burrow/deploy/compile"
+	"github.com/certikfoundation/burrow/logging"
 	cli "github.com/jawher/mow.cli"
 )
 

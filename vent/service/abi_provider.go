@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/hyperledger/burrow/crypto"
-	"github.com/hyperledger/burrow/execution/evm/abi"
-	"github.com/hyperledger/burrow/logging"
-	"github.com/hyperledger/burrow/rpc/rpcquery"
+	"github.com/certikfoundation/burrow/crypto"
+	"github.com/certikfoundation/burrow/execution/evm/abi"
+	"github.com/certikfoundation/burrow/logging"
+	"github.com/certikfoundation/burrow/rpc/rpcquery"
 )
 
 type EventSpecGetter func(abi.EventID, crypto.Address) (*abi.EventSpec, error)

@@ -11,14 +11,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/burrow/integration"
-	"github.com/hyperledger/burrow/integration/rpctest"
-	"github.com/hyperledger/burrow/logging"
-	"github.com/hyperledger/burrow/vent/config"
-	"github.com/hyperledger/burrow/vent/service"
-	"github.com/hyperledger/burrow/vent/sqlsol"
-	"github.com/hyperledger/burrow/vent/test"
-	"github.com/hyperledger/burrow/vent/types"
+	"github.com/certikfoundation/burrow/integration"
+	"github.com/certikfoundation/burrow/integration/rpctest"
+	"github.com/certikfoundation/burrow/logging"
+	"github.com/certikfoundation/burrow/vent/config"
+	"github.com/certikfoundation/burrow/vent/service"
+	"github.com/certikfoundation/burrow/vent/sqlsol"
+	"github.com/certikfoundation/burrow/vent/test"
+	"github.com/certikfoundation/burrow/vent/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -36,8 +36,8 @@ func TestServer(t *testing.T) {
 			_, closeDB := test.NewTestDB(t, cfg)
 			defer closeDB()
 
-			cfg.SpecFileOrDirs = []string{os.Getenv("GOPATH") + "/src/github.com/hyperledger/burrow/vent/test/sqlsol_view.json"}
-			cfg.AbiFileOrDirs = []string{os.Getenv("GOPATH") + "/src/github.com/hyperledger/burrow/vent/test/EventsTest.abi"}
+			cfg.SpecFileOrDirs = []string{os.Getenv("GOPATH") + "/src/github.com/certikfoundation/burrow/vent/test/sqlsol_view.json"}
+			cfg.AbiFileOrDirs = []string{os.Getenv("GOPATH") + "/src/github.com/certikfoundation/burrow/vent/test/EventsTest.abi"}
 			cfg.GRPCAddr = kern.GRPCListenAddress().String()
 
 			log := logging.NewNoopLogger()

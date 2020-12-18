@@ -3,7 +3,7 @@ package def
 import (
 	"testing"
 
-	"github.com/hyperledger/burrow/crypto"
+	"github.com/certikfoundation/burrow/crypto"
 	"github.com/stretchr/testify/require"
 )
 

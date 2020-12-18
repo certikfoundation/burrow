@@ -6,10 +6,10 @@ package commands
 import (
 	"fmt"
 
-	"github.com/hyperledger/burrow/execution/native"
+	"github.com/certikfoundation/burrow/execution/native"
 	cli "github.com/jawher/mow.cli"
 
-	"github.com/hyperledger/burrow/util/natives/templates"
+	"github.com/certikfoundation/burrow/util/natives/templates"
 )
 
 // Dump native contracts

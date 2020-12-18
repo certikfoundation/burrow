@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/hyperledger/burrow/config"
-	"github.com/hyperledger/burrow/crypto"
+	"github.com/certikfoundation/burrow/config"
+	"github.com/certikfoundation/burrow/crypto"
 	cli "github.com/jawher/mow.cli"
 )
 

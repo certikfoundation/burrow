@@ -9,7 +9,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/hyperledger/burrow/execution/native"
+	"github.com/certikfoundation/burrow/execution/native"
 	"github.com/iancoleman/strcase"
 )
 

@@ -3,7 +3,7 @@ package validator
 import (
 	"math/big"
 
-	"github.com/hyperledger/burrow/crypto"
+	"github.com/certikfoundation/burrow/crypto"
 )
 
 type Writer interface {

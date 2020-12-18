@@ -1,8 +1,8 @@
 package sqldb
 
 import (
-	"github.com/hyperledger/burrow/txs"
-	"github.com/hyperledger/burrow/vent/types"
+	"github.com/certikfoundation/burrow/txs"
+	"github.com/certikfoundation/burrow/vent/types"
 )
 
 // getSysTablesDefinition returns log, chain info & dictionary structures

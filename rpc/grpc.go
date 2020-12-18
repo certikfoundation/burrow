@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"runtime/debug"
 
-	"github.com/hyperledger/burrow/logging"
-	"github.com/hyperledger/burrow/logging/structure"
+	"github.com/certikfoundation/burrow/logging"
+	"github.com/certikfoundation/burrow/logging/structure"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 )

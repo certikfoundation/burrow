@@ -13,8 +13,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hyperledger/burrow/bcm"
-	"github.com/hyperledger/burrow/execution/state"
+	"github.com/certikfoundation/burrow/bcm"
+	"github.com/certikfoundation/burrow/execution/state"
 	"github.com/stretchr/testify/require"
 	"github.com/syndtr/goleveldb/leveldb/opt"
 	dbm "github.com/tendermint/tm-db"

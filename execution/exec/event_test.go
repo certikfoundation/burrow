@@ -3,10 +3,10 @@ package exec
 import (
 	"testing"
 
-	"github.com/hyperledger/burrow/binary"
-	"github.com/hyperledger/burrow/crypto"
-	"github.com/hyperledger/burrow/event"
-	"github.com/hyperledger/burrow/event/query"
+	"github.com/certikfoundation/burrow/binary"
+	"github.com/certikfoundation/burrow/crypto"
+	"github.com/certikfoundation/burrow/event"
+	"github.com/certikfoundation/burrow/event/query"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"github.com/tmthrgd/go-hex"

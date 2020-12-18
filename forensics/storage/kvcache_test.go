@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/hyperledger/burrow/storage"
+	"github.com/certikfoundation/burrow/storage"
 
 	"github.com/stretchr/testify/assert"
 )

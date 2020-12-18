@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/hyperledger/burrow/logging"
+	"github.com/certikfoundation/burrow/logging"
 	"github.com/stretchr/testify/assert"
 	hex "github.com/tmthrgd/go-hex"
 )

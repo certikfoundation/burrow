@@ -7,11 +7,11 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/hyperledger/burrow/execution/evm/abi"
-	"github.com/hyperledger/burrow/execution/exec"
-	"github.com/hyperledger/burrow/logging"
-	"github.com/hyperledger/burrow/vent/sqlsol"
-	"github.com/hyperledger/burrow/vent/types"
+	"github.com/certikfoundation/burrow/execution/evm/abi"
+	"github.com/certikfoundation/burrow/execution/exec"
+	"github.com/certikfoundation/burrow/logging"
+	"github.com/certikfoundation/burrow/vent/sqlsol"
+	"github.com/certikfoundation/burrow/vent/types"
 	"github.com/pkg/errors"
 	"github.com/tmthrgd/go-hex"
 )

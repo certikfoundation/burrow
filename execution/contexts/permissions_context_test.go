@@ -3,10 +3,10 @@ package contexts
 import (
 	"testing"
 
-	"github.com/hyperledger/burrow/acm/acmstate"
-	"github.com/hyperledger/burrow/logging"
-	"github.com/hyperledger/burrow/permission"
-	"github.com/hyperledger/burrow/txs/payload"
+	"github.com/certikfoundation/burrow/acm/acmstate"
+	"github.com/certikfoundation/burrow/logging"
+	"github.com/certikfoundation/burrow/permission"
+	"github.com/certikfoundation/burrow/txs/payload"
 	"github.com/stretchr/testify/require"
 )
 

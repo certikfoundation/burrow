@@ -1,10 +1,10 @@
 package rpcdump
 
 import (
-	"github.com/hyperledger/burrow/bcm"
-	"github.com/hyperledger/burrow/dump"
-	"github.com/hyperledger/burrow/execution/state"
-	"github.com/hyperledger/burrow/logging"
+	"github.com/certikfoundation/burrow/bcm"
+	"github.com/certikfoundation/burrow/dump"
+	"github.com/certikfoundation/burrow/execution/state"
+	"github.com/certikfoundation/burrow/logging"
 )
 
 type dumpServer struct {

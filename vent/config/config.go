@@ -3,8 +3,8 @@ package config
 import (
 	"time"
 
-	"github.com/hyperledger/burrow/vent/sqlsol"
-	"github.com/hyperledger/burrow/vent/types"
+	"github.com/certikfoundation/burrow/vent/sqlsol"
+	"github.com/certikfoundation/burrow/vent/types"
 )
 
 const DefaultPostgresDBURL = "postgres://postgres@localhost:5432/postgres?sslmode=disable"

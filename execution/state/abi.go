@@ -1,7 +1,7 @@
 package state
 
 import (
-	"github.com/hyperledger/burrow/acm/acmstate"
+	"github.com/certikfoundation/burrow/acm/acmstate"
 )
 
 func (s *ReadState) GetMetadata(metahash acmstate.MetadataHash) (string, error) {

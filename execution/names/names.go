@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/hyperledger/burrow/event/query"
+	"github.com/certikfoundation/burrow/event/query"
 )
 
 var MinNameRegistrationPeriod uint64 = 5

@@ -3,8 +3,8 @@ package engine
 import (
 	"time"
 
-	"github.com/hyperledger/burrow/crypto"
-	"github.com/hyperledger/burrow/execution/exec"
+	"github.com/certikfoundation/burrow/crypto"
+	"github.com/certikfoundation/burrow/execution/exec"
 )
 
 type Blockchain interface {

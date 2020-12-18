@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/hyperledger/burrow/project"
+	"github.com/certikfoundation/burrow/project"
 )
 
 func main() {

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/hyperledger/burrow/event"
-	"github.com/hyperledger/burrow/event/query"
+	"github.com/certikfoundation/burrow/event"
+	"github.com/certikfoundation/burrow/event/query"
 )
 
 type EventStream interface {

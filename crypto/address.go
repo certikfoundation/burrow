@@ -7,7 +7,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/hyperledger/burrow/binary"
+	"github.com/certikfoundation/burrow/binary"
 
 	hex "github.com/tmthrgd/go-hex"
 )

@@ -12,14 +12,14 @@ import (
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	golang_proto "github.com/golang/protobuf/proto"
-	acm "github.com/hyperledger/burrow/acm"
-	validator "github.com/hyperledger/burrow/acm/validator"
-	github_com_hyperledger_burrow_binary "github.com/hyperledger/burrow/binary"
-	github_com_hyperledger_burrow_crypto "github.com/hyperledger/burrow/crypto"
-	names "github.com/hyperledger/burrow/execution/names"
-	registry "github.com/hyperledger/burrow/execution/registry"
-	rpc "github.com/hyperledger/burrow/rpc"
-	payload "github.com/hyperledger/burrow/txs/payload"
+	acm "github.com/certikfoundation/burrow/acm"
+	validator "github.com/certikfoundation/burrow/acm/validator"
+	github_com_hyperledger_burrow_binary "github.com/certikfoundation/burrow/binary"
+	github_com_hyperledger_burrow_crypto "github.com/certikfoundation/burrow/crypto"
+	names "github.com/certikfoundation/burrow/execution/names"
+	registry "github.com/certikfoundation/burrow/execution/registry"
+	rpc "github.com/certikfoundation/burrow/rpc"
+	payload "github.com/certikfoundation/burrow/txs/payload"
 	types "github.com/tendermint/tendermint/abci/types"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
@@ -89,7 +89,7 @@ func (*StatusParam) XXX_MessageName() string {
 }
 
 type GetAccountParam struct {
-	Address              github_com_hyperledger_burrow_crypto.Address `protobuf:"bytes,1,opt,name=Address,proto3,customtype=github.com/hyperledger/burrow/crypto.Address" json:"Address"`
+	Address              github_com_hyperledger_burrow_crypto.Address `protobuf:"bytes,1,opt,name=Address,proto3,customtype=github.com/certikfoundation/burrow/crypto.Address" json:"Address"`
 	XXX_NoUnkeyedLiteral struct{}                                     `json:"-"`
 	XXX_unrecognized     []byte                                       `json:"-"`
 	XXX_sizecache        int32                                        `json:"-"`
@@ -124,8 +124,8 @@ func (*GetAccountParam) XXX_MessageName() string {
 }
 
 type GetMetadataParam struct {
-	Address              *github_com_hyperledger_burrow_crypto.Address  `protobuf:"bytes,1,opt,name=Address,proto3,customtype=github.com/hyperledger/burrow/crypto.Address" json:"Address,omitempty"`
-	MetadataHash         *github_com_hyperledger_burrow_binary.HexBytes `protobuf:"bytes,2,opt,name=MetadataHash,proto3,customtype=github.com/hyperledger/burrow/binary.HexBytes" json:"MetadataHash,omitempty"`
+	Address              *github_com_hyperledger_burrow_crypto.Address  `protobuf:"bytes,1,opt,name=Address,proto3,customtype=github.com/certikfoundation/burrow/crypto.Address" json:"Address,omitempty"`
+	MetadataHash         *github_com_hyperledger_burrow_binary.HexBytes `protobuf:"bytes,2,opt,name=MetadataHash,proto3,customtype=github.com/certikfoundation/burrow/binary.HexBytes" json:"MetadataHash,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                       `json:"-"`
 	XXX_unrecognized     []byte                                         `json:"-"`
 	XXX_sizecache        int32                                          `json:"-"`
@@ -202,8 +202,8 @@ func (*MetadataResult) XXX_MessageName() string {
 }
 
 type GetStorageParam struct {
-	Address              github_com_hyperledger_burrow_crypto.Address `protobuf:"bytes,1,opt,name=Address,proto3,customtype=github.com/hyperledger/burrow/crypto.Address" json:"Address"`
-	Key                  github_com_hyperledger_burrow_binary.Word256 `protobuf:"bytes,2,opt,name=Key,proto3,customtype=github.com/hyperledger/burrow/binary.Word256" json:"Key"`
+	Address              github_com_hyperledger_burrow_crypto.Address `protobuf:"bytes,1,opt,name=Address,proto3,customtype=github.com/certikfoundation/burrow/crypto.Address" json:"Address"`
+	Key                  github_com_hyperledger_burrow_binary.Word256 `protobuf:"bytes,2,opt,name=Key,proto3,customtype=github.com/certikfoundation/burrow/binary.Word256" json:"Key"`
 	XXX_NoUnkeyedLiteral struct{}                                     `json:"-"`
 	XXX_unrecognized     []byte                                       `json:"-"`
 	XXX_sizecache        int32                                        `json:"-"`
@@ -238,7 +238,7 @@ func (*GetStorageParam) XXX_MessageName() string {
 }
 
 type StorageValue struct {
-	Value                github_com_hyperledger_burrow_binary.HexBytes `protobuf:"bytes,1,opt,name=Value,proto3,customtype=github.com/hyperledger/burrow/binary.HexBytes" json:"Value"`
+	Value                github_com_hyperledger_burrow_binary.HexBytes `protobuf:"bytes,1,opt,name=Value,proto3,customtype=github.com/certikfoundation/burrow/binary.HexBytes" json:"Value"`
 	XXX_NoUnkeyedLiteral struct{}                                      `json:"-"`
 	XXX_unrecognized     []byte                                        `json:"-"`
 	XXX_sizecache        int32                                         `json:"-"`
@@ -552,7 +552,7 @@ func (*NetworkRegistry) XXX_MessageName() string {
 }
 
 type RegisteredValidator struct {
-	Address              github_com_hyperledger_burrow_crypto.Address `protobuf:"bytes,1,opt,name=Address,proto3,customtype=github.com/hyperledger/burrow/crypto.Address" json:"Address"`
+	Address              github_com_hyperledger_burrow_crypto.Address `protobuf:"bytes,1,opt,name=Address,proto3,customtype=github.com/certikfoundation/burrow/crypto.Address" json:"Address"`
 	Node                 *registry.NodeIdentity                       `protobuf:"bytes,2,opt,name=Node,proto3" json:"Node,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                     `json:"-"`
 	XXX_unrecognized     []byte                                       `json:"-"`

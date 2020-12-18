@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/hyperledger/burrow/consensus/tendermint/codes"
+	"github.com/certikfoundation/burrow/consensus/tendermint/codes"
 	abciTypes "github.com/tendermint/tendermint/abci/types"
 )
 

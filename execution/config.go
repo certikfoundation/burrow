@@ -3,7 +3,7 @@ package execution
 import (
 	"fmt"
 
-	"github.com/hyperledger/burrow/execution/evm"
+	"github.com/certikfoundation/burrow/execution/evm"
 )
 
 type VMOption string

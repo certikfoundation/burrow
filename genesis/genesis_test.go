@@ -5,9 +5,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/burrow/acm"
-	"github.com/hyperledger/burrow/acm/validator"
-	"github.com/hyperledger/burrow/permission"
+	"github.com/certikfoundation/burrow/acm"
+	"github.com/certikfoundation/burrow/acm/validator"
+	"github.com/certikfoundation/burrow/permission"
 	"github.com/stretchr/testify/assert"
 )
 

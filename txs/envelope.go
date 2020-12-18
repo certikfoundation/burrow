@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/hyperledger/burrow/acm"
-	"github.com/hyperledger/burrow/acm/acmstate"
-	"github.com/hyperledger/burrow/crypto"
-	"github.com/hyperledger/burrow/event/query"
-	"github.com/hyperledger/burrow/txs/payload"
+	"github.com/certikfoundation/burrow/acm"
+	"github.com/certikfoundation/burrow/acm/acmstate"
+	"github.com/certikfoundation/burrow/crypto"
+	"github.com/certikfoundation/burrow/event/query"
+	"github.com/certikfoundation/burrow/txs/payload"
 )
 
 type Codec interface {

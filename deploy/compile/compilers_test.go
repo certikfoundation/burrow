@@ -11,7 +11,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/hyperledger/burrow/logging"
+	"github.com/certikfoundation/burrow/logging"
 	"github.com/stretchr/testify/assert"
 )
 

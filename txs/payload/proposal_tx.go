@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/hyperledger/burrow/encoding"
+	"github.com/certikfoundation/burrow/encoding"
 )
 
 func NewProposalTx(propsal *Proposal) *ProposalTx {

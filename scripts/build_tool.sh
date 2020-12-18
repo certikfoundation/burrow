@@ -25,7 +25,7 @@ script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Grab date, commit, version
 . "$script_dir/local_version.sh" > /dev/null
 
-DOCKER_REPO=${DOCKER_REPO:-"hyperledger/burrow"}
+DOCKER_REPO=${DOCKER_REPO:-"certikfoundation/burrow"}
 REPO=${REPO:-"$PWD"}
 
 function log() {

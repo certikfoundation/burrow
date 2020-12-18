@@ -6,7 +6,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/hyperledger/burrow/encoding"
+	"github.com/certikfoundation/burrow/encoding"
 )
 
 type Source interface {

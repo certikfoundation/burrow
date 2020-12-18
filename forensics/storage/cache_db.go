@@ -1,7 +1,7 @@
 package storage
 
 import (
-	"github.com/hyperledger/burrow/storage"
+	"github.com/certikfoundation/burrow/storage"
 	dbm "github.com/tendermint/tm-db"
 )
 

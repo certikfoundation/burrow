@@ -11,8 +11,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/hyperledger/burrow/execution/exec"
-	"github.com/hyperledger/burrow/rpc/rpcevents"
+	"github.com/certikfoundation/burrow/execution/exec"
+	"github.com/certikfoundation/burrow/rpc/rpcevents"
 	"google.golang.org/grpc"
 )
 
