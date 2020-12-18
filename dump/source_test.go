@@ -3,9 +3,9 @@ package dump
 import (
 	"testing"
 
-	"github.com/hyperledger/burrow/bcm"
-	"github.com/hyperledger/burrow/execution/state"
-	"github.com/hyperledger/burrow/genesis"
+	"github.com/certikfoundation/burrow/bcm"
+	"github.com/certikfoundation/burrow/execution/state"
+	"github.com/certikfoundation/burrow/genesis"
 	"github.com/stretchr/testify/require"
 )
 

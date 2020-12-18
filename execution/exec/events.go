@@ -5,9 +5,9 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/hyperledger/burrow/event"
-	"github.com/hyperledger/burrow/event/query"
-	"github.com/hyperledger/burrow/execution/errors"
+	"github.com/certikfoundation/burrow/event"
+	"github.com/certikfoundation/burrow/event/query"
+	"github.com/certikfoundation/burrow/execution/errors"
 )
 
 type Events []*Event

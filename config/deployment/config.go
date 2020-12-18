@@ -8,8 +8,8 @@ import (
 	"reflect"
 	"text/template"
 
-	"github.com/hyperledger/burrow/crypto"
-	"github.com/hyperledger/burrow/genesis"
+	"github.com/certikfoundation/burrow/crypto"
+	"github.com/certikfoundation/burrow/genesis"
 	"github.com/pkg/errors"
 	hex "github.com/tmthrgd/go-hex"
 	yaml "gopkg.in/yaml.v2"

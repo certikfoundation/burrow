@@ -3,7 +3,7 @@ package evm
 import (
 	"testing"
 
-	"github.com/hyperledger/burrow/execution/errors"
+	"github.com/certikfoundation/burrow/execution/errors"
 	"github.com/stretchr/testify/require"
 
 	"math/big"

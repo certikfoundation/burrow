@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/hyperledger/burrow/crypto"
+	"github.com/certikfoundation/burrow/crypto"
 )
 
 // Cache helps prevent unnecessary IAVLTree updates and garbage generation.

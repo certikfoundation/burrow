@@ -8,19 +8,19 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/hyperledger/burrow/acm"
-	"github.com/hyperledger/burrow/acm/acmstate"
-	. "github.com/hyperledger/burrow/binary"
-	"github.com/hyperledger/burrow/crypto"
+	"github.com/certikfoundation/burrow/acm"
+	"github.com/certikfoundation/burrow/acm/acmstate"
+	. "github.com/certikfoundation/burrow/binary"
+	"github.com/certikfoundation/burrow/crypto"
 
-	"github.com/hyperledger/burrow/execution/engine"
-	"github.com/hyperledger/burrow/execution/errors"
-	"github.com/hyperledger/burrow/execution/evm/abi"
-	. "github.com/hyperledger/burrow/execution/evm/asm"
-	"github.com/hyperledger/burrow/execution/exec"
-	"github.com/hyperledger/burrow/execution/native"
-	"github.com/hyperledger/burrow/permission"
-	"github.com/hyperledger/burrow/txs"
+	"github.com/certikfoundation/burrow/execution/engine"
+	"github.com/certikfoundation/burrow/execution/errors"
+	"github.com/certikfoundation/burrow/execution/evm/abi"
+	. "github.com/certikfoundation/burrow/execution/evm/asm"
+	"github.com/certikfoundation/burrow/execution/exec"
+	"github.com/certikfoundation/burrow/execution/native"
+	"github.com/certikfoundation/burrow/permission"
+	"github.com/certikfoundation/burrow/txs"
 )
 
 type Contract struct {

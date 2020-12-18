@@ -3,13 +3,13 @@ package state
 import (
 	"math/big"
 
-	"github.com/hyperledger/burrow/encoding"
-	"github.com/hyperledger/burrow/genesis"
+	"github.com/certikfoundation/burrow/encoding"
+	"github.com/certikfoundation/burrow/genesis"
 
-	"github.com/hyperledger/burrow/acm/validator"
-	"github.com/hyperledger/burrow/storage"
+	"github.com/certikfoundation/burrow/acm/validator"
+	"github.com/certikfoundation/burrow/storage"
 
-	"github.com/hyperledger/burrow/crypto"
+	"github.com/certikfoundation/burrow/crypto"
 )
 
 // Initialises the validator Ring from the validator storage in forest

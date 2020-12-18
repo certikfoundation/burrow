@@ -1,7 +1,7 @@
 package tendermint
 
 import (
-	"github.com/hyperledger/burrow/crypto"
+	"github.com/certikfoundation/burrow/crypto"
 	tmCrypto "github.com/tendermint/tendermint/crypto"
 	tmTypes "github.com/tendermint/tendermint/types"
 )

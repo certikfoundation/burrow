@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/burrow/crypto"
+	"github.com/certikfoundation/burrow/crypto"
 
-	"github.com/hyperledger/burrow/integration"
-	"github.com/hyperledger/burrow/keys"
+	"github.com/certikfoundation/burrow/integration"
+	"github.com/certikfoundation/burrow/keys"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc"

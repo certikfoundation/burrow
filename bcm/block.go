@@ -1,7 +1,7 @@
 package bcm
 
 import (
-	"github.com/hyperledger/burrow/txs"
+	"github.com/certikfoundation/burrow/txs"
 	"github.com/tendermint/tendermint/types"
 )
 

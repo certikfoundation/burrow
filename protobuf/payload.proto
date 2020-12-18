@@ -1,6 +1,6 @@
 syntax = 'proto3';
 
-option go_package = "github.com/hyperledger/burrow/txs/payload";
+option go_package = "github.com/certikfoundation/burrow/txs/payload";
 
 import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 
@@ -42,7 +42,7 @@ message Any {
 message TxInput {
     option (gogoproto.goproto_stringer) = false;
     // The address from which this input flows
-    bytes Address = 1 [(gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address", (gogoproto.nullable) = false];
+    bytes Address = 1 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/crypto.Address", (gogoproto.nullable) = false];
     // The amount of native token to transfer from the input address
     uint64 Amount = 2;
     // The sequence number that this transaction will induce (i.e. one greater than the input account's current sequence)
@@ -53,7 +53,7 @@ message TxInput {
 message TxOutput {
     option (gogoproto.goproto_stringer) = false;
     // The address to which this output flows
-    bytes Address = 1 [(gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address", (gogoproto.nullable) = false];
+    bytes Address = 1 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/crypto.Address", (gogoproto.nullable) = false];
     // The amount of native token to transfer to the output address
     uint64 Amount = 2;
 }
@@ -64,15 +64,15 @@ message CallTx {
     // The caller's input
     TxInput Input = 1;
     // The contract address to call or nil if we are creating a contract
-    bytes Address = 2 [(gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];
+    bytes Address = 2 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/crypto.Address"];
     // The upper bound on the amount of gas (and therefore EVM execution steps) this CallTx may generate
     uint64 GasLimit = 3;
     // Fee to offer validators for processing transaction
     uint64 Fee = 4;
     // EVM bytecode
-    bytes Data = 5 [(gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes", (gogoproto.nullable) = false];
+    bytes Data = 5 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/binary.HexBytes", (gogoproto.nullable) = false];
     // WASM bytecode
-    bytes WASM = 6 [(gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes", (gogoproto.nullable) = false, (gogoproto.jsontag)="tags,omitempty"];
+    bytes WASM = 6 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/binary.HexBytes", (gogoproto.nullable) = false, (gogoproto.jsontag)="tags,omitempty"];
     // Set of contracts this code will deploy
     repeated ContractMeta ContractMeta = 7;
     // The upper bound on the price per unit of gas
@@ -80,7 +80,7 @@ message CallTx {
 }
 
 message ContractMeta {
-    bytes CodeHash = 1 [(gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes", (gogoproto.nullable) = false];
+    bytes CodeHash = 1 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/binary.HexBytes", (gogoproto.nullable) = false];
     string Meta = 2;
 }
 
@@ -147,7 +147,7 @@ message ProposalTx {
 
     TxInput Input = 1;
     int64 VotingWeight = 2;
-    bytes ProposalHash = 3 [(gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];
+    bytes ProposalHash = 3 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/binary.HexBytes"];
     Proposal Proposal = 4;
 }
 
@@ -173,7 +173,7 @@ message Vote {
     option (gogoproto.goproto_stringer) = false;
     option (gogoproto.goproto_getters) = false;
 
-    bytes Address = 1 [(gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address", (gogoproto.nullable) = false];
+    bytes Address = 1 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/crypto.Address", (gogoproto.nullable) = false];
     int64 VotingWeight = 2;
 }
 
@@ -188,7 +188,7 @@ message Proposal {
 
 message Ballot {
     Proposal Proposal = 1;
-    bytes FinalizingTx = 2 [(gogoproto.customtype) = "github.com/hyperledger/burrow/binary.HexBytes"];
+    bytes FinalizingTx = 2 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/binary.HexBytes"];
     enum ProposalState {
         // PROPOSED might be expired, if sequence number of any of the input accounts are out of date
         PROPOSED = 0;

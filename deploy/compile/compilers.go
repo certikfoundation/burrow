@@ -10,12 +10,12 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/hyperledger/burrow/acm/acmstate"
-	"github.com/hyperledger/burrow/crypto"
+	"github.com/certikfoundation/burrow/acm/acmstate"
+	"github.com/certikfoundation/burrow/crypto"
 	"golang.org/x/crypto/sha3"
 
-	"github.com/hyperledger/burrow/execution/evm/asm"
-	"github.com/hyperledger/burrow/logging"
+	"github.com/certikfoundation/burrow/execution/evm/asm"
+	"github.com/certikfoundation/burrow/logging"
 	hex "github.com/tmthrgd/go-hex"
 )
 

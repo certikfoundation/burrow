@@ -3,8 +3,8 @@ package payload
 import (
 	"fmt"
 
-	"github.com/hyperledger/burrow/crypto"
-	"github.com/hyperledger/burrow/execution/registry"
+	"github.com/certikfoundation/burrow/crypto"
+	"github.com/certikfoundation/burrow/execution/registry"
 )
 
 func NewIdentifyTx(address crypto.Address, node *registry.NodeIdentity) *IdentifyTx {

@@ -3,11 +3,11 @@ package spec
 import (
 	"testing"
 
-	"github.com/hyperledger/burrow/acm/balance"
-	"github.com/hyperledger/burrow/crypto"
-	"github.com/hyperledger/burrow/keys"
-	"github.com/hyperledger/burrow/logging"
-	"github.com/hyperledger/burrow/permission"
+	"github.com/certikfoundation/burrow/acm/balance"
+	"github.com/certikfoundation/burrow/crypto"
+	"github.com/certikfoundation/burrow/keys"
+	"github.com/certikfoundation/burrow/logging"
+	"github.com/certikfoundation/burrow/permission"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

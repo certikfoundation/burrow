@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/hyperledger/burrow/acm/acmstate"
-	"github.com/hyperledger/burrow/binary"
-	"github.com/hyperledger/burrow/execution/engine"
-	"github.com/hyperledger/burrow/execution/evm/abi"
+	"github.com/certikfoundation/burrow/acm/acmstate"
+	"github.com/certikfoundation/burrow/binary"
+	"github.com/certikfoundation/burrow/execution/engine"
+	"github.com/certikfoundation/burrow/execution/evm/abi"
 
-	"github.com/hyperledger/burrow/crypto"
+	"github.com/certikfoundation/burrow/crypto"
 	"github.com/stretchr/testify/require"
 )
 

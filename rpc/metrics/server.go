@@ -10,9 +10,9 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/hyperledger/burrow/logging"
-	"github.com/hyperledger/burrow/rpc"
-	"github.com/hyperledger/burrow/rpc/lib/server"
+	"github.com/certikfoundation/burrow/logging"
+	"github.com/certikfoundation/burrow/rpc"
+	"github.com/certikfoundation/burrow/rpc/lib/server"
 )
 
 func StartServer(service *rpc.Service, pattern string, listener net.Listener, blockSampleSize int,

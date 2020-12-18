@@ -6,16 +6,16 @@ import (
 	"runtime/debug"
 	"unicode"
 
-	"github.com/hyperledger/burrow/acm/acmstate"
-	"github.com/hyperledger/burrow/acm/validator"
-	"github.com/hyperledger/burrow/crypto"
-	"github.com/hyperledger/burrow/execution/errors"
-	"github.com/hyperledger/burrow/execution/exec"
-	"github.com/hyperledger/burrow/execution/proposal"
-	"github.com/hyperledger/burrow/logging"
-	"github.com/hyperledger/burrow/logging/structure"
-	"github.com/hyperledger/burrow/txs"
-	"github.com/hyperledger/burrow/txs/payload"
+	"github.com/certikfoundation/burrow/acm/acmstate"
+	"github.com/certikfoundation/burrow/acm/validator"
+	"github.com/certikfoundation/burrow/crypto"
+	"github.com/certikfoundation/burrow/execution/errors"
+	"github.com/certikfoundation/burrow/execution/exec"
+	"github.com/certikfoundation/burrow/execution/proposal"
+	"github.com/certikfoundation/burrow/logging"
+	"github.com/certikfoundation/burrow/logging/structure"
+	"github.com/certikfoundation/burrow/txs"
+	"github.com/certikfoundation/burrow/txs/payload"
 )
 
 type ProposalContext struct {

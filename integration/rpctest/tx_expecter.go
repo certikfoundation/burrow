@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/burrow/binary"
-	"github.com/hyperledger/burrow/event"
-	"github.com/hyperledger/burrow/execution/exec"
-	"github.com/hyperledger/burrow/rpc/rpcevents"
+	"github.com/certikfoundation/burrow/binary"
+	"github.com/certikfoundation/burrow/event"
+	"github.com/certikfoundation/burrow/execution/exec"
+	"github.com/certikfoundation/burrow/rpc/rpcevents"
 )
 
 const (

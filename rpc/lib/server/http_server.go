@@ -11,9 +11,9 @@ import (
 	"runtime/debug"
 	"time"
 
-	"github.com/hyperledger/burrow/logging"
-	"github.com/hyperledger/burrow/logging/structure"
-	"github.com/hyperledger/burrow/rpc/lib/types"
+	"github.com/certikfoundation/burrow/logging"
+	"github.com/certikfoundation/burrow/logging/structure"
+	"github.com/certikfoundation/burrow/rpc/lib/types"
 )
 
 func StartHTTPServer(listener net.Listener, handler http.Handler, logger *logging.Logger) (*http.Server, error) {

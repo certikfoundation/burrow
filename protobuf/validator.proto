@@ -2,7 +2,7 @@ syntax = 'proto3';
 
 package validator;
 
-option go_package = "github.com/hyperledger/burrow/acm/validator";
+option go_package = "github.com/certikfoundation/burrow/acm/validator";
 
 import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 
@@ -15,7 +15,7 @@ option (gogoproto.messagename_all) = true;
 
 message Validator {
     option (gogoproto.goproto_stringer) = false;
-    bytes Address = 1 [(gogoproto.customtype) = "github.com/hyperledger/burrow/crypto.Address"];
+    bytes Address = 1 [(gogoproto.customtype) = "github.com/certikfoundation/burrow/crypto.Address"];
     crypto.PublicKey PublicKey = 2 [(gogoproto.nullable) = false];
     uint64 Power = 3;
 }

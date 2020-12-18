@@ -6,13 +6,13 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/hyperledger/burrow/bcm"
-	"github.com/hyperledger/burrow/config"
-	"github.com/hyperledger/burrow/core"
-	"github.com/hyperledger/burrow/integration"
-	"github.com/hyperledger/burrow/integration/rpctest"
-	"github.com/hyperledger/burrow/permission"
-	"github.com/hyperledger/burrow/txs/payload"
+	"github.com/certikfoundation/burrow/bcm"
+	"github.com/certikfoundation/burrow/config"
+	"github.com/certikfoundation/burrow/core"
+	"github.com/certikfoundation/burrow/integration"
+	"github.com/certikfoundation/burrow/integration/rpctest"
+	"github.com/certikfoundation/burrow/permission"
+	"github.com/certikfoundation/burrow/txs/payload"
 	"github.com/stretchr/testify/require"
 )
 

@@ -12,7 +12,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/hyperledger/burrow/crypto"
+	"github.com/certikfoundation/burrow/crypto"
 	"github.com/tmthrgd/go-hex"
 	"golang.org/x/crypto/scrypt"
 )

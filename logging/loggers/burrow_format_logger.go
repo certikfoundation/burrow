@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/go-kit/kit/log"
-	"github.com/hyperledger/burrow/logging/structure"
+	"github.com/certikfoundation/burrow/logging/structure"
 	"github.com/tmthrgd/go-hex"
 )
 

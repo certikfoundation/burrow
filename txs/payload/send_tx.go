@@ -3,8 +3,8 @@ package payload
 import (
 	"fmt"
 
-	"github.com/hyperledger/burrow/acm/acmstate"
-	"github.com/hyperledger/burrow/crypto"
+	"github.com/certikfoundation/burrow/acm/acmstate"
+	"github.com/certikfoundation/burrow/crypto"
 )
 
 func NewSendTx() *SendTx {

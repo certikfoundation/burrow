@@ -8,10 +8,10 @@ import (
 	"math"
 	"math/big"
 
-	. "github.com/hyperledger/burrow/binary"
-	"github.com/hyperledger/burrow/crypto"
-	"github.com/hyperledger/burrow/execution/errors"
-	"github.com/hyperledger/burrow/execution/native"
+	. "github.com/certikfoundation/burrow/binary"
+	"github.com/certikfoundation/burrow/crypto"
+	"github.com/certikfoundation/burrow/execution/errors"
+	"github.com/certikfoundation/burrow/execution/native"
 )
 
 // Not goroutine safe

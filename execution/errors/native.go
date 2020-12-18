@@ -3,7 +3,7 @@ package errors
 import (
 	"fmt"
 
-	"github.com/hyperledger/burrow/crypto"
+	"github.com/certikfoundation/burrow/crypto"
 )
 
 type LacksNativePermission struct {

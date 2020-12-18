@@ -10,12 +10,12 @@ import (
 	"sort"
 	"time"
 
-	"github.com/hyperledger/burrow/binary"
+	"github.com/certikfoundation/burrow/binary"
 
-	"github.com/hyperledger/burrow/acm"
-	"github.com/hyperledger/burrow/acm/validator"
-	"github.com/hyperledger/burrow/crypto"
-	"github.com/hyperledger/burrow/permission"
+	"github.com/certikfoundation/burrow/acm"
+	"github.com/certikfoundation/burrow/acm/validator"
+	"github.com/certikfoundation/burrow/crypto"
+	"github.com/certikfoundation/burrow/permission"
 )
 
 // How many bytes to take from the front of the GenesisDoc hash to append

@@ -3,8 +3,8 @@ package commands
 import (
 	"fmt"
 
-	"github.com/hyperledger/burrow/config/source"
-	"github.com/hyperledger/burrow/genesis/spec"
+	"github.com/certikfoundation/burrow/config/source"
+	"github.com/certikfoundation/burrow/genesis/spec"
 	cli "github.com/jawher/mow.cli"
 )
 

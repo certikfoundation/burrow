@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/hyperledger/burrow/config/source"
+	"github.com/certikfoundation/burrow/config/source"
 )
 
 func TestEventTablesSchema(t *testing.T) {

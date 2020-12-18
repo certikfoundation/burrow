@@ -6,7 +6,7 @@ package loggers
 import (
 	"testing"
 
-	"github.com/hyperledger/burrow/logging/errors"
+	"github.com/certikfoundation/burrow/logging/errors"
 	"github.com/stretchr/testify/assert"
 )
 

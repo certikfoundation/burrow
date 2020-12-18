@@ -8,10 +8,10 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/hyperledger/burrow/config"
-	"github.com/hyperledger/burrow/config/source"
-	"github.com/hyperledger/burrow/genesis"
-	logging_config "github.com/hyperledger/burrow/logging/logconfig"
+	"github.com/certikfoundation/burrow/config"
+	"github.com/certikfoundation/burrow/config/source"
+	"github.com/certikfoundation/burrow/genesis"
+	logging_config "github.com/certikfoundation/burrow/logging/logconfig"
 )
 
 type Output interface {

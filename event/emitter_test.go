@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hyperledger/burrow/event/query"
-	"github.com/hyperledger/burrow/logging"
+	"github.com/certikfoundation/burrow/event/query"
+	"github.com/certikfoundation/burrow/logging"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

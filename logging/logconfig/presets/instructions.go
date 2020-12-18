@@ -5,9 +5,9 @@ import (
 
 	"strconv"
 
-	"github.com/hyperledger/burrow/logging/logconfig"
-	"github.com/hyperledger/burrow/logging/loggers"
-	"github.com/hyperledger/burrow/logging/structure"
+	"github.com/certikfoundation/burrow/logging/logconfig"
+	"github.com/certikfoundation/burrow/logging/loggers"
+	"github.com/certikfoundation/burrow/logging/structure"
 )
 
 // Function to generate part of a tree of Sinks (e.g. append a single child node, or an entire subtree).

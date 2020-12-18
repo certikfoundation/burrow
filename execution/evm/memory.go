@@ -5,7 +5,7 @@ import (
 	"math"
 	"math/big"
 
-	"github.com/hyperledger/burrow/execution/errors"
+	"github.com/certikfoundation/burrow/execution/errors"
 )
 
 const (

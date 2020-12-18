@@ -5,13 +5,13 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/hyperledger/burrow/deploy/def"
-	"github.com/hyperledger/burrow/logging"
+	"github.com/certikfoundation/burrow/deploy/def"
+	"github.com/certikfoundation/burrow/logging"
 
 	"encoding/json"
 
 	"github.com/elgs/gojq"
-	"github.com/hyperledger/burrow/acm/validator"
+	"github.com/certikfoundation/burrow/acm/validator"
 )
 
 func GetBlockHeight(client *def.Client, logger *logging.Logger) (latestBlockHeight uint64, err error) {

@@ -1,7 +1,7 @@
 package commands
 
 import (
-	"github.com/hyperledger/burrow/core"
+	"github.com/certikfoundation/burrow/core"
 	cli "github.com/jawher/mow.cli"
 )
 

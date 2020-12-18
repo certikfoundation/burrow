@@ -1,7 +1,7 @@
 package proposal
 
 import (
-	"github.com/hyperledger/burrow/txs/payload"
+	"github.com/certikfoundation/burrow/txs/payload"
 )
 
 type Reader interface {

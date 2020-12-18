@@ -5,11 +5,11 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/hyperledger/burrow/acm/acmstate"
-	burrow_binary "github.com/hyperledger/burrow/binary"
-	crypto "github.com/hyperledger/burrow/crypto"
-	"github.com/hyperledger/burrow/execution/engine"
-	"github.com/hyperledger/burrow/execution/errors"
+	"github.com/certikfoundation/burrow/acm/acmstate"
+	burrow_binary "github.com/certikfoundation/burrow/binary"
+	crypto "github.com/certikfoundation/burrow/crypto"
+	"github.com/certikfoundation/burrow/execution/engine"
+	"github.com/certikfoundation/burrow/execution/errors"
 	"github.com/perlin-network/life/exec"
 )
 

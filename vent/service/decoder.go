@@ -4,10 +4,10 @@ import (
 	"math/big"
 	"strconv"
 
-	"github.com/hyperledger/burrow/crypto"
-	"github.com/hyperledger/burrow/execution/evm/abi"
-	"github.com/hyperledger/burrow/execution/exec"
-	"github.com/hyperledger/burrow/vent/types"
+	"github.com/certikfoundation/burrow/crypto"
+	"github.com/certikfoundation/burrow/execution/evm/abi"
+	"github.com/certikfoundation/burrow/execution/exec"
+	"github.com/certikfoundation/burrow/vent/types"
 	"github.com/pkg/errors"
 )
 

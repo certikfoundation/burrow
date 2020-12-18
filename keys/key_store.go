@@ -3,7 +3,7 @@ package keys
 import (
 	"context"
 
-	"github.com/hyperledger/burrow/crypto"
+	"github.com/certikfoundation/burrow/crypto"
 )
 
 const (

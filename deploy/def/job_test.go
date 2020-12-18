@@ -4,8 +4,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hyperledger/burrow/acm"
-	"github.com/hyperledger/burrow/execution/evm/abi"
+	"github.com/certikfoundation/burrow/acm"
+	"github.com/certikfoundation/burrow/execution/evm/abi"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

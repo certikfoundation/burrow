@@ -5,7 +5,7 @@ package sqldb_test
 import (
 	"testing"
 
-	"github.com/hyperledger/burrow/vent/test"
+	"github.com/certikfoundation/burrow/vent/test"
 )
 
 func TestSqliteSynchronizeDB(t *testing.T) {

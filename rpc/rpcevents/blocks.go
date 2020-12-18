@@ -1,7 +1,7 @@
 package rpcevents
 
 import (
-	"github.com/hyperledger/burrow/execution/exec"
+	"github.com/certikfoundation/burrow/execution/exec"
 )
 
 // Get bounds suitable for events.Provider

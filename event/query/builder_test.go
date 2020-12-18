@@ -3,7 +3,7 @@ package query
 import (
 	"testing"
 
-	"github.com/hyperledger/burrow/logging/structure"
+	"github.com/certikfoundation/burrow/logging/structure"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

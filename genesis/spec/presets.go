@@ -3,8 +3,8 @@ package spec
 import (
 	"sort"
 
-	"github.com/hyperledger/burrow/acm/balance"
-	"github.com/hyperledger/burrow/permission"
+	"github.com/certikfoundation/burrow/acm/balance"
+	"github.com/certikfoundation/burrow/permission"
 )
 
 // Files here can be used as starting points for building various 'chain types' but are otherwise

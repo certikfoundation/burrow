@@ -5,10 +5,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/hyperledger/burrow/deploy/def"
-	"github.com/hyperledger/burrow/logging"
-	"github.com/hyperledger/burrow/txs"
-	"github.com/hyperledger/burrow/txs/payload"
+	"github.com/certikfoundation/burrow/deploy/def"
+	"github.com/certikfoundation/burrow/logging"
+	"github.com/certikfoundation/burrow/txs"
+	"github.com/certikfoundation/burrow/txs/payload"
 )
 
 type ProposalState int

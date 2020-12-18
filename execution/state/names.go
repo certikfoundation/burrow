@@ -3,8 +3,8 @@ package state
 import (
 	"fmt"
 
-	"github.com/hyperledger/burrow/encoding"
-	"github.com/hyperledger/burrow/execution/names"
+	"github.com/certikfoundation/burrow/encoding"
+	"github.com/certikfoundation/burrow/execution/names"
 )
 
 var _ names.IterableReader = &State{}

@@ -3,7 +3,7 @@ package payload
 import (
 	"fmt"
 
-	"github.com/hyperledger/burrow/crypto"
+	"github.com/certikfoundation/burrow/crypto"
 )
 
 func NewUnbondTx(address crypto.Address, amount uint64) *UnbondTx {

@@ -44,7 +44,7 @@ jobs:
     - uses: actions/checkout@v2
     - run: make docker_build
       env:
-        DOCKER_REPO: "hyperledger/burrow"
+        DOCKER_REPO: "certikfoundation/burrow"
 
   keys:
     runs-on: ubuntu-latest

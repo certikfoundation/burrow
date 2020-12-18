@@ -3,7 +3,7 @@ package event
 import (
 	"fmt"
 
-	"github.com/hyperledger/burrow/event/query"
+	"github.com/certikfoundation/burrow/event/query"
 )
 
 const (

@@ -3,8 +3,8 @@ package state
 import (
 	"fmt"
 
-	"github.com/hyperledger/burrow/execution/proposal"
-	"github.com/hyperledger/burrow/txs/payload"
+	"github.com/certikfoundation/burrow/execution/proposal"
+	"github.com/certikfoundation/burrow/txs/payload"
 )
 
 var _ proposal.IterableReader = &State{}
