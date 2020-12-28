@@ -235,8 +235,14 @@ func (app *App) EndBlock(reqEndBlock types.RequestEndBlock) types.ResponseEndBlo
 	err := app.validators.ValidatorChanges(BurrowValidatorDelayInBlocks).IterateValidators(func(id crypto.Addressable, power *big.Int) error {
 		app.logger.InfoMsg("Updating validator power", "validator_address", id.GetAddress(),
 			"new_power", power)
+
+		protoPk, err := id.GetPublicKey().PublicKeyToProto()
+		if err != nil {
+			panic(err)
+		}
+
 		validatorUpdates = append(validatorUpdates, types.ValidatorUpdate{
-			PubKey: id.GetPublicKey().ABCIPubKey(),
+			PubKey: protoPk,
 			// Must ensure power fits in an int64 during execution
 			Power: power.Int64(),
 		})
