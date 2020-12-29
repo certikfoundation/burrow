@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/go-kit/kit/log"
 	"github.com/certikfoundation/burrow/logging"
+	"github.com/go-kit/kit/log"
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/tendermint/abci/types"
 )

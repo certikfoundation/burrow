@@ -10,10 +10,10 @@ import (
 
 	"reflect"
 
-	validation "github.com/go-ozzo/ozzo-validation"
 	"github.com/certikfoundation/burrow/acm"
 	"github.com/certikfoundation/burrow/crypto"
 	"github.com/certikfoundation/burrow/permission"
+	validation "github.com/go-ozzo/ozzo-validation"
 )
 
 var PlaceholderRegex = regexp.MustCompile(`\$(?P<bracket>{?)(?P<job>[[:word:]]+)(\.(?P<variable>[[:word:]]+))?}?`)

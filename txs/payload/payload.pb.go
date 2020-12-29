@@ -9,14 +9,14 @@ import (
 	math "math"
 	math_bits "math/bits"
 
-	_ "github.com/gogo/protobuf/gogoproto"
-	proto "github.com/gogo/protobuf/proto"
-	golang_proto "github.com/golang/protobuf/proto"
 	github_com_hyperledger_burrow_binary "github.com/certikfoundation/burrow/binary"
 	github_com_hyperledger_burrow_crypto "github.com/certikfoundation/burrow/crypto"
 	registry "github.com/certikfoundation/burrow/execution/registry"
 	spec "github.com/certikfoundation/burrow/genesis/spec"
 	permission "github.com/certikfoundation/burrow/permission"
+	_ "github.com/gogo/protobuf/gogoproto"
+	proto "github.com/gogo/protobuf/proto"
+	golang_proto "github.com/golang/protobuf/proto"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.

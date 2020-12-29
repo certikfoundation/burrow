@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/go-kit/kit/log"
 	"github.com/certikfoundation/burrow/logging/structure"
+	"github.com/go-kit/kit/log"
 	"github.com/tmthrgd/go-hex"
 )
 

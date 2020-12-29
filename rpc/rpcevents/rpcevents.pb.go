@@ -10,11 +10,11 @@ import (
 	math "math"
 	math_bits "math/bits"
 
+	github_com_hyperledger_burrow_binary "github.com/certikfoundation/burrow/binary"
+	exec "github.com/certikfoundation/burrow/execution/exec"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	golang_proto "github.com/golang/protobuf/proto"
-	github_com_hyperledger_burrow_binary "github.com/certikfoundation/burrow/binary"
-	exec "github.com/certikfoundation/burrow/execution/exec"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"

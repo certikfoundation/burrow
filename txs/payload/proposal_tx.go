@@ -4,8 +4,8 @@ import (
 	"crypto/sha256"
 	"fmt"
 
-	"github.com/golang/protobuf/proto"
 	"github.com/certikfoundation/burrow/encoding"
+	"github.com/golang/protobuf/proto"
 )
 
 func NewProposalTx(propsal *Proposal) *ProposalTx {

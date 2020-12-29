@@ -6,12 +6,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/go-kit/kit/log"
 	pkgs "github.com/certikfoundation/burrow/deploy"
 	"github.com/certikfoundation/burrow/deploy/def"
 	"github.com/certikfoundation/burrow/deploy/proposals"
 	"github.com/certikfoundation/burrow/logging"
 	"github.com/certikfoundation/burrow/logging/loggers"
+	"github.com/go-kit/kit/log"
 	cli "github.com/jawher/mow.cli"
 )
 

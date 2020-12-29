@@ -3,9 +3,9 @@ package registry
 import (
 	"testing"
 
-	"github.com/gogo/protobuf/proto"
 	"github.com/certikfoundation/burrow/binary"
 	"github.com/certikfoundation/burrow/crypto"
+	"github.com/gogo/protobuf/proto"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

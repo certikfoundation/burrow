@@ -3,9 +3,9 @@ package loggers
 import (
 	"sync"
 
+	"github.com/certikfoundation/burrow/logging/structure"
 	"github.com/eapache/channels"
 	"github.com/go-kit/kit/log"
-	"github.com/certikfoundation/burrow/logging/structure"
 )
 
 type CaptureLogger struct {

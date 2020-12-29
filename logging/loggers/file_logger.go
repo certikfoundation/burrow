@@ -7,8 +7,8 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/go-kit/kit/log"
 	"github.com/certikfoundation/burrow/logging/structure"
+	"github.com/go-kit/kit/log"
 )
 
 type FileLogger struct {

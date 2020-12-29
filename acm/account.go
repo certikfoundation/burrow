@@ -8,12 +8,12 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/gogo/protobuf/proto"
 	"github.com/certikfoundation/burrow/binary"
 	"github.com/certikfoundation/burrow/crypto"
 	"github.com/certikfoundation/burrow/event/query"
 	"github.com/certikfoundation/burrow/execution/errors"
 	"github.com/certikfoundation/burrow/permission"
+	"github.com/gogo/protobuf/proto"
 )
 
 var GlobalPermissionsAddress = crypto.Address(binary.Zero160)

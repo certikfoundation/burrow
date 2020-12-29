@@ -10,16 +10,16 @@ import (
 	math_bits "math/bits"
 	time "time"
 
-	_ "github.com/gogo/protobuf/gogoproto"
-	proto "github.com/gogo/protobuf/proto"
-	github_com_gogo_protobuf_types "github.com/gogo/protobuf/types"
-	golang_proto "github.com/golang/protobuf/proto"
-	_ "github.com/golang/protobuf/ptypes/timestamp"
 	acm "github.com/certikfoundation/burrow/acm"
 	github_com_hyperledger_burrow_binary "github.com/certikfoundation/burrow/binary"
 	github_com_hyperledger_burrow_crypto "github.com/certikfoundation/burrow/crypto"
 	exec "github.com/certikfoundation/burrow/execution/exec"
 	names "github.com/certikfoundation/burrow/execution/names"
+	_ "github.com/gogo/protobuf/gogoproto"
+	proto "github.com/gogo/protobuf/proto"
+	github_com_gogo_protobuf_types "github.com/gogo/protobuf/types"
+	golang_proto "github.com/golang/protobuf/proto"
+	_ "github.com/golang/protobuf/ptypes/timestamp"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.

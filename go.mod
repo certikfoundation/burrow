@@ -40,8 +40,8 @@ require (
 	github.com/stretchr/testify v1.6.1
 	github.com/syndtr/goleveldb v1.0.1-0.20200815110645-5c35d600f0ca
 	github.com/tendermint/go-amino v0.14.1
-	github.com/tendermint/iavl v0.13.0
-	github.com/tendermint/tendermint v0.34.0
+	github.com/cosmos/iavl v0.15.0-rc3.0.20201009144442-230e9bdf52cd
+	github.com/tendermint/tendermint v0.34.0-rc6
 	github.com/tendermint/tm-db v0.6.3
 	github.com/test-go/testify v1.1.4
 	github.com/tmthrgd/atomics v0.0.0-20190904060638-dc7a5fcc7e0d // indirect

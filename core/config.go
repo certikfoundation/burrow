@@ -3,7 +3,6 @@ package core
 import (
 	"fmt"
 
-	"github.com/go-kit/kit/log"
 	"github.com/certikfoundation/burrow/config"
 	"github.com/certikfoundation/burrow/consensus/abci"
 	"github.com/certikfoundation/burrow/consensus/tendermint"
@@ -13,6 +12,7 @@ import (
 	"github.com/certikfoundation/burrow/logging/logconfig"
 	"github.com/certikfoundation/burrow/logging/structure"
 	"github.com/certikfoundation/burrow/project"
+	"github.com/go-kit/kit/log"
 	tmConfig "github.com/tendermint/tendermint/config"
 	"github.com/tendermint/tendermint/node"
 	tmTypes "github.com/tendermint/tendermint/types"

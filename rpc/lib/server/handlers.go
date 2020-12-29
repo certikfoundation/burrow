@@ -14,11 +14,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/gorilla/websocket"
 	"github.com/certikfoundation/burrow/consensus/tendermint"
 	"github.com/certikfoundation/burrow/logging"
 	"github.com/certikfoundation/burrow/logging/structure"
 	"github.com/certikfoundation/burrow/rpc/lib/types"
+	"github.com/gorilla/websocket"
 	"github.com/pkg/errors"
 	"github.com/tendermint/tendermint/libs/service"
 )

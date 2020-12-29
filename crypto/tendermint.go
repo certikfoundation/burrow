@@ -55,7 +55,6 @@ func PublicKeyFromABCIPubKey(k pc.PublicKey) (PublicKey, error) {
 	}
 }
 
-
 // func PublicKeyFromABCIPubKey(pubKey abci.PubKey) (PublicKey, error) {
 // 	switch pubKey.Type {
 // 	case CurveTypeEd25519.ABCIType():

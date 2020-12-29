@@ -17,7 +17,6 @@ import (
 
 	"github.com/certikfoundation/burrow/dump"
 
-	"github.com/go-kit/kit/log"
 	"github.com/certikfoundation/burrow/bcm"
 	"github.com/certikfoundation/burrow/consensus/tendermint"
 	"github.com/certikfoundation/burrow/crypto"
@@ -31,6 +30,7 @@ import (
 	"github.com/certikfoundation/burrow/process"
 	"github.com/certikfoundation/burrow/rpc"
 	"github.com/certikfoundation/burrow/txs"
+	"github.com/go-kit/kit/log"
 	"github.com/streadway/simpleuuid"
 	"github.com/tendermint/tendermint/store"
 	tmTypes "github.com/tendermint/tendermint/types"

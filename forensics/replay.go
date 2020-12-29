@@ -11,7 +11,6 @@ import (
 	"fmt"
 	"path"
 
-	"github.com/fatih/color"
 	"github.com/certikfoundation/burrow/bcm"
 	"github.com/certikfoundation/burrow/binary"
 	"github.com/certikfoundation/burrow/consensus/tendermint"
@@ -23,6 +22,7 @@ import (
 	"github.com/certikfoundation/burrow/genesis"
 	"github.com/certikfoundation/burrow/logging"
 	"github.com/certikfoundation/burrow/txs"
+	"github.com/fatih/color"
 	"github.com/pkg/errors"
 	sm "github.com/tendermint/tendermint/state"
 	"github.com/tendermint/tendermint/store"

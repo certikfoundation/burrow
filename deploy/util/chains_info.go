@@ -10,8 +10,8 @@ import (
 
 	"encoding/json"
 
-	"github.com/elgs/gojq"
 	"github.com/certikfoundation/burrow/acm/validator"
+	"github.com/elgs/gojq"
 )
 
 func GetBlockHeight(client *def.Client, logger *logging.Logger) (latestBlockHeight uint64, err error) {

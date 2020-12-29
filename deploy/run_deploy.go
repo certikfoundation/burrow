@@ -8,12 +8,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/go-kit/kit/log"
 	"github.com/certikfoundation/burrow/deploy/def"
 	"github.com/certikfoundation/burrow/deploy/jobs"
 	"github.com/certikfoundation/burrow/deploy/loader"
 	"github.com/certikfoundation/burrow/execution/evm/abi"
 	"github.com/certikfoundation/burrow/logging"
+	"github.com/go-kit/kit/log"
 )
 
 type playbookWork struct {
