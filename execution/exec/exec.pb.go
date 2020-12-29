@@ -536,11 +536,11 @@ func (m *BlockExecution) GetPredecessorHeight() uint64 {
 	return 0
 }
 
-func (m *BlockExecution) GetHeader() types.Header {
+func (m *BlockExecution) GetHeader() *types.Header {
 	if m != nil {
-		return m.Header
+		return &m.Header
 	}
-	return types.Header{}
+	return &types.Header{}
 }
 
 func (m *BlockExecution) GetTxExecutions() []*TxExecution {

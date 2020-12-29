@@ -24,13 +24,13 @@ import (
 	"github.com/certikfoundation/burrow/event"
 	"github.com/certikfoundation/burrow/execution/exec"
 	"github.com/certikfoundation/burrow/integration/rpctest"
-	"github.com/certikfoundation/burrow/rpc"
 	"github.com/certikfoundation/burrow/rpc/rpcinfo/infoclient"
 	"github.com/certikfoundation/burrow/rpc/rpctransact"
 	"github.com/certikfoundation/burrow/txs"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	ctypes "github.com/tendermint/tendermint/consensus/types"
+	tmjson "github.com/tendermint/tendermint/libs/json"
 )
 
 const timeout = 5 * time.Second
@@ -212,9 +212,8 @@ func TestInfoServer(t *testing.T) {
 				bs, err := json.Marshal(rawMap)
 				require.NoError(t, err)
 
-				cdc := rpc.NewAminoCodec()
 				rs := new(ctypes.RoundState)
-				err = cdc.UnmarshalJSON(bs, rs)
+				err = tmjson.Unmarshal(bs, rs)
 				require.NoError(t, err)
 
 				assert.Equal(t, rs.Validators.Validators[0].Address, rs.Validators.Proposer.Address)

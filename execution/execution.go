@@ -9,6 +9,8 @@ import (
 	"runtime/debug"
 	"sync"
 
+	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
+
 	"github.com/certikfoundation/burrow/acm"
 	"github.com/certikfoundation/burrow/acm/acmstate"
 	"github.com/certikfoundation/burrow/acm/validator"
@@ -30,7 +32,6 @@ import (
 	"github.com/certikfoundation/burrow/permission"
 	"github.com/certikfoundation/burrow/txs"
 	"github.com/certikfoundation/burrow/txs/payload"
-	abciTypes "github.com/tendermint/tendermint/abci/types"
 )
 
 type Executor interface {
@@ -68,7 +69,7 @@ type BatchExecutor interface {
 type BatchCommitter interface {
 	BatchExecutor
 	// Commit execution results to underlying State and provide opportunity to mutate state before it is saved
-	Commit(header *abciTypes.Header) (stateHash []byte, err error)
+	Commit(header *tmproto.Header) (stateHash []byte, err error)
 }
 
 type executor struct {
@@ -341,7 +342,7 @@ func (exe *executor) updateSignatory(sig txs.Signatory) error {
 
 // Commit the current state - optionally pass in the tendermint ABCI header for that to be included with the BeginBlock
 // StreamEvent
-func (exe *executor) Commit(header *abciTypes.Header) (stateHash []byte, err error) {
+func (exe *executor) Commit(header *tmproto.Header) (stateHash []byte, err error) {
 	// The write lock to the executor is controlled by the caller (e.g. abci.App) so we do not acquire it here to avoid
 	// deadlock
 	defer func() {
@@ -444,7 +445,7 @@ func (exe *executor) PendingValidators() validator.IterableReader {
 	return exe.validatorCache.Delta
 }
 
-func (exe *executor) finaliseBlockExecution(header *abciTypes.Header) (*exec.BlockExecution, error) {
+func (exe *executor) finaliseBlockExecution(header *tmproto.Header) (*exec.BlockExecution, error) {
 	if header != nil && uint64(header.Height) != exe.block.Height {
 		return nil, fmt.Errorf("trying to finalise block execution with height %v but passed Tendermint"+
 			"block header at height %v", exe.block.Height, header.Height)
@@ -452,7 +453,7 @@ func (exe *executor) finaliseBlockExecution(header *abciTypes.Header) (*exec.Blo
 	// Capture BlockExecution to return
 	be := exe.block
 	// Set the header when provided
-	be.Header = header
+	be.Header = *header
 	// My default the predecessor of the next block is the is the predecessor of the current block
 	// (in case the current block has no transactions - since we do not currently store empty blocks in state, see
 	// /execution/state/events.go)

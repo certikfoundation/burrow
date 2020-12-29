@@ -9,6 +9,7 @@ require (
 	github.com/asaskevich/govalidator v0.0.0-20180720115003-f9ffefc3facf // indirect
 	github.com/btcsuite/btcd v0.21.0-beta
 	github.com/cep21/xdgbasedir v0.0.0-20170329171747-21470bfc93b9
+	github.com/cosmos/iavl v0.15.0-rc3.0.20201009144442-230e9bdf52cd
 	github.com/eapache/channels v1.1.0
 	github.com/eapache/queue v1.1.0 // indirect
 	github.com/elgs/gojq v0.0.0-20160421194050-81fa9a608a13
@@ -39,8 +40,7 @@ require (
 	github.com/streadway/simpleuuid v0.0.0-20130420165545-6617b501e485
 	github.com/stretchr/testify v1.6.1
 	github.com/syndtr/goleveldb v1.0.1-0.20200815110645-5c35d600f0ca
-	github.com/tendermint/go-amino v0.14.1
-	github.com/cosmos/iavl v0.15.0-rc3.0.20201009144442-230e9bdf52cd
+	github.com/tendermint/go-amino v0.14.1 // indirect
 	github.com/tendermint/tendermint v0.34.0-rc6
 	github.com/tendermint/tm-db v0.6.3
 	github.com/test-go/testify v1.1.4

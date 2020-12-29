@@ -24,7 +24,11 @@ func NewBlockStore(blockStore state.BlockStore) *BlockStore {
 }
 
 func NewBlockExplorer(dbBackendType dbm.BackendType, dbDir string) *BlockStore {
-	return NewBlockStore(store.NewBlockStore(dbm.NewDB("blockstore", dbBackendType, dbDir)))
+	newDB, err := dbm.NewDB("blockstore", dbBackendType, dbDir)
+	if err != nil {
+		panic(err)
+	}
+	return NewBlockStore(store.NewBlockStore(newDB))
 }
 
 func (bs *BlockStore) Block(height int64) (_ *Block, err error) {

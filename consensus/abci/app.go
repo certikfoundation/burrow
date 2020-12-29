@@ -319,3 +319,23 @@ func (app *App) Commit() types.ResponseCommit {
 		Data: appHash,
 	}
 }
+
+// ListSnapshots lists available snapshots
+func (app *App) ListSnapshots(types.RequestListSnapshots) types.ResponseListSnapshots {
+	return types.ResponseListSnapshots{}
+}
+
+// OfferSnapshot offers a snapshot to the application
+func (app *App) OfferSnapshot(types.RequestOfferSnapshot) types.ResponseOfferSnapshot {
+	return types.ResponseOfferSnapshot{}
+}                
+
+// LoadSnapshotChunk loads a snapshot chunk
+func (app *App) LoadSnapshotChunk(types.RequestLoadSnapshotChunk) types.ResponseLoadSnapshotChunk {
+	return types.ResponseLoadSnapshotChunk{}
+}    
+
+// ApplySnapshotChunk applies a shapshot chunk
+func (app *App) ApplySnapshotChunk(types.RequestApplySnapshotChunk) types.ResponseApplySnapshotChunk {
+	return types.ResponseApplySnapshotChunk{}
+} 

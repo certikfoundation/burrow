@@ -21,7 +21,11 @@ type NodeView struct {
 }
 
 func NewNodeView(tmNode *Node, txDecoder txs.Decoder, runID simpleuuid.UUID) (*NodeView, error) {
-	publicKey, err := crypto.PublicKeyFromTendermintPubKey(tmNode.PrivValidator().GetPubKey())
+	tmpk, err := tmNode.PrivValidator().GetPubKey()
+	if err != nil {
+		return nil, err
+	}
+	publicKey, err := crypto.PublicKeyFromTendermintPubKey(tmpk)
 	if err != nil {
 		return nil, err
 	}
@@ -63,7 +67,7 @@ func (nv *NodeView) IsFastSyncing() bool {
 	if nv == nil {
 		return true
 	}
-	return nv.tmNode.ConsensusReactor().FastSync()
+	return nv.tmNode.ConsensusReactor().WaitSync()
 }
 
 func (nv *NodeView) Peers() p2p.IPeerSet {
