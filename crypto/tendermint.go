@@ -109,13 +109,15 @@ func (p PublicKey) PublicKeyToProto() (pc.PublicKey, error) {
 func (p PublicKey) TendermintPubKey() tmCrypto.PubKey {
 	switch p.CurveType {
 	case CurveTypeEd25519:
-		pk := tmEd25519.PubKey{}
-		copy(pk[:], p.PublicKey)
-		return pk
+		pk := make([]byte, tmEd25519.PubKeySize)
+		//pk := tmEd25519.PubKey{}
+		copy(pk, p.PublicKey)
+		return tmEd25519.PubKey(pk)
 	case CurveTypeSecp256k1:
-		pk := tmSecp256k1.PubKey{}
-		copy(pk[:], p.PublicKey)
-		return pk
+		pk := make([]byte, tmSecp256k1.PubKeySize)
+		//pk := tmSecp256k1.PubKey{}
+		copy(pk, p.PublicKey)
+		return tmSecp256k1.PubKey(pk)
 	default:
 		return nil
 	}

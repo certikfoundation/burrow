@@ -10,7 +10,7 @@ import (
 
 func TestBlockExecution_Marshal(t *testing.T) {
 	be := &BlockExecution{
-		Header: tmproto.Header{
+		Header: &tmproto.Header{
 			Height:          3,
 			AppHash:         []byte{2},
 			ProposerAddress: []byte{1, 2, 33},
@@ -24,7 +24,7 @@ func TestBlockExecution_Marshal(t *testing.T) {
 
 func TestBlockExecution_StreamEvents(t *testing.T) {
 	be := &BlockExecution{
-		Header: tmproto.Header{
+		Header: &tmproto.Header{
 			Height:          2,
 			AppHash:         []byte{2},
 			ProposerAddress: []byte{1, 2, 33},

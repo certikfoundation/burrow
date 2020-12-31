@@ -129,6 +129,8 @@ func (app *App) InitChain(chain types.RequestInitChain) (respInitChain types.Res
 		}
 	}
 	app.logger.InfoMsg("Initial validator set matches")
+
+	respInitChain.AppHash = app.blockchain.AppHashAfterLastBlock()
 	return
 }
 

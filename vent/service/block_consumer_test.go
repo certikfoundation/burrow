@@ -174,7 +174,7 @@ func consumeBlock(blockConsumer func(*exec.BlockExecution) error, eventCh <-chan
 	logEvents ...*exec.LogEvent) (map[string]types.EventDataTable, error) {
 
 	block := &exec.BlockExecution{
-		Header: tmproto.Header{},
+		Header: &tmproto.Header{},
 	}
 	for _, logEvent := range logEvents {
 		txe := &exec.TxExecution{

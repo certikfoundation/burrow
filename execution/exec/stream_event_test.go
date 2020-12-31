@@ -37,7 +37,7 @@ func TestTxExecution(t *testing.T) {
 func TestConsumeBlockExecution(t *testing.T) {
 	height := int64(234242)
 	be := &BlockExecution{
-		Header: tmproto.Header{
+		Header: &tmproto.Header{
 			ChainID: genesisDoc.ChainID(),
 			AppHash: crypto.Keccak256([]byte("hashily")),
 			Time:    time.Now(),

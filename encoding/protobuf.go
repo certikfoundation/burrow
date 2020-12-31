@@ -5,7 +5,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/golang/protobuf/proto"
+	//"github.com/golang/protobuf/proto"
+	"github.com/gogo/protobuf/proto"
 )
 
 type Buffer struct {

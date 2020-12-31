@@ -453,7 +453,7 @@ func (exe *executor) finaliseBlockExecution(header *tmproto.Header) (*exec.Block
 	// Capture BlockExecution to return
 	be := exe.block
 	// Set the header when provided
-	be.Header = *header
+	be.Header = header
 	// My default the predecessor of the next block is the is the predecessor of the current block
 	// (in case the current block has no transactions - since we do not currently store empty blocks in state, see
 	// /execution/state/events.go)

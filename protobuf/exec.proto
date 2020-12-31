@@ -43,7 +43,7 @@ message BeginBlock {
     uint64 NumTxs = 3;
     // The height of the most recent block we stored in state (which is the last non-empty block in current implementation)
     uint64 PredecessorHeight = 4;
-    tendermint.types.Header header = 2 [(gogoproto.nullable) = false];
+    tendermint.types.Header header = 2;
 }
 
 message EndBlock {
@@ -83,7 +83,7 @@ message BlockExecution {
     uint64 Height = 1;
     // The height of the most recent block we stored in state (which is the last non-empty block in current implementation)
     uint64 PredecessorHeight = 4;
-    tendermint.types.Header header = 2 [(gogoproto.nullable) = false];
+    tendermint.types.Header header = 2;
     repeated TxExecution TxExecutions = 3;
 }
 
