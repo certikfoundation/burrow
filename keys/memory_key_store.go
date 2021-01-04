@@ -5,8 +5,8 @@ import (
 	"crypto/rand"
 	"fmt"
 
-	"github.com/certikfoundation/burrow/acm"
-	"github.com/certikfoundation/burrow/crypto"
+	"github.com/hyperledger/burrow/acm"
+	"github.com/hyperledger/burrow/crypto"
 )
 
 type MemoryKeyStore struct {

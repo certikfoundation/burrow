@@ -2,8 +2,8 @@ package types
 
 import (
 	"github.com/alecthomas/jsonschema"
-	"github.com/certikfoundation/burrow/event/query"
 	validation "github.com/go-ozzo/ozzo-validation"
+	"github.com/hyperledger/burrow/event/query"
 )
 
 // ProjectionSpec contains all event class specifications

@@ -9,7 +9,7 @@ import (
 	math "math"
 	math_bits "math/bits"
 
-	github_com_hyperledger_burrow_crypto "github.com/certikfoundation/burrow/crypto"
+	github_com_hyperledger_burrow_crypto "github.com/hyperledger/burrow/crypto"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	golang_proto "github.com/golang/protobuf/proto"
@@ -144,7 +144,7 @@ type PermArgs struct {
 	// The permission function
 	Action PermFlag `protobuf:"varint,1,opt,name=Action,casttype=PermFlag" json:"Action"`
 	// The target of the action
-	Target *github_com_hyperledger_burrow_crypto.Address `protobuf:"bytes,2,opt,name=Target,customtype=github.com/certikfoundation/burrow/crypto.Address" json:"Target,omitempty"`
+	Target *github_com_hyperledger_burrow_crypto.Address `protobuf:"bytes,2,opt,name=Target,customtype=github.com/hyperledger/burrow/crypto.Address" json:"Target,omitempty"`
 	// Possible arguments
 	Permission           *PermFlag `protobuf:"varint,3,opt,name=Permission,casttype=PermFlag" json:"Permission,omitempty"`
 	Role                 *string   `protobuf:"bytes,4,opt,name=Role" json:"Role,omitempty"`

@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/certikfoundation/burrow/logging"
-	"github.com/certikfoundation/burrow/vent/types"
+	"github.com/hyperledger/burrow/logging"
+	"github.com/hyperledger/burrow/vent/types"
 	"github.com/jmoiron/sqlx"
 	sqlite3 "github.com/mattn/go-sqlite3"
 )

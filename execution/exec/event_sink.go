@@ -1,7 +1,7 @@
 package exec
 
 import (
-	"github.com/certikfoundation/burrow/execution/errors"
+	"github.com/hyperledger/burrow/execution/errors"
 )
 
 type EventSink interface {

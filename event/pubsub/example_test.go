@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/certikfoundation/burrow/event/pubsub"
-	"github.com/certikfoundation/burrow/event/query"
+	"github.com/hyperledger/burrow/event/pubsub"
+	"github.com/hyperledger/burrow/event/query"
 	"github.com/stretchr/testify/require"
 )
 

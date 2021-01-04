@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/certikfoundation/burrow/execution/evm/asm"
-	"github.com/certikfoundation/burrow/execution/evm/asm/bc"
+	"github.com/hyperledger/burrow/execution/evm/asm"
+	"github.com/hyperledger/burrow/execution/evm/asm/bc"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

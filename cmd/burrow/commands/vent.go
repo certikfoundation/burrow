@@ -9,14 +9,14 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/certikfoundation/burrow/config/source"
-	"github.com/certikfoundation/burrow/execution/evm/abi"
-	"github.com/certikfoundation/burrow/logging/logconfig"
-	"github.com/certikfoundation/burrow/vent/config"
-	"github.com/certikfoundation/burrow/vent/service"
-	"github.com/certikfoundation/burrow/vent/sqldb"
-	"github.com/certikfoundation/burrow/vent/sqlsol"
-	"github.com/certikfoundation/burrow/vent/types"
+	"github.com/hyperledger/burrow/config/source"
+	"github.com/hyperledger/burrow/execution/evm/abi"
+	"github.com/hyperledger/burrow/logging/logconfig"
+	"github.com/hyperledger/burrow/vent/config"
+	"github.com/hyperledger/burrow/vent/service"
+	"github.com/hyperledger/burrow/vent/sqldb"
+	"github.com/hyperledger/burrow/vent/sqlsol"
+	"github.com/hyperledger/burrow/vent/types"
 	cli "github.com/jawher/mow.cli"
 )
 

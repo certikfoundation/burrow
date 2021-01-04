@@ -6,8 +6,8 @@ package adapters
 import (
 	"fmt"
 
-	"github.com/certikfoundation/burrow/logging"
-	"github.com/certikfoundation/burrow/vent/types"
+	"github.com/hyperledger/burrow/logging"
+	"github.com/hyperledger/burrow/vent/types"
 	"github.com/jmoiron/sqlx"
 )
 

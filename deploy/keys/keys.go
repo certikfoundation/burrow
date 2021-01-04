@@ -5,8 +5,8 @@ import (
 	"io/ioutil"
 	"time"
 
-	"github.com/certikfoundation/burrow/keys"
-	"github.com/certikfoundation/burrow/logging"
+	"github.com/hyperledger/burrow/keys"
+	"github.com/hyperledger/burrow/logging"
 )
 
 type LocalKeyClient struct {

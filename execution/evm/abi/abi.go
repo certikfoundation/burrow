@@ -9,9 +9,9 @@ import (
 	"path/filepath"
 	"reflect"
 
-	"github.com/certikfoundation/burrow/crypto"
-	"github.com/certikfoundation/burrow/deploy/compile"
-	"github.com/certikfoundation/burrow/logging"
+	"github.com/hyperledger/burrow/crypto"
+	"github.com/hyperledger/burrow/deploy/compile"
+	"github.com/hyperledger/burrow/logging"
 )
 
 // Variable exist to unpack return values into, so have both the return

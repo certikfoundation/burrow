@@ -7,10 +7,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/certikfoundation/burrow/bcm"
+	"github.com/hyperledger/burrow/bcm"
 
-	"github.com/certikfoundation/burrow/execution"
-	"github.com/certikfoundation/burrow/txs"
+	"github.com/hyperledger/burrow/execution"
+	"github.com/hyperledger/burrow/txs"
 	"github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/mempool"
 	tmTypes "github.com/tendermint/tendermint/types"

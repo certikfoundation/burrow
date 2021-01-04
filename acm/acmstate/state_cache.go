@@ -8,10 +8,10 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/certikfoundation/burrow/acm"
-	"github.com/certikfoundation/burrow/binary"
-	"github.com/certikfoundation/burrow/crypto"
-	"github.com/certikfoundation/burrow/execution/errors"
+	"github.com/hyperledger/burrow/acm"
+	"github.com/hyperledger/burrow/binary"
+	"github.com/hyperledger/burrow/crypto"
+	"github.com/hyperledger/burrow/execution/errors"
 )
 
 type Cache struct {

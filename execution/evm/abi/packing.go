@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/certikfoundation/burrow/binary"
+	"github.com/hyperledger/burrow/binary"
 )
 
 func Pack(argSpec []Argument, args ...interface{}) ([]byte, error) {

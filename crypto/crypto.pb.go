@@ -9,7 +9,7 @@ import (
 	math "math"
 	math_bits "math/bits"
 
-	github_com_hyperledger_burrow_binary "github.com/certikfoundation/burrow/binary"
+	github_com_hyperledger_burrow_binary "github.com/hyperledger/burrow/binary"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	golang_proto "github.com/golang/protobuf/proto"
@@ -29,7 +29,7 @@ const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type PublicKey struct {
 	CurveType            CurveType                                     `protobuf:"varint,1,opt,name=CurveType,proto3,casttype=CurveType" json:"CurveType,omitempty"`
-	PublicKey            github_com_hyperledger_burrow_binary.HexBytes `protobuf:"bytes,2,opt,name=PublicKey,proto3,customtype=github.com/certikfoundation/burrow/binary.HexBytes" json:"PublicKey"`
+	PublicKey            github_com_hyperledger_burrow_binary.HexBytes `protobuf:"bytes,2,opt,name=PublicKey,proto3,customtype=github.com/hyperledger/burrow/binary.HexBytes" json:"PublicKey"`
 	XXX_NoUnkeyedLiteral struct{}                                      `json:"-"`
 	XXX_unrecognized     []byte                                        `json:"-"`
 	XXX_sizecache        int32                                         `json:"-"`

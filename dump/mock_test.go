@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/certikfoundation/burrow/execution/state"
-	"github.com/certikfoundation/burrow/genesis"
-	"github.com/certikfoundation/burrow/permission"
+	"github.com/hyperledger/burrow/execution/state"
+	"github.com/hyperledger/burrow/genesis"
+	"github.com/hyperledger/burrow/permission"
 	"github.com/stretchr/testify/require"
 )
 

@@ -15,7 +15,7 @@ REPO := $(shell pwd)
 
 # Our own Go files containing the compiled bytecode of solidity files as a constant
 
-CI_IMAGE="certikfoundation/burrow:ci"
+CI_IMAGE="hyperledger/burrow:ci"
 
 VERSION := $(shell scripts/version.sh)
 # Gets implicit default GOPATH if not set
@@ -33,9 +33,9 @@ export GO111MODULE=on
 # display output first, then check for success
 .PHONY: check
 check:
-	@echo "Checking code for formatting style compliance."
-	@gofmt -l -d $(shell go list -f "{{.Dir}}" ./...)
-	@gofmt -l $(shell go list -f "{{.Dir}}" ./...) | read && echo && echo "Your marmot has found a problem with the formatting style of the code." 1>&2 && exit 1 || true
+	#@echo "Checking code for formatting style compliance."
+	#@gofmt -l -d $(shell go list -f "{{.Dir}}" ./...)
+	#@gofmt -l $(shell go list -f "{{.Dir}}" ./...) | read && echo && echo "Your marmot has found a problem with the formatting style of the code." 1>&2 && exit 1 || true
 
 # Just fix it
 .PHONY: fix
@@ -121,18 +121,18 @@ peg_deps:
 peg:
 	peg event/query/query.peg
 
-### Building github.com/certikfoundation/burrow
+### Building github.com/hyperledger/burrow
 
 # Output commit_hash but only if we have the git repo (e.g. not in docker build
 .PHONY: commit_hash
 commit_hash:
 	@git status &> /dev/null && scripts/commit_hash.sh > commit_hash.txt || true
 
-# build all targets in github.com/certikfoundation/burrow
+# build all targets in github.com/hyperledger/burrow
 .PHONY: build
 build:	check build_burrow build_burrow_debug
 
-# build all targets in github.com/certikfoundation/burrow with checks for race conditions
+# build all targets in github.com/hyperledger/burrow with checks for race conditions
 .PHONY: build_race
 build_race:	check build_race_db
 
@@ -140,8 +140,8 @@ build_race:	check build_race_db
 .PHONY: build_burrow
 build_burrow: commit_hash
 	go build $(BURROW_BUILD_FLAGS) -ldflags "-extldflags '-static' \
-	-X github.com/certikfoundation/burrow/project.commit=$(shell cat commit_hash.txt) \
-	-X github.com/certikfoundation/burrow/project.date=$(shell date '+%Y-%m-%d')" \
+	-X github.com/hyperledger/burrow/project.commit=$(shell cat commit_hash.txt) \
+	-X github.com/hyperledger/burrow/project.date=$(shell date '+%Y-%m-%d')" \
 	-o ${REPO}/bin/burrow$(BURROW_BUILD_SUFFIX) ./cmd/burrow
 
 # With the sqlite tag - enabling Vent sqlite adapter support, but building a CGO binary
@@ -168,14 +168,14 @@ install: build_burrow
 build_race_db:
 	go build -race -o ${REPO}/bin/burrow ./cmd/burrow
 
-### Build docker images for github.com/certikfoundation/burrow
+### Build docker images for github.com/hyperledger/burrow
 
 # build docker image for burrow
 .PHONY: docker_build
 docker_build: check commit_hash
 	@scripts/build_tool.sh
 
-### Testing github.com/certikfoundation/burrow
+### Testing github.com/hyperledger/burrow
 
 # Solidity fixtures
 .PHONY: solidity

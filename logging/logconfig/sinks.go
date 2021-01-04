@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/certikfoundation/burrow/logging/loggers"
-	"github.com/certikfoundation/burrow/logging/structure"
 	"github.com/eapache/channels"
 	"github.com/go-kit/kit/log"
+	"github.com/hyperledger/burrow/logging/loggers"
+	"github.com/hyperledger/burrow/logging/structure"
 )
 
 // This file contains definitions for a configurable output graph for the

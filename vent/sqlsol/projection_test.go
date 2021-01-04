@@ -3,9 +3,9 @@ package sqlsol_test
 import (
 	"testing"
 
-	"github.com/certikfoundation/burrow/vent/sqlsol"
-	"github.com/certikfoundation/burrow/vent/test"
-	"github.com/certikfoundation/burrow/vent/types"
+	"github.com/hyperledger/burrow/vent/sqlsol"
+	"github.com/hyperledger/burrow/vent/test"
+	"github.com/hyperledger/burrow/vent/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -8,11 +8,11 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/certikfoundation/burrow/event/query"
-	"github.com/certikfoundation/burrow/execution/solidity"
+	"github.com/hyperledger/burrow/event/query"
+	"github.com/hyperledger/burrow/execution/solidity"
 
-	"github.com/certikfoundation/burrow/crypto"
-	"github.com/certikfoundation/burrow/permission"
+	"github.com/hyperledger/burrow/crypto"
+	"github.com/hyperledger/burrow/permission"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

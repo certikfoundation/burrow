@@ -4,15 +4,15 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/certikfoundation/burrow/binary"
+	"github.com/hyperledger/burrow/binary"
 
-	"github.com/certikfoundation/burrow/crypto"
-	"github.com/certikfoundation/burrow/event"
-	"github.com/certikfoundation/burrow/event/query"
-	"github.com/certikfoundation/burrow/execution/errors"
-	"github.com/certikfoundation/burrow/execution/names"
-	"github.com/certikfoundation/burrow/permission"
-	"github.com/certikfoundation/burrow/txs"
+	"github.com/hyperledger/burrow/crypto"
+	"github.com/hyperledger/burrow/event"
+	"github.com/hyperledger/burrow/event/query"
+	"github.com/hyperledger/burrow/execution/errors"
+	"github.com/hyperledger/burrow/execution/names"
+	"github.com/hyperledger/burrow/permission"
+	"github.com/hyperledger/burrow/txs"
 )
 
 func EventStringAccountInput(addr crypto.Address) string  { return fmt.Sprintf("Acc/%s/Input", addr) }

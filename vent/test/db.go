@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/certikfoundation/burrow/logging"
-	"github.com/certikfoundation/burrow/vent/config"
-	"github.com/certikfoundation/burrow/vent/sqldb"
-	"github.com/certikfoundation/burrow/vent/types"
+	"github.com/hyperledger/burrow/logging"
+	"github.com/hyperledger/burrow/vent/config"
+	"github.com/hyperledger/burrow/vent/sqldb"
+	"github.com/hyperledger/burrow/vent/types"
 	"github.com/stretchr/testify/require"
 )
 

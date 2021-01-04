@@ -10,11 +10,11 @@ import (
 	math_bits "math/bits"
 	time "time"
 
-	acm "github.com/certikfoundation/burrow/acm"
-	github_com_hyperledger_burrow_binary "github.com/certikfoundation/burrow/binary"
-	github_com_hyperledger_burrow_crypto "github.com/certikfoundation/burrow/crypto"
-	exec "github.com/certikfoundation/burrow/execution/exec"
-	names "github.com/certikfoundation/burrow/execution/names"
+	acm "github.com/hyperledger/burrow/acm"
+	github_com_hyperledger_burrow_binary "github.com/hyperledger/burrow/binary"
+	github_com_hyperledger_burrow_crypto "github.com/hyperledger/burrow/crypto"
+	exec "github.com/hyperledger/burrow/execution/exec"
+	names "github.com/hyperledger/burrow/execution/names"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	github_com_gogo_protobuf_types "github.com/gogo/protobuf/types"
@@ -36,8 +36,8 @@ var _ = time.Kitchen
 const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type Storage struct {
-	Key                  github_com_hyperledger_burrow_binary.Word256  `protobuf:"bytes,1,opt,name=Key,proto3,customtype=github.com/certikfoundation/burrow/binary.Word256" json:"Key"`
-	Value                github_com_hyperledger_burrow_binary.HexBytes `protobuf:"bytes,2,opt,name=Value,proto3,customtype=github.com/certikfoundation/burrow/binary.HexBytes" json:"Value"`
+	Key                  github_com_hyperledger_burrow_binary.Word256  `protobuf:"bytes,1,opt,name=Key,proto3,customtype=github.com/hyperledger/burrow/binary.Word256" json:"Key"`
+	Value                github_com_hyperledger_burrow_binary.HexBytes `protobuf:"bytes,2,opt,name=Value,proto3,customtype=github.com/hyperledger/burrow/binary.HexBytes" json:"Value"`
 	XXX_NoUnkeyedLiteral struct{}                                      `json:"-"`
 	XXX_unrecognized     []byte                                        `json:"-"`
 	XXX_sizecache        int32                                         `json:"-"`
@@ -77,7 +77,7 @@ func (*Storage) XXX_MessageName() string {
 }
 
 type AccountStorage struct {
-	Address              github_com_hyperledger_burrow_crypto.Address `protobuf:"bytes,1,opt,name=Address,proto3,customtype=github.com/certikfoundation/burrow/crypto.Address" json:"Address"`
+	Address              github_com_hyperledger_burrow_crypto.Address `protobuf:"bytes,1,opt,name=Address,proto3,customtype=github.com/hyperledger/burrow/crypto.Address" json:"Address"`
 	Storage              []*Storage                                   `protobuf:"bytes,2,rep,name=Storage,proto3" json:"Storage,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                     `json:"-"`
 	XXX_unrecognized     []byte                                       `json:"-"`

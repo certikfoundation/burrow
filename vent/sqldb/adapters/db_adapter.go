@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/certikfoundation/burrow/vent/types"
+	"github.com/hyperledger/burrow/vent/types"
 	"github.com/jmoiron/sqlx"
 )
 

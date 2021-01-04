@@ -5,9 +5,9 @@ import (
 
 	"strconv"
 
-	"github.com/certikfoundation/burrow/logging/logconfig"
-	"github.com/certikfoundation/burrow/logging/loggers"
-	"github.com/certikfoundation/burrow/logging/structure"
+	"github.com/hyperledger/burrow/logging/logconfig"
+	"github.com/hyperledger/burrow/logging/loggers"
+	"github.com/hyperledger/burrow/logging/structure"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

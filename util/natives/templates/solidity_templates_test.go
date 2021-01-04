@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/certikfoundation/burrow/execution/native"
+	"github.com/hyperledger/burrow/execution/native"
 	"github.com/stretchr/testify/assert"
 )
 

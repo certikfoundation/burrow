@@ -4,8 +4,8 @@
 package loggers
 
 import (
-	"github.com/certikfoundation/burrow/logging/errors"
 	"github.com/go-kit/kit/log"
+	"github.com/hyperledger/burrow/logging/errors"
 )
 
 // This represents an 'AND' type logger. When logged to it will log to each of

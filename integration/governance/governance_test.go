@@ -8,19 +8,19 @@ import (
 	"testing"
 	"time"
 
-	"github.com/certikfoundation/burrow/acm"
-	"github.com/certikfoundation/burrow/acm/balance"
-	"github.com/certikfoundation/burrow/acm/validator"
-	"github.com/certikfoundation/burrow/config"
-	"github.com/certikfoundation/burrow/core"
-	"github.com/certikfoundation/burrow/crypto"
-	"github.com/certikfoundation/burrow/execution/errors"
-	"github.com/certikfoundation/burrow/genesis/spec"
-	"github.com/certikfoundation/burrow/integration"
-	"github.com/certikfoundation/burrow/integration/rpctest"
-	"github.com/certikfoundation/burrow/permission"
-	"github.com/certikfoundation/burrow/rpc/rpcquery"
-	"github.com/certikfoundation/burrow/txs/payload"
+	"github.com/hyperledger/burrow/acm"
+	"github.com/hyperledger/burrow/acm/balance"
+	"github.com/hyperledger/burrow/acm/validator"
+	"github.com/hyperledger/burrow/config"
+	"github.com/hyperledger/burrow/core"
+	"github.com/hyperledger/burrow/crypto"
+	"github.com/hyperledger/burrow/execution/errors"
+	"github.com/hyperledger/burrow/genesis/spec"
+	"github.com/hyperledger/burrow/integration"
+	"github.com/hyperledger/burrow/integration/rpctest"
+	"github.com/hyperledger/burrow/permission"
+	"github.com/hyperledger/burrow/rpc/rpcquery"
+	"github.com/hyperledger/burrow/txs/payload"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	tmcore "github.com/tendermint/tendermint/rpc/core"
@@ -240,16 +240,16 @@ func TestGovernance(t *testing.T) {
 	// goroutine 2181 [running]:
 	// runtime/debug.Stack(0x12786c0, 0xc000085d70, 0xc000085c50)
 	// /home/sean/go1.12.1/src/runtime/debug/stack.go:24 +0x9d
-	// github.com/certikfoundation/burrow/vendor/github.com/tendermint/tendermint/libs/db.(*GoLevelDB).Get(0xc005c5b318, 0xc01fd71840, 0x5, 0x8, 0x5, 0x8, 0x5)
-	// /home/sean/go/src/github.com/certikfoundation/burrow/vendor/github.com/tendermint/tendermint/libs/db/go_level_db.go:57 +0xaf
-	// github.com/certikfoundation/burrow/vendor/github.com/tendermint/tendermint/blockchain.(*BlockStore).LoadSeenCommit(0xc00bfd6120, 0x12, 0xc002b85c90)
-	// /home/sean/go/src/github.com/certikfoundation/burrow/vendor/github.com/tendermint/tendermint/blockchain/store.go:128 +0xf2
-	// github.com/certikfoundation/burrow/vendor/github.com/tendermint/tendermint/consensus.(*ConsensusState).LoadCommit(0xc002b85c00, 0x12, 0x0)
-	// /home/sean/go/src/github.com/certikfoundation/burrow/vendor/github.com/tendermint/tendermint/consensus/state.go:273 +0xb2
-	// github.com/certikfoundation/burrow/vendor/github.com/tendermint/tendermint/consensus.(*ConsensusReactor).queryMaj23Routine(0xc0008ec680, 0x12ad1a0, 0xc010f79800, 0xc009119520)
-	// /home/sean/go/src/github.com/certikfoundation/burrow/vendor/github.com/tendermint/tendermint/consensus/reactor.go:789 +0x291
-	// created by github.com/certikfoundation/burrow/vendor/github.com/tendermint/tendermint/consensus.(*ConsensusReactor).AddPeer
-	// /home/sean/go/src/github.com/certikfoundation/burrow/vendor/github.com/tendermint/tendermint/consensus/reactor.go:171 +0x23a
+	// github.com/hyperledger/burrow/vendor/github.com/tendermint/tendermint/libs/db.(*GoLevelDB).Get(0xc005c5b318, 0xc01fd71840, 0x5, 0x8, 0x5, 0x8, 0x5)
+	// /home/sean/go/src/github.com/hyperledger/burrow/vendor/github.com/tendermint/tendermint/libs/db/go_level_db.go:57 +0xaf
+	// github.com/hyperledger/burrow/vendor/github.com/tendermint/tendermint/blockchain.(*BlockStore).LoadSeenCommit(0xc00bfd6120, 0x12, 0xc002b85c90)
+	// /home/sean/go/src/github.com/hyperledger/burrow/vendor/github.com/tendermint/tendermint/blockchain/store.go:128 +0xf2
+	// github.com/hyperledger/burrow/vendor/github.com/tendermint/tendermint/consensus.(*ConsensusState).LoadCommit(0xc002b85c00, 0x12, 0x0)
+	// /home/sean/go/src/github.com/hyperledger/burrow/vendor/github.com/tendermint/tendermint/consensus/state.go:273 +0xb2
+	// github.com/hyperledger/burrow/vendor/github.com/tendermint/tendermint/consensus.(*ConsensusReactor).queryMaj23Routine(0xc0008ec680, 0x12ad1a0, 0xc010f79800, 0xc009119520)
+	// /home/sean/go/src/github.com/hyperledger/burrow/vendor/github.com/tendermint/tendermint/consensus/reactor.go:789 +0x291
+	// created by github.com/hyperledger/burrow/vendor/github.com/tendermint/tendermint/consensus.(*ConsensusReactor).AddPeer
+	// /home/sean/go/src/github.com/hyperledger/burrow/vendor/github.com/tendermint/tendermint/consensus/reactor.go:171 +0x23a
 
 	time.Sleep(4 * time.Second)
 }

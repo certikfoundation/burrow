@@ -1,9 +1,9 @@
 package native
 
 import (
-	"github.com/certikfoundation/burrow/execution/engine"
-	"github.com/certikfoundation/burrow/execution/errors"
-	"github.com/certikfoundation/burrow/execution/exec"
+	"github.com/hyperledger/burrow/execution/engine"
+	"github.com/hyperledger/burrow/execution/errors"
+	"github.com/hyperledger/burrow/execution/exec"
 )
 
 // Call provides a standard wrapper for implementing Callable.Call with appropriate error handling and event firing.

@@ -3,13 +3,13 @@ package jobs
 import (
 	"fmt"
 
-	"github.com/certikfoundation/burrow/logging"
-	"github.com/certikfoundation/burrow/txs/payload"
+	"github.com/hyperledger/burrow/logging"
+	"github.com/hyperledger/burrow/txs/payload"
 
-	"github.com/certikfoundation/burrow/crypto"
-	"github.com/certikfoundation/burrow/deploy/def"
-	"github.com/certikfoundation/burrow/deploy/util"
-	"github.com/certikfoundation/burrow/execution/evm/abi"
+	"github.com/hyperledger/burrow/crypto"
+	"github.com/hyperledger/burrow/deploy/def"
+	"github.com/hyperledger/burrow/deploy/util"
+	"github.com/hyperledger/burrow/execution/evm/abi"
 )
 
 func FormulateUpdateAccountJob(gov *def.UpdateAccount, account string, client *def.Client, logger *logging.Logger) (*payload.GovTx, []*abi.Variable, error) {

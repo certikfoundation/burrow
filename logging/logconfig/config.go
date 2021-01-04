@@ -5,12 +5,12 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/certikfoundation/burrow/logging"
 	"github.com/eapache/channels"
 	"github.com/go-kit/kit/log"
+	"github.com/hyperledger/burrow/logging"
 
 	"github.com/BurntSushi/toml"
-	"github.com/certikfoundation/burrow/logging/loggers"
+	"github.com/hyperledger/burrow/logging/loggers"
 )
 
 type LoggingConfig struct {

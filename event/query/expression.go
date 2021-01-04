@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/certikfoundation/burrow/logging/errors"
+	"github.com/hyperledger/burrow/logging/errors"
 )
 
 const (

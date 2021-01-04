@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/certikfoundation/burrow/event"
-	"github.com/certikfoundation/burrow/event/query"
-	"github.com/certikfoundation/burrow/txs"
+	"github.com/hyperledger/burrow/event"
+	"github.com/hyperledger/burrow/event/query"
+	"github.com/hyperledger/burrow/txs"
 )
 
 func EventStringBlockExecution(height uint64) string {

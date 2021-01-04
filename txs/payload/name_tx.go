@@ -3,8 +3,8 @@ package payload
 import (
 	"fmt"
 
-	"github.com/certikfoundation/burrow/acm/acmstate"
-	"github.com/certikfoundation/burrow/crypto"
+	"github.com/hyperledger/burrow/acm/acmstate"
+	"github.com/hyperledger/burrow/crypto"
 )
 
 func NewNameTx(st acmstate.AccountGetter, from crypto.PublicKey, name, data string, amt, fee uint64) (*NameTx, error) {

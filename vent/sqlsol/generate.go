@@ -3,8 +3,8 @@ package sqlsol
 import (
 	"fmt"
 
-	"github.com/certikfoundation/burrow/execution/evm/abi"
-	"github.com/certikfoundation/burrow/vent/types"
+	"github.com/hyperledger/burrow/execution/evm/abi"
+	"github.com/hyperledger/burrow/vent/types"
 )
 
 // GenerateSpecFromAbis creates a simple spec which just logs all events

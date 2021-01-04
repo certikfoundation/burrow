@@ -7,16 +7,16 @@ import (
 	"testing"
 	"time"
 
-	"github.com/certikfoundation/burrow/integration"
-	"github.com/certikfoundation/burrow/integration/rpctest"
+	"github.com/hyperledger/burrow/integration"
+	"github.com/hyperledger/burrow/integration/rpctest"
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/certikfoundation/burrow/vent/types"
+	"github.com/hyperledger/burrow/vent/types"
 	"github.com/lib/pq"
 	"github.com/stretchr/testify/require"
 
-	"github.com/certikfoundation/burrow/vent/test"
+	"github.com/hyperledger/burrow/vent/test"
 )
 
 func TestPostgresConsumer(t *testing.T) {

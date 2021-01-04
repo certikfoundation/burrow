@@ -3,12 +3,12 @@ package acmstate
 import (
 	"fmt"
 
-	"github.com/certikfoundation/burrow/acm"
-	"github.com/certikfoundation/burrow/binary"
-	"github.com/certikfoundation/burrow/crypto"
+	"github.com/hyperledger/burrow/acm"
+	"github.com/hyperledger/burrow/binary"
+	"github.com/hyperledger/burrow/crypto"
 	"golang.org/x/crypto/sha3"
 
-	"github.com/certikfoundation/burrow/permission"
+	"github.com/hyperledger/burrow/permission"
 	"github.com/tmthrgd/go-hex"
 )
 

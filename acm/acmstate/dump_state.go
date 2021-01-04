@@ -5,8 +5,8 @@ import (
 	"encoding/hex"
 	"encoding/json"
 
-	"github.com/certikfoundation/burrow/acm"
-	"github.com/certikfoundation/burrow/crypto"
+	"github.com/hyperledger/burrow/acm"
+	"github.com/hyperledger/burrow/crypto"
 )
 
 type DumpState struct {

@@ -1,8 +1,8 @@
 package def
 
 import (
-	"github.com/certikfoundation/burrow/deploy/def/rule"
 	validation "github.com/go-ozzo/ozzo-validation"
+	"github.com/hyperledger/burrow/deploy/def/rule"
 )
 
 const DefaultOutputFile = "deploy.output.json"

@@ -17,9 +17,9 @@ package state
 import (
 	"testing"
 
-	"github.com/certikfoundation/burrow/acm"
-	"github.com/certikfoundation/burrow/config/source"
-	"github.com/certikfoundation/burrow/permission"
+	"github.com/hyperledger/burrow/acm"
+	"github.com/hyperledger/burrow/config/source"
+	"github.com/hyperledger/burrow/permission"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"

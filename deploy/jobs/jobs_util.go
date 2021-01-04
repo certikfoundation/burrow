@@ -1,8 +1,8 @@
 package jobs
 
 import (
-	"github.com/certikfoundation/burrow/deploy/def"
-	"github.com/certikfoundation/burrow/logging"
+	"github.com/hyperledger/burrow/deploy/def"
+	"github.com/hyperledger/burrow/logging"
 )
 
 func SetAccountJob(account *def.Account, script *def.Playbook, logger *logging.Logger) (string, error) {

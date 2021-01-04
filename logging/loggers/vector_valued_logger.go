@@ -4,8 +4,8 @@
 package loggers
 
 import (
-	"github.com/certikfoundation/burrow/logging/structure"
 	"github.com/go-kit/kit/log"
+	"github.com/hyperledger/burrow/logging/structure"
 )
 
 // Treat duplicate key-values as consecutive entries in a vector-valued lookup

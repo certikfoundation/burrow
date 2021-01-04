@@ -3,7 +3,7 @@ package validator
 import (
 	"math/big"
 
-	"github.com/certikfoundation/burrow/crypto"
+	"github.com/hyperledger/burrow/crypto"
 )
 
 // Cache is just a Ring with no memory

@@ -1,4 +1,4 @@
-module github.com/certikfoundation/burrow
+module github.com/hyperledger/burrow
 
 go 1.15
 

@@ -3,8 +3,8 @@ package payload
 import (
 	"fmt"
 
-	"github.com/certikfoundation/burrow/acm/acmstate"
-	"github.com/certikfoundation/burrow/crypto"
+	"github.com/hyperledger/burrow/acm/acmstate"
+	"github.com/hyperledger/burrow/crypto"
 )
 
 func NewBondTx(address crypto.Address, amount uint64) *BondTx {

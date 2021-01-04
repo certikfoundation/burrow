@@ -6,11 +6,11 @@ import (
 	"os"
 	"time"
 
-	"github.com/certikfoundation/burrow/core"
-	"github.com/certikfoundation/burrow/dump"
-	"github.com/certikfoundation/burrow/logging/logconfig"
-	"github.com/certikfoundation/burrow/rpc/rpcdump"
-	"github.com/certikfoundation/burrow/rpc/rpcquery"
+	"github.com/hyperledger/burrow/core"
+	"github.com/hyperledger/burrow/dump"
+	"github.com/hyperledger/burrow/logging/logconfig"
+	"github.com/hyperledger/burrow/rpc/rpcdump"
+	"github.com/hyperledger/burrow/rpc/rpcquery"
 	cli "github.com/jawher/mow.cli"
 	"google.golang.org/grpc"
 )

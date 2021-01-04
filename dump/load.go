@@ -5,12 +5,12 @@ import (
 	bin "encoding/binary"
 	"io"
 
-	"github.com/certikfoundation/burrow/acm"
-	"github.com/certikfoundation/burrow/acm/acmstate"
-	"github.com/certikfoundation/burrow/binary"
-	"github.com/certikfoundation/burrow/execution/exec"
-	"github.com/certikfoundation/burrow/execution/state"
-	"github.com/certikfoundation/burrow/txs/payload"
+	"github.com/hyperledger/burrow/acm"
+	"github.com/hyperledger/burrow/acm/acmstate"
+	"github.com/hyperledger/burrow/binary"
+	"github.com/hyperledger/burrow/execution/exec"
+	"github.com/hyperledger/burrow/execution/state"
+	"github.com/hyperledger/burrow/txs/payload"
 )
 
 // Load a dump into state

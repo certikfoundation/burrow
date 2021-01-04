@@ -8,13 +8,13 @@ import (
 
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 
-	"github.com/certikfoundation/burrow/crypto"
-	"github.com/certikfoundation/burrow/execution/evm/abi"
-	"github.com/certikfoundation/burrow/execution/exec"
-	"github.com/certikfoundation/burrow/execution/solidity"
-	"github.com/certikfoundation/burrow/logging"
-	"github.com/certikfoundation/burrow/vent/sqlsol"
-	"github.com/certikfoundation/burrow/vent/types"
+	"github.com/hyperledger/burrow/crypto"
+	"github.com/hyperledger/burrow/execution/evm/abi"
+	"github.com/hyperledger/burrow/execution/exec"
+	"github.com/hyperledger/burrow/execution/solidity"
+	"github.com/hyperledger/burrow/logging"
+	"github.com/hyperledger/burrow/vent/sqlsol"
+	"github.com/hyperledger/burrow/vent/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

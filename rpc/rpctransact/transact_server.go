@@ -5,15 +5,15 @@ import (
 	"sync"
 	"time"
 
-	"github.com/certikfoundation/burrow/logging"
+	"github.com/hyperledger/burrow/logging"
 
-	"github.com/certikfoundation/burrow/acm/acmstate"
-	"github.com/certikfoundation/burrow/bcm"
+	"github.com/hyperledger/burrow/acm/acmstate"
+	"github.com/hyperledger/burrow/bcm"
 
-	"github.com/certikfoundation/burrow/execution"
-	"github.com/certikfoundation/burrow/execution/exec"
-	"github.com/certikfoundation/burrow/txs"
-	"github.com/certikfoundation/burrow/txs/payload"
+	"github.com/hyperledger/burrow/execution"
+	"github.com/hyperledger/burrow/execution/exec"
+	"github.com/hyperledger/burrow/txs"
+	"github.com/hyperledger/burrow/txs/payload"
 	"golang.org/x/net/context"
 )
 

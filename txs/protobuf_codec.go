@@ -1,7 +1,7 @@
 package txs
 
 import (
-	"github.com/certikfoundation/burrow/encoding"
+	"github.com/hyperledger/burrow/encoding"
 )
 
 type protobufCodec struct {

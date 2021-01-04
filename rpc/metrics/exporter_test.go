@@ -9,11 +9,11 @@ import (
 
 	io_prometheus_client "github.com/prometheus/client_model/go"
 
-	"github.com/certikfoundation/burrow/bcm"
+	"github.com/hyperledger/burrow/bcm"
 
-	"github.com/certikfoundation/burrow/consensus/tendermint"
-	"github.com/certikfoundation/burrow/logging"
-	"github.com/certikfoundation/burrow/rpc"
+	"github.com/hyperledger/burrow/consensus/tendermint"
+	"github.com/hyperledger/burrow/logging"
+	"github.com/hyperledger/burrow/rpc"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/stretchr/testify/require"
 

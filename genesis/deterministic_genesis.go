@@ -5,9 +5,9 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/certikfoundation/burrow/acm"
-	"github.com/certikfoundation/burrow/crypto"
-	"github.com/certikfoundation/burrow/permission"
+	"github.com/hyperledger/burrow/acm"
+	"github.com/hyperledger/burrow/crypto"
+	"github.com/hyperledger/burrow/permission"
 )
 
 type deterministicGenesis struct {

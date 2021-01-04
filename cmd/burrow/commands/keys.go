@@ -10,11 +10,11 @@ import (
 	"os"
 	"time"
 
-	"github.com/certikfoundation/burrow/config"
-	"github.com/certikfoundation/burrow/config/deployment"
-	"github.com/certikfoundation/burrow/crypto"
-	"github.com/certikfoundation/burrow/keys"
 	"github.com/howeyc/gopass"
+	"github.com/hyperledger/burrow/config"
+	"github.com/hyperledger/burrow/config/deployment"
+	"github.com/hyperledger/burrow/crypto"
+	"github.com/hyperledger/burrow/keys"
 	cli "github.com/jawher/mow.cli"
 	"google.golang.org/grpc"
 )

@@ -3,7 +3,7 @@ package storage
 import (
 	"bytes"
 
-	"github.com/certikfoundation/burrow/storage"
+	"github.com/hyperledger/burrow/storage"
 )
 
 type uniqueIterator struct {

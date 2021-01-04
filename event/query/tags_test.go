@@ -4,8 +4,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/certikfoundation/burrow/binary"
-	"github.com/certikfoundation/burrow/crypto"
+	"github.com/hyperledger/burrow/binary"
+	"github.com/hyperledger/burrow/crypto"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

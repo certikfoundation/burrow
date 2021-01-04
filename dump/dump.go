@@ -6,15 +6,15 @@ import (
 	"io"
 	"time"
 
-	"github.com/certikfoundation/burrow/acm"
-	"github.com/certikfoundation/burrow/acm/acmstate"
-	"github.com/certikfoundation/burrow/binary"
-	"github.com/certikfoundation/burrow/encoding"
-	"github.com/certikfoundation/burrow/execution/exec"
-	"github.com/certikfoundation/burrow/execution/names"
-	"github.com/certikfoundation/burrow/execution/state"
-	"github.com/certikfoundation/burrow/logging"
-	"github.com/certikfoundation/burrow/storage"
+	"github.com/hyperledger/burrow/acm"
+	"github.com/hyperledger/burrow/acm/acmstate"
+	"github.com/hyperledger/burrow/binary"
+	"github.com/hyperledger/burrow/encoding"
+	"github.com/hyperledger/burrow/execution/exec"
+	"github.com/hyperledger/burrow/execution/names"
+	"github.com/hyperledger/burrow/execution/state"
+	"github.com/hyperledger/burrow/logging"
+	"github.com/hyperledger/burrow/storage"
 )
 
 const (

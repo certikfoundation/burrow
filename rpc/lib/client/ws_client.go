@@ -9,8 +9,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/certikfoundation/burrow/rpc/lib/types"
 	"github.com/gorilla/websocket"
+	"github.com/hyperledger/burrow/rpc/lib/types"
 	"github.com/pkg/errors"
 	metrics "github.com/rcrowley/go-metrics"
 	"github.com/tendermint/tendermint/libs/rand"

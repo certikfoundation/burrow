@@ -9,7 +9,7 @@ import (
 	math "math"
 	math_bits "math/bits"
 
-	dump "github.com/certikfoundation/burrow/dump"
+	dump "github.com/hyperledger/burrow/dump"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	golang_proto "github.com/golang/protobuf/proto"

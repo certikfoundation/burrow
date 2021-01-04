@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/certikfoundation/burrow/logging"
-	"github.com/certikfoundation/burrow/vent/sqldb/adapters"
-	"github.com/certikfoundation/burrow/vent/types"
+	"github.com/hyperledger/burrow/logging"
+	"github.com/hyperledger/burrow/vent/sqldb/adapters"
+	"github.com/hyperledger/burrow/vent/types"
 	"github.com/jmoiron/sqlx"
 )
 

@@ -1,1 +1,1 @@
-* Test case for issue [#696](https://github.com/certikfoundation/burrow/issues/526)
+* Test case for issue [#696](https://github.com/hyperledger/burrow/issues/526)

@@ -1,7 +1,7 @@
 package engine
 
 import (
-	"github.com/certikfoundation/burrow/acm"
+	"github.com/hyperledger/burrow/acm"
 )
 
 type Dispatcher interface {

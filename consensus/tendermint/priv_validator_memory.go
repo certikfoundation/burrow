@@ -3,7 +3,7 @@ package tendermint
 import (
 	"fmt"
 
-	"github.com/certikfoundation/burrow/crypto"
+	"github.com/hyperledger/burrow/crypto"
 	tmCrypto "github.com/tendermint/tendermint/crypto"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 	tmTypes "github.com/tendermint/tendermint/types"

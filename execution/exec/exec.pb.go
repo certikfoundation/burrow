@@ -5,15 +5,15 @@ package exec
 
 import (
 	fmt "fmt"
-	github_com_certikfoundation_burrow_binary "github.com/certikfoundation/burrow/binary"
-	github_com_certikfoundation_burrow_crypto "github.com/certikfoundation/burrow/crypto"
-	errors "github.com/certikfoundation/burrow/execution/errors"
-	names "github.com/certikfoundation/burrow/execution/names"
-	spec "github.com/certikfoundation/burrow/genesis/spec"
-	permission "github.com/certikfoundation/burrow/permission"
-	github_com_certikfoundation_burrow_txs "github.com/certikfoundation/burrow/txs"
-	txs "github.com/certikfoundation/burrow/txs"
-	github_com_certikfoundation_burrow_txs_payload "github.com/certikfoundation/burrow/txs/payload"
+	github_com_certikfoundation_burrow_binary "github.com/hyperledger/burrow/binary"
+	github_com_certikfoundation_burrow_crypto "github.com/hyperledger/burrow/crypto"
+	errors "github.com/hyperledger/burrow/execution/errors"
+	names "github.com/hyperledger/burrow/execution/names"
+	spec "github.com/hyperledger/burrow/genesis/spec"
+	permission "github.com/hyperledger/burrow/permission"
+	github_com_certikfoundation_burrow_txs "github.com/hyperledger/burrow/txs"
+	txs "github.com/hyperledger/burrow/txs"
+	github_com_certikfoundation_burrow_txs_payload "github.com/hyperledger/burrow/txs/payload"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	github_com_gogo_protobuf_types "github.com/gogo/protobuf/types"
@@ -90,7 +90,7 @@ func (*StreamEvents) XXX_MessageName() string {
 type StreamEvent struct {
 	BeginBlock           *BeginBlock                                      `protobuf:"bytes,1,opt,name=BeginBlock,proto3" json:"BeginBlock,omitempty"`
 	BeginTx              *BeginTx                                         `protobuf:"bytes,2,opt,name=BeginTx,proto3" json:"BeginTx,omitempty"`
-	Envelope             *github_com_certikfoundation_burrow_txs.Envelope `protobuf:"bytes,3,opt,name=Envelope,proto3,customtype=github.com/certikfoundation/burrow/txs.Envelope" json:"Envelope,omitempty"`
+	Envelope             *github_com_certikfoundation_burrow_txs.Envelope `protobuf:"bytes,3,opt,name=Envelope,proto3,customtype=github.com/hyperledger/burrow/txs.Envelope" json:"Envelope,omitempty"`
 	Event                *Event                                           `protobuf:"bytes,4,opt,name=Event,proto3" json:"Event,omitempty"`
 	EndTx                *EndTx                                           `protobuf:"bytes,5,opt,name=EndTx,proto3" json:"EndTx,omitempty"`
 	EndBlock             *EndBlock                                        `protobuf:"bytes,6,opt,name=EndBlock,proto3" json:"EndBlock,omitempty"`
@@ -364,7 +364,7 @@ func (*BeginTx) XXX_MessageName() string {
 
 type EndTx struct {
 	// The hash of the transaction that caused this event to be generated
-	TxHash               github_com_certikfoundation_burrow_binary.HexBytes `protobuf:"bytes,3,opt,name=TxHash,proto3,customtype=github.com/certikfoundation/burrow/binary.HexBytes" json:"TxHash"`
+	TxHash               github_com_certikfoundation_burrow_binary.HexBytes `protobuf:"bytes,3,opt,name=TxHash,proto3,customtype=github.com/hyperledger/burrow/binary.HexBytes" json:"TxHash"`
 	XXX_NoUnkeyedLiteral struct{}                                           `json:"-"`
 	XXX_unrecognized     []byte                                             `json:"-"`
 	XXX_sizecache        int32                                              `json:"-"`
@@ -405,9 +405,9 @@ func (*EndTx) XXX_MessageName() string {
 
 type TxHeader struct {
 	// Transaction type
-	TxType github_com_certikfoundation_burrow_txs_payload.Type `protobuf:"varint,1,opt,name=TxType,proto3,casttype=github.com/certikfoundation/burrow/txs/payload.Type" json:"TxType,omitempty"`
+	TxType github_com_certikfoundation_burrow_txs_payload.Type `protobuf:"varint,1,opt,name=TxType,proto3,casttype=github.com/hyperledger/burrow/txs/payload.Type" json:"TxType,omitempty"`
 	// The hash of the transaction that caused this event to be generated
-	TxHash github_com_certikfoundation_burrow_binary.HexBytes `protobuf:"bytes,2,opt,name=TxHash,proto3,customtype=github.com/certikfoundation/burrow/binary.HexBytes" json:"TxHash"`
+	TxHash github_com_certikfoundation_burrow_binary.HexBytes `protobuf:"bytes,2,opt,name=TxHash,proto3,customtype=github.com/hyperledger/burrow/binary.HexBytes" json:"TxHash"`
 	// The block height at which this transaction was included
 	Height uint64 `protobuf:"varint,3,opt,name=Height,proto3" json:"Height,omitempty"`
 	// The index of this transaction within the block
@@ -613,7 +613,7 @@ func (*TxExecutionKey) XXX_MessageName() string {
 type TxExecution struct {
 	*TxHeader `protobuf:"bytes,1,opt,name=Header,proto3,embedded=Header" json:"Header,omitempty"`
 	// Signed Tx that triggered this execution
-	Envelope *github_com_certikfoundation_burrow_txs.Envelope `protobuf:"bytes,6,opt,name=Envelope,proto3,customtype=github.com/certikfoundation/burrow/txs.Envelope" json:"Envelope,omitempty"`
+	Envelope *github_com_certikfoundation_burrow_txs.Envelope `protobuf:"bytes,6,opt,name=Envelope,proto3,customtype=github.com/hyperledger/burrow/txs.Envelope" json:"Envelope,omitempty"`
 	// Execution events
 	Events []*Event `protobuf:"bytes,7,rep,name=Events,proto3" json:"Events,omitempty"`
 	// The execution results
@@ -774,9 +774,9 @@ func (*Origin) XXX_MessageName() string {
 
 type Header struct {
 	// Transaction type
-	TxType github_com_certikfoundation_burrow_txs_payload.Type `protobuf:"varint,1,opt,name=TxType,proto3,casttype=github.com/certikfoundation/burrow/txs/payload.Type" json:"TxType,omitempty"`
+	TxType github_com_certikfoundation_burrow_txs_payload.Type `protobuf:"varint,1,opt,name=TxType,proto3,casttype=github.com/hyperledger/burrow/txs/payload.Type" json:"TxType,omitempty"`
 	// The hash of the transaction that caused this event to be generated
-	TxHash github_com_certikfoundation_burrow_binary.HexBytes `protobuf:"bytes,2,opt,name=TxHash,proto3,customtype=github.com/certikfoundation/burrow/binary.HexBytes" json:"TxHash"`
+	TxHash github_com_certikfoundation_burrow_binary.HexBytes `protobuf:"bytes,2,opt,name=TxHash,proto3,customtype=github.com/hyperledger/burrow/binary.HexBytes" json:"TxHash"`
 	// The type of event
 	EventType EventType `protobuf:"varint,3,opt,name=EventType,proto3,casttype=EventType" json:"EventType,omitempty"`
 	// EventID published with event
@@ -1029,9 +1029,9 @@ func (*Result) XXX_MessageName() string {
 }
 
 type LogEvent struct {
-	Address              github_com_certikfoundation_burrow_crypto.Address   `protobuf:"bytes,1,opt,name=Address,proto3,customtype=github.com/certikfoundation/burrow/crypto.Address" json:"Address"`
-	Data                 github_com_certikfoundation_burrow_binary.HexBytes  `protobuf:"bytes,2,opt,name=Data,proto3,customtype=github.com/certikfoundation/burrow/binary.HexBytes" json:"Data"`
-	Topics               []github_com_certikfoundation_burrow_binary.Word256 `protobuf:"bytes,3,rep,name=Topics,proto3,customtype=github.com/certikfoundation/burrow/binary.Word256" json:"Topics"`
+	Address              github_com_certikfoundation_burrow_crypto.Address   `protobuf:"bytes,1,opt,name=Address,proto3,customtype=github.com/hyperledger/burrow/crypto.Address" json:"Address"`
+	Data                 github_com_certikfoundation_burrow_binary.HexBytes  `protobuf:"bytes,2,opt,name=Data,proto3,customtype=github.com/hyperledger/burrow/binary.HexBytes" json:"Data"`
+	Topics               []github_com_certikfoundation_burrow_binary.Word256 `protobuf:"bytes,3,rep,name=Topics,proto3,customtype=github.com/hyperledger/burrow/binary.Word256" json:"Topics"`
 	XXX_NoUnkeyedLiteral struct{}                                            `json:"-"`
 	XXX_unrecognized     []byte                                              `json:"-"`
 	XXX_sizecache        int32                                               `json:"-"`
@@ -1073,9 +1073,9 @@ func (*LogEvent) XXX_MessageName() string {
 type CallEvent struct {
 	CallType             CallType                                           `protobuf:"varint,5,opt,name=CallType,proto3,casttype=CallType" json:"CallType,omitempty"`
 	CallData             *CallData                                          `protobuf:"bytes,1,opt,name=CallData,proto3" json:"CallData,omitempty"`
-	Origin               github_com_certikfoundation_burrow_crypto.Address  `protobuf:"bytes,2,opt,name=Origin,proto3,customtype=github.com/certikfoundation/burrow/crypto.Address" json:"Origin"`
+	Origin               github_com_certikfoundation_burrow_crypto.Address  `protobuf:"bytes,2,opt,name=Origin,proto3,customtype=github.com/hyperledger/burrow/crypto.Address" json:"Origin"`
 	StackDepth           uint64                                             `protobuf:"varint,3,opt,name=StackDepth,proto3" json:"StackDepth,omitempty"`
-	Return               github_com_certikfoundation_burrow_binary.HexBytes `protobuf:"bytes,4,opt,name=Return,proto3,customtype=github.com/certikfoundation/burrow/binary.HexBytes" json:"Return"`
+	Return               github_com_certikfoundation_burrow_binary.HexBytes `protobuf:"bytes,4,opt,name=Return,proto3,customtype=github.com/hyperledger/burrow/binary.HexBytes" json:"Return"`
 	XXX_NoUnkeyedLiteral struct{}                                           `json:"-"`
 	XXX_unrecognized     []byte                                             `json:"-"`
 	XXX_sizecache        int32                                              `json:"-"`
@@ -1183,7 +1183,7 @@ func (*GovernAccountEvent) XXX_MessageName() string {
 }
 
 type InputEvent struct {
-	Address              github_com_certikfoundation_burrow_crypto.Address `protobuf:"bytes,1,opt,name=Address,proto3,customtype=github.com/certikfoundation/burrow/crypto.Address" json:"Address"`
+	Address              github_com_certikfoundation_burrow_crypto.Address `protobuf:"bytes,1,opt,name=Address,proto3,customtype=github.com/hyperledger/burrow/crypto.Address" json:"Address"`
 	XXX_NoUnkeyedLiteral struct{}                                          `json:"-"`
 	XXX_unrecognized     []byte                                            `json:"-"`
 	XXX_sizecache        int32                                             `json:"-"`
@@ -1223,7 +1223,7 @@ func (*InputEvent) XXX_MessageName() string {
 }
 
 type OutputEvent struct {
-	Address              github_com_certikfoundation_burrow_crypto.Address `protobuf:"bytes,1,opt,name=Address,proto3,customtype=github.com/certikfoundation/burrow/crypto.Address" json:"Address"`
+	Address              github_com_certikfoundation_burrow_crypto.Address `protobuf:"bytes,1,opt,name=Address,proto3,customtype=github.com/hyperledger/burrow/crypto.Address" json:"Address"`
 	XXX_NoUnkeyedLiteral struct{}                                          `json:"-"`
 	XXX_unrecognized     []byte                                            `json:"-"`
 	XXX_sizecache        int32                                             `json:"-"`
@@ -1263,9 +1263,9 @@ func (*OutputEvent) XXX_MessageName() string {
 }
 
 type CallData struct {
-	Caller               github_com_certikfoundation_burrow_crypto.Address  `protobuf:"bytes,1,opt,name=Caller,proto3,customtype=github.com/certikfoundation/burrow/crypto.Address" json:"Caller"`
-	Callee               github_com_certikfoundation_burrow_crypto.Address  `protobuf:"bytes,2,opt,name=Callee,proto3,customtype=github.com/certikfoundation/burrow/crypto.Address" json:"Callee"`
-	Data                 github_com_certikfoundation_burrow_binary.HexBytes `protobuf:"bytes,3,opt,name=Data,proto3,customtype=github.com/certikfoundation/burrow/binary.HexBytes" json:"Data"`
+	Caller               github_com_certikfoundation_burrow_crypto.Address  `protobuf:"bytes,1,opt,name=Caller,proto3,customtype=github.com/hyperledger/burrow/crypto.Address" json:"Caller"`
+	Callee               github_com_certikfoundation_burrow_crypto.Address  `protobuf:"bytes,2,opt,name=Callee,proto3,customtype=github.com/hyperledger/burrow/crypto.Address" json:"Callee"`
+	Data                 github_com_certikfoundation_burrow_binary.HexBytes `protobuf:"bytes,3,opt,name=Data,proto3,customtype=github.com/hyperledger/burrow/binary.HexBytes" json:"Data"`
 	Value                uint64                                             `protobuf:"varint,4,opt,name=Value,proto3" json:"Value,omitempty"`
 	Gas                  uint64                                             `protobuf:"varint,5,opt,name=Gas,proto3" json:"Gas,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                           `json:"-"`

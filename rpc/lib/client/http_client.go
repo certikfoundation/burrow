@@ -11,7 +11,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/certikfoundation/burrow/rpc/lib/types"
+	"github.com/hyperledger/burrow/rpc/lib/types"
 	"github.com/pkg/errors"
 )
 

@@ -8,12 +8,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/certikfoundation/burrow/vent/config"
-	"github.com/certikfoundation/burrow/vent/sqldb"
-	"github.com/certikfoundation/burrow/vent/sqldb/adapters"
-	"github.com/certikfoundation/burrow/vent/sqlsol"
-	"github.com/certikfoundation/burrow/vent/test"
-	"github.com/certikfoundation/burrow/vent/types"
+	"github.com/hyperledger/burrow/vent/config"
+	"github.com/hyperledger/burrow/vent/sqldb"
+	"github.com/hyperledger/burrow/vent/sqldb/adapters"
+	"github.com/hyperledger/burrow/vent/sqlsol"
+	"github.com/hyperledger/burrow/vent/test"
+	"github.com/hyperledger/burrow/vent/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

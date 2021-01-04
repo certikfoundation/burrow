@@ -9,11 +9,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/certikfoundation/burrow/encoding"
+	"github.com/hyperledger/burrow/encoding"
 	"github.com/tendermint/tendermint/types"
 
-	"github.com/certikfoundation/burrow/genesis"
-	"github.com/certikfoundation/burrow/logging"
+	"github.com/hyperledger/burrow/genesis"
+	"github.com/hyperledger/burrow/logging"
 	dbm "github.com/tendermint/tm-db"
 )
 

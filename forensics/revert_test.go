@@ -9,7 +9,7 @@ import (
 	"path"
 	"testing"
 
-	"github.com/certikfoundation/burrow/execution/exec"
+	"github.com/hyperledger/burrow/execution/exec"
 	"github.com/stretchr/testify/require"
 )
 

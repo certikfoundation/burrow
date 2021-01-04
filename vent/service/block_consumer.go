@@ -3,12 +3,12 @@ package service
 import (
 	"io"
 
-	"github.com/certikfoundation/burrow/event/query"
-	"github.com/certikfoundation/burrow/execution/exec"
-	"github.com/certikfoundation/burrow/logging"
-	"github.com/certikfoundation/burrow/logging/structure"
-	"github.com/certikfoundation/burrow/vent/sqlsol"
-	"github.com/certikfoundation/burrow/vent/types"
+	"github.com/hyperledger/burrow/event/query"
+	"github.com/hyperledger/burrow/execution/exec"
+	"github.com/hyperledger/burrow/logging"
+	"github.com/hyperledger/burrow/logging/structure"
+	"github.com/hyperledger/burrow/vent/sqlsol"
+	"github.com/hyperledger/burrow/vent/types"
 	"github.com/pkg/errors"
 )
 

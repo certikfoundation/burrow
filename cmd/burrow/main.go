@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/certikfoundation/burrow/cmd/burrow/commands"
-	"github.com/certikfoundation/burrow/project"
+	"github.com/hyperledger/burrow/cmd/burrow/commands"
+	"github.com/hyperledger/burrow/project"
 	cli "github.com/jawher/mow.cli"
 )
 

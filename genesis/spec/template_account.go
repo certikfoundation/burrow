@@ -3,11 +3,11 @@ package spec
 import (
 	"fmt"
 
-	"github.com/certikfoundation/burrow/acm/balance"
-	"github.com/certikfoundation/burrow/crypto"
-	"github.com/certikfoundation/burrow/genesis"
-	"github.com/certikfoundation/burrow/keys"
-	"github.com/certikfoundation/burrow/permission"
+	"github.com/hyperledger/burrow/acm/balance"
+	"github.com/hyperledger/burrow/crypto"
+	"github.com/hyperledger/burrow/genesis"
+	"github.com/hyperledger/burrow/keys"
+	"github.com/hyperledger/burrow/permission"
 )
 
 func (ta TemplateAccount) Validator(keyClient keys.KeyClient, index int, curve crypto.CurveType) (*genesis.Validator, error) {

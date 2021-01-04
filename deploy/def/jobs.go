@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/certikfoundation/burrow/deploy/def/rule"
-	"github.com/certikfoundation/burrow/execution/evm/abi"
 	validation "github.com/go-ozzo/ozzo-validation"
 	"github.com/go-ozzo/ozzo-validation/is"
+	"github.com/hyperledger/burrow/deploy/def/rule"
+	"github.com/hyperledger/burrow/execution/evm/abi"
 )
 
 // ------------------------------------------------------------------------

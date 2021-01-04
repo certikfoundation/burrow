@@ -8,8 +8,8 @@ import (
 	math "math"
 	math_bits "math/bits"
 
-	crypto "github.com/certikfoundation/burrow/crypto"
-	github_com_hyperledger_burrow_crypto "github.com/certikfoundation/burrow/crypto"
+	crypto "github.com/hyperledger/burrow/crypto"
+	github_com_hyperledger_burrow_crypto "github.com/hyperledger/burrow/crypto"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	golang_proto "github.com/golang/protobuf/proto"
@@ -28,7 +28,7 @@ var _ = math.Inf
 const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type Validator struct {
-	Address              *github_com_hyperledger_burrow_crypto.Address `protobuf:"bytes,1,opt,name=Address,proto3,customtype=github.com/certikfoundation/burrow/crypto.Address" json:"Address,omitempty"`
+	Address              *github_com_hyperledger_burrow_crypto.Address `protobuf:"bytes,1,opt,name=Address,proto3,customtype=github.com/hyperledger/burrow/crypto.Address" json:"Address,omitempty"`
 	PublicKey            crypto.PublicKey                              `protobuf:"bytes,2,opt,name=PublicKey,proto3" json:"PublicKey"`
 	Power                uint64                                        `protobuf:"varint,3,opt,name=Power,proto3" json:"Power,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                      `json:"-"`

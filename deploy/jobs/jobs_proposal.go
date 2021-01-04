@@ -4,15 +4,15 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/certikfoundation/burrow/acm/acmstate"
-	"github.com/certikfoundation/burrow/binary"
-	"github.com/certikfoundation/burrow/crypto"
-	"github.com/certikfoundation/burrow/deploy/def"
-	"github.com/certikfoundation/burrow/deploy/proposals"
-	"github.com/certikfoundation/burrow/deploy/util"
-	"github.com/certikfoundation/burrow/logging"
-	"github.com/certikfoundation/burrow/txs"
-	"github.com/certikfoundation/burrow/txs/payload"
+	"github.com/hyperledger/burrow/acm/acmstate"
+	"github.com/hyperledger/burrow/binary"
+	"github.com/hyperledger/burrow/crypto"
+	"github.com/hyperledger/burrow/deploy/def"
+	"github.com/hyperledger/burrow/deploy/proposals"
+	"github.com/hyperledger/burrow/deploy/util"
+	"github.com/hyperledger/burrow/logging"
+	"github.com/hyperledger/burrow/txs"
+	"github.com/hyperledger/burrow/txs/payload"
 )
 
 func getAccountSequence(seq string, addressStr string, seqCache *acmstate.Cache, client *def.Client, logger *logging.Logger) (string, error) {
