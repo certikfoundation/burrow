@@ -29,7 +29,6 @@ func PublicKeyFromTendermintPubKey(pubKey tmCrypto.PubKey) (PublicKey, error) {
 	}
 }
 
-// TODO must accept crypto.PublicKey
 func PublicKeyFromABCIPubKey(k pc.PublicKey) (PublicKey, error) {
 	switch k := k.Sum.(type) {
 	case *pc.PublicKey_Ed25519:
@@ -55,33 +54,6 @@ func PublicKeyFromABCIPubKey(k pc.PublicKey) (PublicKey, error) {
 	}
 }
 
-// func PublicKeyFromABCIPubKey(pubKey abci.PubKey) (PublicKey, error) {
-// 	switch pubKey.Type {
-// 	case CurveTypeEd25519.ABCIType():
-// 		return PublicKey{
-// 			CurveType: CurveTypeEd25519,
-// 			PublicKey: pubKey.Data,
-// 		}, nil
-// 	case CurveTypeSecp256k1.ABCIType():
-// 		return PublicKey{
-// 			CurveType: CurveTypeSecp256k1,
-// 			PublicKey: pubKey.Data,
-// 		}, nil
-// 	}
-// 	return PublicKey{}, fmt.Errorf("did not recognise ABCI PubKey type: %s", pubKey.Type)
-// }
-
-// PublicKey extensions
-
-// // // Return the ABCI PubKey. See Tendermint protobuf.go for the go-crypto conversion this is based on
-// func (p PublicKey) ABCIPubKey() abci.PubKey {
-// 	return abci.PubKey{
-// 		Type: p.CurveType.ABCIType(),
-// 		Data: p.PublicKey,
-// 	}
-// }
-
-// TODO PublicKey to pc.PublicKey
 func (p PublicKey) PublicKeyToProto() (pc.PublicKey, error) {
 	var kp pc.PublicKey
 
