@@ -10,13 +10,13 @@ import (
 	math_bits "math/bits"
 	time "time"
 
+	github_com_hyperledger_burrow_binary "github.com/hyperledger/burrow/binary"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	github_com_gogo_protobuf_types "github.com/gogo/protobuf/types"
 	golang_proto "github.com/golang/protobuf/proto"
 	_ "github.com/golang/protobuf/ptypes/duration"
 	_ "github.com/golang/protobuf/ptypes/timestamp"
-	github_com_hyperledger_burrow_binary "github.com/hyperledger/burrow/binary"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.

@@ -202,7 +202,7 @@ func (kvi *KVCacheIterator) Valid() bool {
 	return kvi.keyIndex < len(kvi.keys)
 }
 
-func (kvi *KVCacheIterator) Close() {}
+func (kvi *KVCacheIterator) Close() error { return nil }
 
 func (kvi *KVCacheIterator) Error() error { return nil }
 

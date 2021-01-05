@@ -9,10 +9,10 @@ import (
 	math "math"
 	math_bits "math/bits"
 
+	dump "github.com/hyperledger/burrow/dump"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	golang_proto "github.com/golang/protobuf/proto"
-	dump "github.com/hyperledger/burrow/dump"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"

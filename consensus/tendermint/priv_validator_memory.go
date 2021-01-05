@@ -1,8 +1,11 @@
 package tendermint
 
 import (
+	"fmt"
+
 	"github.com/hyperledger/burrow/crypto"
 	tmCrypto "github.com/tendermint/tendermint/crypto"
+	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 	tmTypes "github.com/tendermint/tendermint/types"
 )
 
@@ -38,15 +41,19 @@ func (pvm *privValidatorMemory) GetAddress() tmTypes.Address {
 	return pvm.Addressable.GetAddress().Bytes()
 }
 
-func (pvm *privValidatorMemory) GetPubKey() tmCrypto.PubKey {
-	return pvm.GetPublicKey().TendermintPubKey()
+func (pvm *privValidatorMemory) GetPubKey() (tmCrypto.PubKey, error) {
+	pk := pvm.GetPublicKey().TendermintPubKey()
+	if pk == nil {
+		return nil, fmt.Errorf("error getting tendermint pubkey")
+	}
+	return pk, nil
 }
 
 // TODO: consider persistence to disk/database to avoid double signing after a crash
-func (pvm *privValidatorMemory) SignVote(chainID string, vote *tmTypes.Vote) error {
+func (pvm *privValidatorMemory) SignVote(chainID string, vote *tmproto.Vote) error {
 	return pvm.lastSignedInfo.SignVote(pvm.signer, chainID, vote)
 }
 
-func (pvm *privValidatorMemory) SignProposal(chainID string, proposal *tmTypes.Proposal) error {
+func (pvm *privValidatorMemory) SignProposal(chainID string, proposal *tmproto.Proposal) error {
 	return pvm.lastSignedInfo.SignProposal(pvm.signer, chainID, proposal)
 }

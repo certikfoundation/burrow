@@ -20,7 +20,7 @@ import (
 	"github.com/hyperledger/burrow/logging"
 	"github.com/hyperledger/burrow/rpc"
 	"github.com/hyperledger/burrow/txs/payload"
-	"github.com/tendermint/tendermint/abci/types"
+	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 	tmtypes "github.com/tendermint/tendermint/types"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
@@ -257,7 +257,7 @@ func (qs *queryServer) GetStats(ctx context.Context, param *GetStatsParam) (*Sta
 
 // Tendermint and blocks
 
-func (qs *queryServer) GetBlockHeader(ctx context.Context, param *GetBlockParam) (*types.Header, error) {
+func (qs *queryServer) GetBlockHeader(ctx context.Context, param *GetBlockParam) (*tmproto.Header, error) {
 	header, err := qs.blockchain.GetBlockHeader(param.Height)
 	if err != nil {
 		return nil, err

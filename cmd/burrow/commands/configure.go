@@ -20,8 +20,7 @@ import (
 	"github.com/hyperledger/burrow/logging/logconfig/presets"
 	"github.com/hyperledger/burrow/rpc"
 	cli "github.com/jawher/mow.cli"
-	"github.com/tendermint/go-amino"
-	cryptoAmino "github.com/tendermint/tendermint/crypto/encoding/amino"
+	tmjson "github.com/tendermint/tendermint/libs/json"
 	dbm "github.com/tendermint/tm-db"
 )
 
@@ -226,16 +225,13 @@ func Configure(output Output) func(cmd *cli.Cmd) {
 
 			peers := make([]string, 0)
 			if conf.GenesisDoc != nil {
-				// NOTE: amino is needed here to add type metadata to JSON envelope for deserialisation to work
-				cdc := amino.NewCodec()
-				cryptoAmino.RegisterAmino(cdc)
 				pkg.GenesisDoc = conf.GenesisDoc
 
 				for _, val := range conf.GenesisDoc.Validators {
 					nodeKey := tendermint.NewNodeKey()
 					nodeAddress, _ := crypto.AddressFromHexString(string(nodeKey.ID()))
 
-					bs, err := cdc.MarshalJSON(nodeKey)
+					bs, err := tmjson.Marshal(nodeKey)
 					if err != nil {
 						output.Fatalf("go-amino failed to json marshal private key: %v", err)
 					}

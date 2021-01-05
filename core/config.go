@@ -65,8 +65,13 @@ func (kern *Kernel) LoadTendermintFromConfig(conf *config.BurrowConfig, privVal 
 
 	kern.database.Stats()
 
+	pk, err := privVal.GetPubKey()
+	if err != nil {
+		return err
+	}
+
 	kern.info = fmt.Sprintf("Burrow_%s_%s_ValidatorID:%X", project.History.CurrentVersion().String(),
-		kern.Blockchain.ChainID(), privVal.GetPubKey().Address())
+		kern.Blockchain.ChainID(), pk.Address())
 
 	app := abci.NewApp(kern.info, kern.Blockchain, kern.State, kern.checker, kern.committer, kern.txCodec,
 		authorizedPeersProvider, kern.Panic, kern.Logger)

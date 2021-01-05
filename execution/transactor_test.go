@@ -65,3 +65,4 @@ func TestTransactor_BroadcastTxSync(t *testing.T) {
 	require.NoError(t, err)
 	assert.Equal(t, height, txe.Height)
 }
+
