@@ -167,7 +167,9 @@ func (cache *Cache) SetStorage(address crypto.Address, key binary.Word256, value
 	if accInfo.removed {
 		return errors.Errorf(errors.Codes.IllegalWrite, "SetStorage on a removed account: %s", address)
 	}
-	accInfo.storage[key] = value
+	tmp := make([]byte, len(value))
+	copy(tmp, value)
+	accInfo.storage[key] = tmp
 	accInfo.updated = true
 	return nil
 }
