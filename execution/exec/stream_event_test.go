@@ -11,7 +11,7 @@ import (
 	"github.com/hyperledger/burrow/txs/payload"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
+	"github.com/tendermint/tendermint/abci/types"
 )
 
 var genesisDoc, accounts, _ = genesis.NewDeterministicGenesis(345234523).GenesisDoc(10, 0)
@@ -37,7 +37,7 @@ func TestTxExecution(t *testing.T) {
 func TestConsumeBlockExecution(t *testing.T) {
 	height := int64(234242)
 	be := &BlockExecution{
-		Header: &tmproto.Header{
+		Header: &types.Header{
 			ChainID: genesisDoc.ChainID(),
 			AppHash: crypto.Keccak256([]byte("hashily")),
 			Time:    time.Now(),

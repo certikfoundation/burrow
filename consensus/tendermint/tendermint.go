@@ -30,11 +30,7 @@ type Node struct {
 }
 
 func DBProvider(ID string, backendType dbm.BackendType, dbDir string) dbm.DB {
-	db, err := dbm.NewDB(ID, backendType, dbDir)
-	if err != nil {
-		panic(err)
-	}
-	return db
+	return dbm.NewDB(ID, backendType, dbDir)
 }
 
 // Since Tendermint doesn't close its DB connections

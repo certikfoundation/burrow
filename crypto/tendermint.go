@@ -5,13 +5,11 @@ import (
 	"strings"
 
 	"github.com/btcsuite/btcd/btcec"
+	abci "github.com/tendermint/tendermint/abci/types"
 	tmCrypto "github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
 	tmEd25519 "github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
 	tmSecp256k1 "github.com/tendermint/tendermint/crypto/secp256k1"
 	"github.com/tendermint/tendermint/p2p"
-	pc "github.com/tendermint/tendermint/proto/tendermint/crypto"
 )
 
 func NodeIDFromAddress(id Address) p2p.ID {
@@ -20,74 +18,51 @@ func NodeIDFromAddress(id Address) p2p.ID {
 
 func PublicKeyFromTendermintPubKey(pubKey tmCrypto.PubKey) (PublicKey, error) {
 	switch pk := pubKey.(type) {
-	case tmEd25519.PubKey:
+	case tmEd25519.PubKeyEd25519:
 		return PublicKeyFromBytes(pk[:], CurveTypeEd25519)
-	case tmSecp256k1.PubKey:
+	case tmSecp256k1.PubKeySecp256k1:
 		return PublicKeyFromBytes(pk[:], CurveTypeSecp256k1)
 	default:
 		return PublicKey{}, fmt.Errorf("unrecognised tendermint public key type: %v", pk)
 	}
-}
 
-func PublicKeyFromABCIPubKey(k pc.PublicKey) (PublicKey, error) {
-	switch k := k.Sum.(type) {
-	case *pc.PublicKey_Ed25519:
-		if len(k.Ed25519) != ed25519.PubKeySize {
-			return PublicKey{}, fmt.Errorf("invalid size for PubKeyEd25519. Got %d, expected %d",
-				len(k.Ed25519), ed25519.PubKeySize)
-		}
+}
+func PublicKeyFromABCIPubKey(pubKey abci.PubKey) (PublicKey, error) {
+	switch pubKey.Type {
+	case CurveTypeEd25519.ABCIType():
 		return PublicKey{
 			CurveType: CurveTypeEd25519,
-			PublicKey: k.Ed25519,
+			PublicKey: pubKey.Data,
 		}, nil
-	case *pc.PublicKey_Secp256K1:
-		if len(k.Secp256K1) != secp256k1.PubKeySize {
-			return PublicKey{}, fmt.Errorf("invalid size for PubKeySecp256k1. Got %d, expected %d",
-				len(k.Secp256K1), secp256k1.PubKeySize)
-		}
+	case CurveTypeSecp256k1.ABCIType():
 		return PublicKey{
 			CurveType: CurveTypeSecp256k1,
-			PublicKey: k.Secp256K1,
+			PublicKey: pubKey.Data,
 		}, nil
-	default:
-		return PublicKey{}, fmt.Errorf("fromproto: key type %v is not supported", k)
 	}
+	return PublicKey{}, fmt.Errorf("did not recognise ABCI PubKey type: %s", pubKey.Type)
 }
 
-func (p PublicKey) PublicKeyToProto() (pc.PublicKey, error) {
-	var kp pc.PublicKey
+// PublicKey extensions
 
-	curveType := p.CurveType.String()
-	switch curveType {
-	case tmSecp256k1.KeyType:
-		kp = pc.PublicKey{
-			Sum: &pc.PublicKey_Secp256K1{
-				Secp256K1: p.PublicKey.Bytes(),
-			},
-		}
-	case tmEd25519.KeyType:
-		kp = pc.PublicKey{
-			Sum: &pc.PublicKey_Ed25519{
-				Ed25519: p.PublicKey.Bytes(),
-			},
-		}
-	default:
-		return kp, fmt.Errorf("toproto: key type %v is not supported", curveType)
+// Return the ABCI PubKey. See Tendermint protobuf.go for the go-crypto conversion this is based on
+func (p PublicKey) ABCIPubKey() abci.PubKey {
+	return abci.PubKey{
+		Type: p.CurveType.ABCIType(),
+		Data: p.PublicKey,
 	}
-
-	return kp, nil
 }
 
 func (p PublicKey) TendermintPubKey() tmCrypto.PubKey {
 	switch p.CurveType {
 	case CurveTypeEd25519:
-		pk := make([]byte, tmEd25519.PubKeySize)
-		copy(pk, p.PublicKey)
-		return tmEd25519.PubKey(pk)
+		pk := tmEd25519.PubKeyEd25519{}
+		copy(pk[:], p.PublicKey)
+		return pk
 	case CurveTypeSecp256k1:
-		pk := make([]byte, tmSecp256k1.PubKeySize)
-		copy(pk, p.PublicKey)
-		return tmSecp256k1.PubKey(pk)
+		pk := tmSecp256k1.PubKeySecp256k1{}
+		copy(pk[:], p.PublicKey)
+		return pk
 	default:
 		return nil
 	}

@@ -200,7 +200,7 @@ func StartupLauncher(kern *Kernel) process.Launcher {
 			logger := kern.Logger.With(
 				"launch_time", start,
 				"burrow_version", project.FullVersion(),
-				"tendermint_version", version.TMCoreSemVer,
+				"tendermint_version", version.Version,
 				"validator_address", nodeView.ValidatorAddress(),
 				"node_id", string(info.ID()),
 				"net_address", netAddress.String(),

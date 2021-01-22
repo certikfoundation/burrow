@@ -78,17 +78,7 @@ func NewKernel(dbDir string) (*Kernel, error) {
 	if dbDir == "" {
 		return nil, fmt.Errorf("Burrow requires a database directory")
 	}
-
 	runID, err := simpleuuid.NewTime(time.Now()) // Create a random ID based on start time
-	if err != nil {
-		return nil, err
-	}
-
-	newDB, err := dbm.NewDB(BurrowDBName, dbm.GoLevelDBBackend, dbDir)
-	if err != nil {
-		return nil, err
-	}
-
 	return &Kernel{
 		Logger:         logging.NewNoopLogger(),
 		RunID:          runID,
@@ -97,8 +87,8 @@ func NewKernel(dbDir string) (*Kernel, error) {
 		listeners:      make(map[string]net.Listener),
 		shutdownNotify: make(chan struct{}),
 		txCodec:        txs.NewProtobufCodec(),
-		database:       newDB,
-	}, nil
+		database:       dbm.NewDB(BurrowDBName, dbm.GoLevelDBBackend, dbDir),
+	}, err
 }
 
 // SetLogger initializes the kernel with the provided logger

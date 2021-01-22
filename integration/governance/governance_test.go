@@ -24,7 +24,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	tmcore "github.com/tendermint/tendermint/rpc/core"
-	rpctypes "github.com/tendermint/tendermint/rpc/jsonrpc/types"
+	rpctypes "github.com/tendermint/tendermint/rpc/lib/types"
 )
 
 func TestGovernance(t *testing.T) {

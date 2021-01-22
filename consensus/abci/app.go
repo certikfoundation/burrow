@@ -129,8 +129,6 @@ func (app *App) InitChain(chain types.RequestInitChain) (respInitChain types.Res
 		}
 	}
 	app.logger.InfoMsg("Initial validator set matches")
-
-	respInitChain.AppHash = app.blockchain.AppHashAfterLastBlock()
 	return
 }
 
@@ -237,14 +235,8 @@ func (app *App) EndBlock(reqEndBlock types.RequestEndBlock) types.ResponseEndBlo
 	err := app.validators.ValidatorChanges(BurrowValidatorDelayInBlocks).IterateValidators(func(id crypto.Addressable, power *big.Int) error {
 		app.logger.InfoMsg("Updating validator power", "validator_address", id.GetAddress(),
 			"new_power", power)
-
-		protoPk, err := id.GetPublicKey().PublicKeyToProto()
-		if err != nil {
-			panic(err)
-		}
-
 		validatorUpdates = append(validatorUpdates, types.ValidatorUpdate{
-			PubKey: protoPk,
+			PubKey: id.GetPublicKey().ABCIPubKey(),
 			// Must ensure power fits in an int64 during execution
 			Power: power.Int64(),
 		})
@@ -321,23 +313,3 @@ func (app *App) Commit() types.ResponseCommit {
 		Data: appHash,
 	}
 }
-
-// ListSnapshots lists available snapshots
-func (app *App) ListSnapshots(types.RequestListSnapshots) types.ResponseListSnapshots {
-	return types.ResponseListSnapshots{}
-}
-
-// OfferSnapshot offers a snapshot to the application
-func (app *App) OfferSnapshot(types.RequestOfferSnapshot) types.ResponseOfferSnapshot {
-	return types.ResponseOfferSnapshot{}
-}                
-
-// LoadSnapshotChunk loads a snapshot chunk
-func (app *App) LoadSnapshotChunk(types.RequestLoadSnapshotChunk) types.ResponseLoadSnapshotChunk {
-	return types.ResponseLoadSnapshotChunk{}
-}    
-
-// ApplySnapshotChunk applies a shapshot chunk
-func (app *App) ApplySnapshotChunk(types.RequestApplySnapshotChunk) types.ResponseApplySnapshotChunk {
-	return types.ResponseApplySnapshotChunk{}
-} 

@@ -13,22 +13,18 @@ import (
 
 type BlockStore struct {
 	txDecoder txs.Decoder
-	state.BlockStore
+	state.BlockStoreRPC
 }
 
-func NewBlockStore(blockStore state.BlockStore) *BlockStore {
+func NewBlockStore(blockStore state.BlockStoreRPC) *BlockStore {
 	return &BlockStore{
-		txDecoder:  txs.NewProtobufCodec(),
-		BlockStore: blockStore,
+		txDecoder:     txs.NewProtobufCodec(),
+		BlockStoreRPC: blockStore,
 	}
 }
 
 func NewBlockExplorer(dbBackendType dbm.BackendType, dbDir string) *BlockStore {
-	newDB, err := dbm.NewDB("blockstore", dbBackendType, dbDir)
-	if err != nil {
-		panic(err)
-	}
-	return NewBlockStore(store.NewBlockStore(newDB))
+	return NewBlockStore(store.NewBlockStore(dbm.NewDB("blockstore", dbBackendType, dbDir)))
 }
 
 func (bs *BlockStore) Block(height int64) (_ *Block, err error) {

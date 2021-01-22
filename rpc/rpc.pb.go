@@ -8,13 +8,13 @@ import (
 	math "math"
 	math_bits "math/bits"
 
+	_ "github.com/gogo/protobuf/gogoproto"
+	proto "github.com/gogo/protobuf/proto"
+	golang_proto "github.com/golang/protobuf/proto"
 	validator "github.com/hyperledger/burrow/acm/validator"
 	bcm "github.com/hyperledger/burrow/bcm"
 	github_com_hyperledger_burrow_binary "github.com/hyperledger/burrow/binary"
 	tendermint "github.com/hyperledger/burrow/consensus/tendermint"
-	_ "github.com/gogo/protobuf/gogoproto"
-	proto "github.com/gogo/protobuf/proto"
-	golang_proto "github.com/golang/protobuf/proto"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.

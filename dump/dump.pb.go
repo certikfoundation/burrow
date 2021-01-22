@@ -10,16 +10,16 @@ import (
 	math_bits "math/bits"
 	time "time"
 
-	acm "github.com/hyperledger/burrow/acm"
-	github_com_hyperledger_burrow_binary "github.com/hyperledger/burrow/binary"
-	github_com_hyperledger_burrow_crypto "github.com/hyperledger/burrow/crypto"
-	exec "github.com/hyperledger/burrow/execution/exec"
-	names "github.com/hyperledger/burrow/execution/names"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	github_com_gogo_protobuf_types "github.com/gogo/protobuf/types"
 	golang_proto "github.com/golang/protobuf/proto"
 	_ "github.com/golang/protobuf/ptypes/timestamp"
+	acm "github.com/hyperledger/burrow/acm"
+	github_com_hyperledger_burrow_binary "github.com/hyperledger/burrow/binary"
+	github_com_hyperledger_burrow_crypto "github.com/hyperledger/burrow/crypto"
+	exec "github.com/hyperledger/burrow/execution/exec"
+	names "github.com/hyperledger/burrow/execution/names"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.

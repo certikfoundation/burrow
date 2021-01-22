@@ -57,21 +57,13 @@ func NewSource(burrowDB, tmDB dbm.DB, genesisDoc *genesis.GenesisDoc) *Source {
 }
 
 func NewSourceFromDir(genesisDoc *genesis.GenesisDoc, dbDir string) *Source {
-	burrowDB, err := dbm.NewDB(core.BurrowDBName, dbm.GoLevelDBBackend, dbDir)
-	if err != nil {
-		panic(err)
-	}
-	tmDB, err := dbm.NewDB("blockstore", dbm.GoLevelDBBackend, path.Join(dbDir, "data"))
-	if err != nil {
-		panic(err)
-	}
+	burrowDB := dbm.NewDB(core.BurrowDBName, dbm.GoLevelDBBackend, dbDir)
+	tmDB := dbm.NewDB("blockstore", dbm.GoLevelDBBackend, path.Join(dbDir, "data"))
 	return NewSource(burrowDB, tmDB, genesisDoc)
 }
 
 func NewSourceFromGenesis(genesisDoc *genesis.GenesisDoc) *Source {
 	tmDB := dbm.NewMemDB()
-	stateStore := sm.NewStore(tmDB)
-
 	gd := tendermint.DeriveGenesisDoc(genesisDoc, nil)
 	st, err := sm.MakeGenesisState(&types.GenesisDoc{
 		ChainID:    gd.ChainID,
@@ -81,8 +73,7 @@ func NewSourceFromGenesis(genesisDoc *genesis.GenesisDoc) *Source {
 	if err != nil {
 		panic(err)
 	}
-	stateStore.Save(st)
-
+	sm.SaveState(tmDB, st)
 	burrowDB, burrowState, burrowChain, err := initBurrow(genesisDoc)
 	if err != nil {
 		panic(err)

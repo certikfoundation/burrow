@@ -13,11 +13,22 @@ import (
 	"github.com/hyperledger/burrow/execution/registry"
 	"github.com/hyperledger/burrow/genesis"
 	"github.com/hyperledger/burrow/txs"
+	amino "github.com/tendermint/go-amino"
+	"github.com/tendermint/tendermint/consensus"
 	ctypes "github.com/tendermint/tendermint/consensus/types"
-	tmjson "github.com/tendermint/tendermint/libs/json"
 	core_types "github.com/tendermint/tendermint/rpc/core/types"
 	tmTypes "github.com/tendermint/tendermint/types"
 )
+
+// When using Tendermint types like Block and Vote we are forced to wrap the outer object and use amino marshalling
+var aminoCodec = NewAminoCodec()
+
+func NewAminoCodec() *amino.Codec {
+	aminoCodec := amino.NewCodec()
+	consensus.RegisterMessages(aminoCodec)
+	core_types.RegisterAmino(aminoCodec)
+	return aminoCodec
+}
 
 type ResultStorage struct {
 	Key   binary.HexBytes
@@ -53,11 +64,11 @@ type BlockMeta struct {
 }
 
 func (bm BlockMeta) MarshalJSON() ([]byte, error) {
-	return tmjson.Marshal(bm.BlockMeta)
+	return aminoCodec.MarshalJSON(bm.BlockMeta)
 }
 
 func (bm *BlockMeta) UnmarshalJSON(data []byte) (err error) {
-	return tmjson.Unmarshal(data, &bm.BlockMeta)
+	return aminoCodec.UnmarshalJSON(data, &bm.BlockMeta)
 }
 
 // Needed for go-amino handling of interface types
@@ -66,11 +77,11 @@ type Block struct {
 }
 
 func (b Block) MarshalJSON() ([]byte, error) {
-	return tmjson.Marshal(b.Block)
+	return aminoCodec.MarshalJSON(b.Block)
 }
 
 func (b *Block) UnmarshalJSON(data []byte) (err error) {
-	return tmjson.Unmarshal(data, &b.Block)
+	return aminoCodec.UnmarshalJSON(data, &b.Block)
 }
 
 type ResultChainId struct {
@@ -114,11 +125,11 @@ type RoundState struct {
 }
 
 func (rs RoundState) MarshalJSON() ([]byte, error) {
-	return tmjson.Marshal(rs.RoundState)
+	return aminoCodec.MarshalJSON(rs.RoundState)
 }
 
 func (rs *RoundState) UnmarshalJSON(data []byte) (err error) {
-	return tmjson.Unmarshal(data, &rs.RoundState)
+	return aminoCodec.UnmarshalJSON(data, &rs.RoundState)
 }
 
 type ResultPeers struct {

@@ -90,11 +90,11 @@ func TestWeb3Service(t *testing.T) {
 			require.Equal(t, x.EncodeNumber(1), result.ChainID)
 		})
 
-		// t.Run("EthProtocolVersion", func(t *testing.T) {
-		// 	result, err := eth.EthProtocolVersion()
-		// 	require.NoError(t, err)
-		// 	require.NotEmpty(t, result.ProtocolVersion)
-		// })
+		t.Run("EthProtocolVersion", func(t *testing.T) {
+			result, err := eth.EthProtocolVersion()
+			require.NoError(t, err)
+			require.NotEmpty(t, result.ProtocolVersion)
+		})
 
 		t.Run("EthChainId", func(t *testing.T) {
 			result, err := eth.EthChainId()
