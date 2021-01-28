@@ -10,6 +10,7 @@ import (
 	crypto "github.com/hyperledger/burrow/crypto"
 	"github.com/hyperledger/burrow/execution/engine"
 	"github.com/hyperledger/burrow/execution/errors"
+	burrowexec "github.com/hyperledger/burrow/execution/exec"
 	"github.com/perlin-network/life/exec"
 )
 
@@ -74,36 +75,150 @@ func (e *execContext) ResolveFunc(module, field string) exec.FunctionImport {
 	}
 
 	switch field {
-	case "call":
+	case "useGas":
 		return func(vm *exec.VirtualMachine) int64 {
-			// gas := int(uint64(vm.GetCurrentFrame().Locals[0]))
+			amount := uint64(vm.GetCurrentFrame().Locals[0])
+			*e.params.Gas -= amount
+			return 0
+		}
+
+	case "getBlockHash":
+		return func(vm *exec.VirtualMachine) int64 {
+			// TODO: implement this
+			// number := int(uint64(vm.GetCurrentFrame().Locals[0]))
+			// resultOffset := int(uint64(vm.GetCurrentFrame().Locals[1]))
+			return 1
+		}
+
+	case "call", "callStatic", "callDelegate", "callCode":
+		return func(vm *exec.VirtualMachine) int64 {
+			gas := uint64(vm.GetCurrentFrame().Locals[0])
 			addressPtr := int(uint32(vm.GetCurrentFrame().Locals[1]))
-			// valuePtr := int(uint32(vm.GetCurrentFrame().Locals[2]))
-			dataPtr := int(uint32(vm.GetCurrentFrame().Locals[3]))
-			dataLen := int(uint32(vm.GetCurrentFrame().Locals[4]))
+			var value uint64
+			var data []byte
+			switch field {
+			case "call":
+				valuePtr := int(uint32(vm.GetCurrentFrame().Locals[2]))
+				value = binary.LittleEndian.Uint64(vm.Memory[valuePtr : valuePtr+32])
+				dataPtr := int(uint32(vm.GetCurrentFrame().Locals[3]))
+				dataLen := int(uint32(vm.GetCurrentFrame().Locals[4]))
+				data = vm.Memory[dataPtr : dataPtr+dataLen]
+			default:
+				dataPtr := int(uint32(vm.GetCurrentFrame().Locals[2]))
+				dataLen := int(uint32(vm.GetCurrentFrame().Locals[3]))
+				data = vm.Memory[dataPtr : dataPtr+dataLen]
+			}
 
 			// fixed support for system contract of keccak256
 			address := make([]byte, crypto.AddressLength)
 
 			copy(address[:], vm.Memory[addressPtr:addressPtr+crypto.AddressLength])
 
-			if bytes.Equal(address, []byte{0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-				0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}) {
+			if bytes.Equal(address, []byte{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+				0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02}) ||
+				bytes.Equal(address, []byte{0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+					0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}) {
 				e.returnData = make([]byte, 32)
-				copy(e.returnData[0:32], crypto.SHA256(vm.Memory[dataPtr:dataPtr+dataLen]))
-			} else if bytes.Equal(address, []byte{0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-				0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}) {
+				copy(e.returnData[0:32], crypto.SHA256(data))
+				return 0
+			} else if bytes.Equal(address, []byte{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+				0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03}) ||
+				bytes.Equal(address, []byte{0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+					0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}) {
 				e.returnData = make([]byte, 32)
-				copy(e.returnData[0:32], crypto.RIPEMD160(vm.Memory[dataPtr:dataPtr+dataLen]))
-			} else if bytes.Equal(address, []byte{0x09, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-				0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}) {
+				copy(e.returnData[0:32], crypto.RIPEMD160(data))
+				return 0
+			} else if bytes.Equal(address, []byte{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+				0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04}) ||
+				bytes.Equal(address, []byte{0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+					0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}) {
+				e.returnData = make([]byte, len(e.params.Input))
+				e.returnData = e.params.Input
+				return 0
+			} else if bytes.Equal(address, []byte{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+				0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x09}) ||
+				bytes.Equal(address, []byte{0x09, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+					0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}) {
 				e.returnData = make([]byte, 32)
-				copy(e.returnData[0:32], crypto.Keccak256(vm.Memory[dataPtr:dataPtr+dataLen]))
-			} else {
-				panic(errors.Codes.InvalidAddress)
+				copy(e.returnData[0:32], crypto.Keccak256(data))
+				return 0
 			}
 
-			return 1
+			target, err := crypto.AddressFromBytes(address)
+			if err != nil {
+				return 1
+			}
+			acc, err := e.state.GetAccount(target)
+			if err != nil {
+				return 1
+			}
+
+			code := acc.WASMCode
+			if len(code) == 0 {
+				return 1
+			}
+
+			callframe := engine.NewCallFrame(e.state, acmstate.Named("TxCache"))
+			childcache := callframe.Cache
+
+			calleeParams := engine.CallParams{
+				Origin: e.params.Origin,
+				Input:  data,
+				Value:  value,
+				Gas:    &gas,
+			}
+
+			switch field {
+			case "call":
+				calleeParams.CallType = burrowexec.CallTypeCall
+				calleeParams.Caller = e.params.Callee
+				calleeParams.Callee = target
+
+			case "callStatic":
+				calleeParams.CallType = burrowexec.CallTypeStatic
+				calleeParams.Caller = e.params.Callee
+				calleeParams.Callee = target
+
+				callframe.ReadOnly()
+
+			case "callCode":
+				calleeParams.CallType = burrowexec.CallTypeCode
+				calleeParams.Caller = e.params.Callee
+				calleeParams.Callee = e.params.Callee
+
+			case "callDelegate":
+				calleeParams.CallType = burrowexec.CallTypeDelegate
+				calleeParams.Caller = e.params.Caller
+				calleeParams.Callee = e.params.Callee
+			}
+
+			// TODO: block events
+			res, err := RunWASM(childcache, calleeParams, data)
+			if errors.GetCode(err) == errors.Codes.ExecutionReverted {
+				return 2
+			}
+
+			if err == nil {
+				// Sync error is a hard stop
+				e.PushError(callframe.Sync())
+			}
+			// Handle remaining gas.
+			*e.params.Gas += *calleeParams.Gas
+			e.returnData = res
+
+			return 0
+		}
+
+	case "getCaller":
+		return func(vm *exec.VirtualMachine) int64 {
+			e.returnData = make([]byte, 20)
+			copy(e.returnData[0:20], e.params.Caller.Bytes())
+			return 0
+		}
+
+	case "getGasLeft":
+		return func(vm *exec.VirtualMachine) int64 {
+			return int64(*e.params.Gas)
 		}
 
 	case "getCallDataSize":
